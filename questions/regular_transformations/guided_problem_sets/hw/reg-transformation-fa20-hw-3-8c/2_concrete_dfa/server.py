@@ -91,12 +91,14 @@ def generate(data: Dict[str, Any]) -> None:
     while not should_use_dfa(M):
         M = generate_random_dfa(3, 3)
 
-    # Ask about transitions for a few random state pairs
+    # Ask about transitions for 2 distinct state pairs
     M_states_list = list(M.states)
+    all_pairs = list(product(M_states_list, M_states_list))
+    sampled_pairs = random.sample(all_pairs, min(2, len(all_pairs)))
     transitions_to_ask = [
-        ((random.choice(M_states_list), random.choice(M_states_list)), a)
+        (pair, a)
+        for pair in sampled_pairs
         for a in M.input_symbols
-        for _ in range(2)  # Ask about 2 state pairs per symbol
     ]
 
     server_base.generate(

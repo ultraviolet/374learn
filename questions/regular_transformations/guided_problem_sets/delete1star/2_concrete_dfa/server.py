@@ -92,10 +92,13 @@ def generate(data: Dict[str, Any]) -> None:
     while not should_use_dfa(M):
         M = generate_random_dfa(3, 3)
 
+    q = random.choice(list(M.states))
     transitions_to_ask = [
-        ((random.choice(list(M.states)), label), a)
-        for label in STATE_LABELS
-        for a in M.input_symbols
+        ((q, BEFORE), a) for a in M.input_symbols
+    ] + [
+        ((q, INSERTING1S), ""),   # epsilon only - no regular transitions
+    ] + [
+        ((q, AFTER), a) for a in M.input_symbols
     ]
 
     server_base.generate(

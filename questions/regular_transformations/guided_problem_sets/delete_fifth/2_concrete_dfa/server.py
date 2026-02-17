@@ -91,9 +91,12 @@ def generate(data: Dict[str, Any]) -> None:
     while not should_use_dfa(M):
         M = generate_random_dfa(3, 3)
 
+    q = random.choice(list(M.states))
     transitions_to_ask = [
-        ((random.choice(list(M.states)), label), a)
-        for label in [BEFORE, (0, AFTER), (1, AFTER), (2, AFTER), (3, AFTER)]
+        ((q, BEFORE), a) for a in M.input_symbols
+    ] + [
+        ((q, i, AFTER), a)
+        for i in range(4)           # 0-3 only; (q,4,AFTER) has no transitions
         for a in M.input_symbols
     ]
 
