@@ -2,7 +2,9 @@
 
 A PrairieLearn course for CS374: Introduction to Algorithms & Models of Computation, featuring scaffolded exercises for theoretical computer science topics.
 
-This fork extends [TheorieLearn](https://theorielearn.github.io/) with enhanced Guided Problem Sets (GPS) for regular language transformations.
+This fork extends [TheorieLearn](https://theorielearn.github.io/) with modified and extended problems.
+
+Public access is available at [374learn](https://374learn.d.rw). You may join the 374L class using join code WHY-P33-G4KD or going to [CSL 374](https://374learn.d.rw/pl/course_instance/1)
 
 ## Quick Setup
 
