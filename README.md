@@ -20,28 +20,23 @@ Public access is available at [374learn](https://374learn.d.rw). You may join th
    git clone https://github.com/ultraviolet/374learn.git
    cd 374learn
    ```
-2. Create Job Directory
-
+2. **Create job directory and start PrairieLearn:**
    ```bash
    mkdir -p ~/pl_ag_jobs
-   ```
-
-3. **Start PrairieLearn with Docker:**
-   ```bash
-   docker run -it --rm \
-     -p 3000:3000 \
+   docker run -d --name prairielearn \
+     -p 80:3000 \
      -v "$PWD:/course" \
+     -v ~/pl_ag_jobs:/jobs \
      prairielearn/prairielearn
    ```
 
-4. **Access the course:**
-   Open your browser to http://localhost:3000/pl
+3. **Access the course:**
+   Open your browser to `http://your-server-ip/pl`
 
-5. **Select your course:**
+4. **Select your course:**
    - Click on "Load from disk"
    - Choose "TheorieLearnPublic"
    - Select the "Public" course instance
-   - 
 ## License
 
 **Copyright &copy; 2026 [TheorieLearn](https://theorielearn.github.io/)**
