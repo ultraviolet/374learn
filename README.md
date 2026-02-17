@@ -1,48 +1,162 @@
-# TheorieLearn Public Repository
+# 374learn
 
-[![Slack](https://img.shields.io/badge/join%20slack-pl4tcs-orange)](https://pl4tcs.slack.com)
+A PrairieLearn course for CS374: Introduction to Algorithms & Models of Computation, featuring scaffolded exercises for theoretical computer science topics.
 
-## Welcome to TheorieLearn!
+This fork extends [TheorieLearn](https://theorielearn.github.io/) with enhanced Guided Problem Sets (GPS) for regular language transformations.
 
-This is a public repository of scaffolding exercises for theoretical computer science, implemented on the on the [PrairieLearn](https://www.prairielearn.org) platform.  These exercises were designed for [CS 374](https://courses.grainger.illinois.edu/cs374al1/) and other courses that teach theoretical computer science at the University of Illinois Urbana-Champaign.
+## Quick Setup
 
-A public practice course containing all our available exercises is available on [PrairieLearn](https://www.prairielearn.org) to anyone with a Microsoft account, Google account, or login credentials at a university with a PrarieLearn license.
+### Prerequisites
 
-For more information about the TheorieLearn project, including developers, publications, instructor usage, and funding information, please see the project page at <https://theorielearn.github.io/>.
+- [Docker](https://www.docker.com/get-started)
+- Git
 
-For questions specific to this repository, feel free to join the TheorieLearn [Slack](https://pl4tcs.slack.com) or email the project director [Jeff Erickson](https://jeffe.cs.illinois.edu) (jeffe@illinois.edu).  For more general PrairieLearn questions, we recommend joining the [PrairieLearn Slack](prairielearn.slack.com); Jeff and other members of the TheorieLearn team are active on this Slack space.
+### Running PrairieLearn Locally
 
-## Copyright and License Information
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/ultraviolet/374learn.git
+   cd 374learn
+   ```
+
+2. **Start PrairieLearn with Docker:**
+   ```bash
+   docker run -it --rm \
+     -p 3000:3000 \
+     -v "$PWD:/course" \
+     prairielearn/prairielearn
+   ```
+
+3. **Access the course:**
+   Open your browser to http://localhost:3000/pl
+
+4. **Select your course:**
+   - Click on "Load from disk"
+   - Choose "TheorieLearnPublic"
+   - Select the "Public" course instance
+
+### Stopping and Restarting
+
+To stop PrairieLearn, press `Ctrl+C` in the terminal.
+
+To restart with a named container (recommended for persistence):
+```bash
+# First time
+docker run -d --name prairielearn \
+  -p 3000:3000 \
+  -v "$PWD:/course" \
+  prairielearn/prairielearn
+
+# Restart after stopping
+docker restart prairielearn
+
+# Stop
+docker stop prairielearn
+```
+
+## Course Structure
+
+### Main Assessments
+
+- **BANK-5: Language Transformations** - Comprehensive regular transformation exercises
+  - 28 transformations with GPS format (84 questions total)
+  - Each transformation includes:
+    1. Introduction with concrete examples
+    2. Apply transformation to a concrete DFA
+    3. Symbolic NFA construction
+
+### Key Topics
+
+- Regular Languages & Automata (DFA/NFA)
+- Regular Transformations (compress, delete, insert, reverse, etc.)
+- Context-Free Languages
+- Decidability & Computability
+- Algorithm Design & Analysis
+
+## Recent Updates
+
+### GPS (Guided Problem Set) Format
+
+All 28 regular transformation coding questions have been converted to GPS format, providing scaffolded learning from concrete examples to symbolic construction:
+
+**Main Transformations (20):**
+- compress_1, compress_2
+- delete0, delete1star, delete1star_prefix, delete_fifth
+- flipEvens, flipSubstring
+- insert0, insert10, insert_fifth
+- inv_thirds, mid, parity_runs
+- proper_proper_prefix, reverse, skip
+- take2skip2_1, take2skip2_2, thirds
+- wRw (w^Rw), wwR (ww^R)
+
+**Homework Transformations (8):**
+- DelOnes, ThereAndBack, XOR
+- Double, Move 1 Forward
+- MoveBack8, Half L, Flip Substring
+
+### Bug Fixes
+
+- Fixed frozenset handling in automata grading (`fa_utils.py`)
+- Fixed KeyError in Move 1 Forward transformation
+- Corrected UUID validation issues
+
+## Development
+
+### File Structure
+
+```
+TheorieLearnPublic/
+├── questions/
+│   ├── regular_transformations/
+│   │   ├── coding/              # Original coding questions
+│   │   └── guided_problem_sets/  # New GPS format (84 questions)
+│   └── ...
+├── courseInstances/
+│   └── Public/
+│       └── assessments/
+│           └── BANK-5/           # Language Transformations assessment
+├── serverFilesCourse/
+│   └── theorielearn/
+│       ├── automata_utils/       # DFA/NFA utilities
+│       └── regular_transformations/
+└── infoCourse.json
+```
+
+### Making Changes
+
+After modifying questions or server code:
+
+1. Restart the PrairieLearn container:
+   ```bash
+   docker restart prairielearn
+   ```
+
+2. Refresh your browser (the course auto-syncs on page load)
+
+### Testing Questions
+
+1. Navigate to the assessment: http://localhost:3000/pl/course_instance/1/assessment_instance/5/
+2. Click through each question to test functionality
+3. Check for errors in:
+   - Question generation (refresh if needed)
+   - Answer grading
+   - Visual rendering
+
+## Contributing
+
+This is a fork of TheorieLearn for personal CS374 practice and development. For upstream contributions, see [TheorieLearn/TheorieLearnPublic](https://github.com/TheorieLearn/TheorieLearnPublic).
+
+## License
 
 **Copyright &copy; 2026 [TheorieLearn](https://theorielearn.github.io/)**
 
-* All text in this repository is released under a [Creative Commons Attribution 4.0 International (CC-BY) License](https://creativecommons.org/licenses/by/4.0/deed.en).
+- All text: [Creative Commons Attribution 4.0 (CC-BY)](https://creativecommons.org/licenses/by/4.0/)
+- All code: [MIT License](LICENSE)
 
-* All code in this repository is released under [The MIT License](LICENSE).
+Based on TheorieLearn resources and [Jeff Erickson's Algorithms course materials](https://jeffe.cs.illinois.edu/teaching/algorithms/).
 
-You may freely free to use, copy, adapt, remix, and/or redistribure any questions, assessments, elements, or other code from this repository, subject to the terms of these licenses.  In particular, if you redistribute any code, please include a link either to this repository <https://github.com/TheorieLearn/TheorieLearnPublic> or to the main TheorieLearn page <https://theorielearn.github.io/>
+## Resources
 
-These resources are based in part on [Jeff Erickson's _Algorithms_ textbook and other course materials](https://jeffe.cs.illinois.edu/teaching/algorithms/), which are also freely available.
-
-## How to Use Our Resources in Your Own PrairieLearn Course
-
-### Copying Questions
-
-To use a question or series of questions, copy the question folders from our `questions/` into your own `questions/` folder.
-Some questions have shared code and resources located in `serverFilesCourse/theorielearn/`. The easiest way would be to place this `theorielearn/` subdirectory into your own `serverFilesCourse`, which will automatically support any question you import from here. You can optionally delete subfolders in `theorielearn/` that aren't imported by the questions you use.
-
-A select few questions have shared resources located in `clientFilesCourse/`. Please check if the questions you use utilize this directory and copy what you need.
-
-### Copying Elements
-
-To use an element, copy the elements you want from `elements/` into your own `elements/` folder. Each element is self contained and should work without external code.
-
-### Automatic Script
-
-TBA! We will provide a script in the future that will let you select questions and elements you want and package it for you to drop in your course, automatically.
-
-## Licensing
-
-All text in this repository is published under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution (CC-BY 4.0)</a> licence.
-  
-All code in this repository is published under <a href="https://opensource.org/license/mit">the MIT License</a>.
+- [PrairieLearn Documentation](https://prairielearn.readthedocs.io/)
+- [CS374 Course Website](https://courses.grainger.illinois.edu/cs374/)
+- [TheorieLearn Project](https://theorielearn.github.io/)
