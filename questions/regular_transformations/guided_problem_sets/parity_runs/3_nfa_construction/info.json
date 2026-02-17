@@ -1,0 +1,10 @@
+{
+    "uuid": "e8279a26-1f4b-4ac7-907b-9763dfe3a7ea",
+    "title": "Symbolic NFA Construction",
+    "topic": "Regular Language Transformations",
+    "tags": [
+        "Guided Practice",
+        "parity_runs"
+    ],
+    "type": "v3"
+}

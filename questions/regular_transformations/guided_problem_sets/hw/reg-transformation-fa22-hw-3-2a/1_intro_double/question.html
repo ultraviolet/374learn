@@ -1,0 +1,49 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+The function $\mathit{double}(w)$ performs a left-shift operation on its input, equivalent to multiplying the binary number by 2.
+
+For example:
+- $\mathit{double}(110100) = 101000$ (shift left, drop leftmost bit, append 0)
+- $\mathit{double}(101) = 010$ (shift left, drop leftmost bit, append 0)
+- $\mathit{double}(1) = 0$ (shift left, drop leftmost bit, append 0)
+
+We define the language transformation as:
+$$L' = \{\mathit{double}(w) \mid w \in L\}$$
+
+<hr>
+Suppose that $L = \{ 01, 10, 11 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="true">00</pl-answer>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+    <pl-answer correct="false">11</pl-answer>
+    <pl-answer correct="false">001</pl-answer>
+    <pl-answer correct="false">101</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings that are $\mathit{double}(w)$ for some $w \in L = \{01, 10, 11\}$.
+
+- $\mathit{double}(01) = 10$ ✓ (drop first bit 0, append 0 to get 10)
+- $\mathit{double}(10) = 00$ ✓ (drop first bit 1, append 0 to get 00)
+- $\mathit{double}(11) = 10$ ✓ (drop first bit 1, append 0 to get 10)
+- $01$ ✗ (would need a string starting with 0 whose double is 01, but doubling always appends 0)
+- $11$ ✗ (would need a string whose double ends in 1, but doubling always appends 0)
+- $001$ ✗ (would need a 3-character result, but $L$ only contains 2-character strings)
+- $101$ ✗ (would need a 3-character result, but $L$ only contains 2-character strings)
+
+Note that $L' = \{10, 00\}$ (the duplicate 10 from both 01 and 11 counts as one element in the set).
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

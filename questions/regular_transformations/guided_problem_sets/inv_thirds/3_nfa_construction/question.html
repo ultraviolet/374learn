@@ -1,0 +1,71 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \mathit{thirds}^{-1}(L) := \{w \in \Sigma^* \mid \mathit{thirds}(w) \in L\}
+$$
+
+where $\mathit{thirds}(w)$ returns the subsequence of $w$ containing every third symbol (positions 3, 6, 9, etc.).
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Note:** For this transformation, we use three labels: `0` (just read position 3, 6, 9, ...), `1` (at position 1, 4, 7, ...), and `2` (at position 2, 5, 8, ...).
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-2" correct-answer="{0, 1, 2}" show-help-text=false size=20 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, 1)" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+$\delta' ((q, 0), 0) =$
+<pl-string-input answers-name="transition-0-0" correct-answer="{(q, 1)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, 0), 1) =$
+<pl-string-input answers-name="transition-0-1" correct-answer="{(q, 1)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, 1), 0) =$
+<pl-string-input answers-name="transition-1-0" correct-answer="{(q, 2)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, 1), 1) =$
+<pl-string-input answers-name="transition-1-1" correct-answer="{(q, 2)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, 2), 0) =$
+<pl-string-input answers-name="transition-2-0" correct-answer="{(δ(q, 0), 0)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, 2), 1) =$
+<pl-string-input answers-name="transition-2-1" correct-answer="{(δ(q, 1), 0)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states-1" correct-answer="A" show-help-text=false size=1 allow-blank=true></pl-string-input>
+$\times$
+<pl-string-input answers-name="accepting-states-2" correct-answer="{0, 1, 2}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

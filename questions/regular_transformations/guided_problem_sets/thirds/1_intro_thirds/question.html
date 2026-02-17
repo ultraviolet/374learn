@@ -1,0 +1,55 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+The function $\mathit{thirds}(w)$ returns the subsequence of $w$ containing every third symbol (positions 3, 6, 9, etc.).
+
+For example:
+- $\mathit{thirds}(011000110) = 100$ (takes positions 3, 6, 9: the 1, 0, 0)
+- $\mathit{thirds}(01101) = 1$ (takes position 3: the 1)
+- $\mathit{thirds}(01) = \varepsilon$ (no position 3, so empty string)
+
+We define the language transformation as:
+$$L' = \{\mathit{thirds}(w) \mid w \in L\}$$
+
+<hr>
+Suppose that $L = \{ 000, 001, 010, 011, 100, 101, 110, 111 \}$ (all 3-character binary strings). What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">0</pl-answer>
+    <pl-answer correct="true">1</pl-answer>
+    <pl-answer correct="false">00</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">11</pl-answer>
+    <pl-answer correct="false">$\varepsilon$ (empty string)</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings that are $\mathit{thirds}(w)$ for some $w \in L$.
+
+Since all strings in $L$ have length 3, applying $\mathit{thirds}$ to each string extracts only the 3rd character:
+
+- $\mathit{thirds}(000) = 0$ (position 3: the 0)
+- $\mathit{thirds}(001) = 1$ (position 3: the 1)
+- $\mathit{thirds}(010) = 0$ (position 3: the 0)
+- $\mathit{thirds}(011) = 1$ (position 3: the 1)
+- $\mathit{thirds}(100) = 0$ (position 3: the 0)
+- $\mathit{thirds}(101) = 1$ (position 3: the 1)
+- $\mathit{thirds}(110) = 0$ (position 3: the 0)
+- $\mathit{thirds}(111) = 1$ (position 3: the 1)
+
+Therefore, $L' = \{0, 1\}$ ✓
+
+- $00$, $01$, $10$, $11$ ✗ (would need strings in $L$ with length at least 6 to produce 2-character outputs)
+- $\varepsilon$ ✗ (would need strings in $L$ with length less than 3, but all strings in $L$ have exactly length 3)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

@@ -1,0 +1,11 @@
+{
+    "uuid": "48f9fc49-5256-4857-83df-ce34edf4ad08",
+    "title": "Constructing the Final NFA",
+    "topic": "Regular Language Transformations",
+    "tags": [
+        "Guided Practice",
+        "xor"
+    ],
+    "type": "v3",
+    "singleVariant": true
+}

@@ -1,0 +1,44 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+$$L' = \{xy \mid x \cdot 1^n \cdot y \in L ~\text{for some}~ n \ge 0\}$$
+
+In other words, $L'$ consists of all strings that can be formed by taking a string in $L$ and removing some (possibly empty) sequence of consecutive 1s.
+
+For example:
+- If $x1111y \in L$, then $xy \in L'$ (we can remove the four consecutive 1s)
+- If $x11y \in L$, then $xy \in L'$ (we can remove the two consecutive 1s)
+- If $xy \in L$, then $xy \in L'$ (we can remove zero 1s, i.e., $n = 0$)
+
+<hr>
+Suppose that $L = \{ 011 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">011</pl-answer>
+    <pl-answer correct="true">01</pl-answer>
+    <pl-answer correct="true">0</pl-answer>
+    <pl-answer>11</pl-answer>
+    <pl-answer>0111</pl-answer>
+    <pl-answer>00</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that inserting some number of consecutive 1s into $w$ gives us $011$.
+
+- $011 \in L'$ ✓ (insert zero 1s: $011 = 011$)
+- $01 \in L'$ ✓ (insert one 1 between the 0 and the 1: $0 \cdot 1 \cdot 1 = 011$)
+- $0 \in L'$ ✓ (insert two 1s after the 0: $0 \cdot 11 \cdot \varepsilon = 011$)
+- $11 \notin L'$ ✗ (cannot insert consecutive 1s into $11$ to get $011$)
+- $0111 \notin L'$ ✗ (would require removing a 1, not inserting)
+- $00 \notin L'$ ✗ (cannot insert consecutive 1s into $00$ to get $011$)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

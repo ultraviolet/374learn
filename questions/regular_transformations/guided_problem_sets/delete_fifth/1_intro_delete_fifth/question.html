@@ -1,0 +1,44 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+$$L' = \{xy \mid xay \in L ~\text{for some}~x,y \in \Sigma^* ~\text{and}~ a \in \Sigma ~\text{such that}~ |y| = 4\}$$
+
+In other words, $L'$ is the language obtained by taking strings from $L$ and deleting the 5th character from the end (if it exists).
+
+For example:
+- If $w = 1100010$ is in $L$, then $110010$ is in $L'$ (delete the 5th character from the end: the first $0$)
+- If $w = 11011$ is in $L$, then $1111$ is in $L'$ (delete the 5th character from the end: the $0$)
+- If $w = 111$ is in $L$ (fewer than 5 characters), then there's no corresponding string in $L'$ from this string
+
+<hr>
+Suppose that $L = \{ 11111 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">1111</pl-answer>
+    <pl-answer correct="false">11111</pl-answer>
+    <pl-answer correct="false">111</pl-answer>
+    <pl-answer correct="false">11</pl-answer>
+    <pl-answer correct="false">01111</pl-answer>
+    <pl-answer correct="false">10111</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w'$ such that we can form some string in $L = \{11111\}$ by inserting a character at the position that is 5 from the end.
+
+- $1111$ is in $L'$ because we can insert a $1$ at the 5th position from the end to get $11111 \in L$ (insert between position 1 and 2: $1 \cdot 1 \cdot 1111$)
+- $11111$ is not the result of deleting the 5th character from the end of any string in $L$ (it has 5 characters, and deleting would give 4 characters)
+- $111$ is not in $L'$ because no matter where we insert a character into $111$, we cannot get a string with 5 characters that equals $11111$
+- $11$ is not in $L'$ for similar reasons
+- $01111$ is not in $L'$ because inserting any character at the 5th position from the end cannot produce $11111$
+- $10111$ is not in $L'$ for similar reasons
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

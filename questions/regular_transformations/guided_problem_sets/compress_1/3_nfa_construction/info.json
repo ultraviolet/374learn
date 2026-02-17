@@ -1,0 +1,11 @@
+{
+    "uuid": "cef42339-e0da-4899-bc66-3e4a70bfa64f",
+    "title": "Constructing the Final NFA",
+    "topic": "Regular Language Transformations",
+    "tags": [
+        "Guided Practice",
+        "compress"
+    ],
+    "type": "v3",
+    "singleVariant": true
+}

@@ -1,0 +1,69 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \text{MoveBack}_8(L) = \{xayz : xyaz \in L ~\text{for some}~ x, y, z \in \{0, 1\}^{*} ~\text{and}~ a \in \{0, 1\} ~\text{such that}~ |{y}| \leq 8\}
+$$
+
+In other words, $L'$ is obtained by moving a character backward by at most 8 positions in strings from $L$.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Note:** For this transformation, the NFA $M'$ has states of three forms:
+- $(q, \text{before})$ for each state $q \in Q$ (representing states before choosing which character to move)
+- $(q, a, i, \text{middle})$ for each state $q \in Q$, $a \in \{0, 1\}$, and $i \in \{0, 1, 2, 3, 4, 5, 6, 7, 8\}$ (representing states after guessing character $a$ will be moved, having read $i$ characters since)
+- $(q, \text{after})$ for each state $q \in Q$ (representing states after placing the moved character)
+
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states" correct-answer="{(q, before) | q ∈ Q} ∪ {(q, a, i, middle) | q ∈ Q, a ∈ {0,1}, i ∈ {0,1,2,3,4,5,6,7,8}} ∪ {(q, after) | q ∈ Q}" show-help-text=false size=120 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, before)" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+For $a \in \{0, 1\}$:
+
+$\delta'((q, \text{before}), a) =$
+<pl-string-input answers-name="transition-before" correct-answer="{(δ(q, a), before), (q, a, 0, middle)}" show-help-text=false size=60 allow-blank=true></pl-string-input>
+
+For $a, b \in \{0, 1\}$ and $i \in \{0, 1, 2, 3, 4, 5, 6, 7\}$:
+
+$\delta'((q, a, i, \text{middle}), b) =$
+<pl-string-input answers-name="transition-middle-symbol" correct-answer="{(δ(q, b), a, i+1, middle)}" show-help-text=false size=50 allow-blank=true></pl-string-input>
+
+For $a \in \{0, 1\}$ and $i \in \{0, 1, 2, 3, 4, 5, 6, 7, 8\}$:
+
+$\delta'((q, a, i, \text{middle}), \varepsilon) =$
+<pl-string-input answers-name="transition-middle-epsilon" correct-answer="{(δ(q, a), after)}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+For $a \in \{0, 1\}$:
+
+$\delta'((q, \text{after}), a) =$
+<pl-string-input answers-name="transition-after" correct-answer="{(δ(q, a), after)}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states" correct-answer="{(q, after) | q ∈ A}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

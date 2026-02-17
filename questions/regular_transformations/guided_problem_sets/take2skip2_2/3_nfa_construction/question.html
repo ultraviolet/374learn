@@ -1,0 +1,80 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{\mathit{take2skip2}(w) \mid w \in L\}
+$$
+
+where $\mathit{take2skip2}(w)$ takes the first two symbols of $w$, skips the next two, takes the next two, skips the next two, and so on.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct an NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Note:** For this transformation, we use four labels: `take1` (reading first symbol of a "take" pair), `take2` (reading second symbol of a "take" pair), `skip1` (reading first symbol of a "skip" pair), and `skip2` (reading second symbol of a "skip" pair).
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-2" correct-answer="{take1, take2, skip1, skip2}" show-help-text=false size=30 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, take1)" show-help-text=false size=15 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{take1}), 0) =$
+<pl-string-input answers-name="transition-take1-0" correct-answer="{(δ(q, 0), take2)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{take1}), 1) =$
+<pl-string-input answers-name="transition-take1-1" correct-answer="{(δ(q, 1), take2)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{take2}), 0) =$
+<pl-string-input answers-name="transition-take2-0" correct-answer="{(δ(q, 0), skip1)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{take2}), 1) =$
+<pl-string-input answers-name="transition-take2-1" correct-answer="{(δ(q, 1), skip1)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{skip1}), 0) =$
+<pl-string-input answers-name="transition-skip1-0" correct-answer="{(q, skip2)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{skip1}), 1) =$
+<pl-string-input answers-name="transition-skip1-1" correct-answer="{(q, skip2)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{skip2}), 0) =$
+<pl-string-input answers-name="transition-skip2-0" correct-answer="{(q, take1)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{skip2}), 1) =$
+<pl-string-input answers-name="transition-skip2-1" correct-answer="{(q, take1)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states-1" correct-answer="A" show-help-text=false size=1 allow-blank=true></pl-string-input>
+$\times$
+<pl-string-input answers-name="accepting-states-2" correct-answer="{take1, take2, skip1, skip2}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

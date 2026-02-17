@@ -1,0 +1,56 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+$$L' = \text{MoveBack}_8(L) = \{xayz : xyaz \in L ~\text{for some}~ x, y, z \in \{0, 1\}^{*} ~\text{and}~ a \in \{0, 1\} ~\text{such that}~ |{y}| \leq 8\}$$
+
+In other words, $L'$ is the language obtained by taking strings from $L$ and moving a character backward by at most 8 positions.
+
+For example:
+- If $w = 0100101001\textbf{1}0011$ is in $L$, then $01\textbf{1}001010010011$ is in $L'$ (move the bold $1$ backward by 8 positions)
+- If $w = 11\textbf{0}11011$ is in $L$, then $1\textbf{0}1111011$ is in $L'$ (move the bold $0$ backward by 2 positions)
+- If $w = \textbf{1}0101$ is in $L$, then $w$ itself is also in $L'$ (move the bold $1$ backward by 0 positions, i.e., no movement)
+
+<hr>
+Suppose that $L = \{ 0011 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">0011</pl-answer>
+    <pl-answer correct="true">0101</pl-answer>
+    <pl-answer correct="true">1001</pl-answer>
+    <pl-answer correct="false">0110</pl-answer>
+    <pl-answer correct="false">1010</pl-answer>
+    <pl-answer correct="false">1100</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w'$ such that we can form $0011 \in L$ by moving a character forward by at most 8 positions.
+
+The transformation takes $xyaz \in L$ and produces $xayz \in L'$ where $|y| \leq 8$. So we're moving character $a$ backward over string $y$.
+
+Given $xyaz = 0011$, we can produce $xayz$ by choosing different decompositions:
+
+1. $x=\varepsilon, y=\varepsilon, a=0, z=011$: gives $xayz = 0011$ ✓ (no movement)
+2. $x=\varepsilon, y=0, a=0, z=11$: gives $xayz = 0011$ (duplicate - no net change)
+3. $x=\varepsilon, y=00, a=1, z=1$: gives $xayz = 0101$ ✓ (move first $1$ back 2 positions)
+4. $x=\varepsilon, y=001, a=1, z=\varepsilon$: gives $xayz = 1001$ ✓ (move last $1$ back 3 positions)
+5. $x=0, y=\varepsilon, a=0, z=11$: gives $xayz = 0011$ (duplicate)
+6. $x=0, y=0, a=1, z=1$: gives $xayz = 0101$ (duplicate)
+7. $x=0, y=01, a=1, z=\varepsilon$: gives $xayz = 1001$ (duplicate)
+8. $x=00, y=\varepsilon, a=1, z=1$: gives $xayz = 0011$ (duplicate)
+9. $x=00, y=1, a=1, z=\varepsilon$: gives $xayz = 1001$ (duplicate)
+
+So the distinct strings in $L'$ are: $0011, 0101, 1001$.
+
+- $0110$ is not in $L'$ because we cannot decompose $0011$ to produce it via the transformation
+- $1010$ is not in $L'$ for similar reasons
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

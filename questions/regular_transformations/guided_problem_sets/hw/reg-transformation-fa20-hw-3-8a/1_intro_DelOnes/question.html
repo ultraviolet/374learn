@@ -1,0 +1,60 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+The transformation $\mathit{DelOnes}(L)$ produces a language where all $1$s are removed from strings of $L$.
+
+More formally: $L' = \{0^{\#_0(w)} \mid w \in L\}$
+
+where $\#_0(w)$ denotes the number of $0$s in string $w$.
+
+For example:
+- If $w = 11000010 \in L$, then $0000 \in L'$ (all $1$s are removed, leaving 4 $0$s)
+- If $w = 00010 \in L$, then $000 \in L'$ (all $1$s are removed, leaving 3 $0$s)
+- If $w = 111 \in L$, then $\varepsilon \in L'$ (all $1$s are removed, leaving the empty string)
+
+<hr>
+Suppose that $L = \{ 00 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">00</pl-answer>
+    <pl-answer correct="true">100</pl-answer>
+    <pl-answer correct="true">010</pl-answer>
+    <pl-answer correct="true">001</pl-answer>
+    <pl-answer correct="true">1100</pl-answer>
+    <pl-answer correct="true">1010</pl-answer>
+    <pl-answer correct="true">1001</pl-answer>
+    <pl-answer correct="true">0110</pl-answer>
+    <pl-answer>0</pl-answer>
+    <pl-answer>000</pl-answer>
+    <pl-answer>11</pl-answer>
+    <pl-answer>01</pl-answer>
+    <pl-answer>10</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that when we remove all $1$s from $w$, we get a string in $L = \{00\}$. In other words, we need $w$ to have exactly two $0$s (and any number of $1$s).
+
+- $00$ has 2 $0$s, remove $1$s → $00$ ✓
+- $100$ has 2 $0$s, remove $1$s → $00$ ✓
+- $010$ has 2 $0$s, remove $1$s → $00$ ✓
+- $001$ has 2 $0$s, remove $1$s → $00$ ✓
+- $1100$ has 2 $0$s, remove $1$s → $00$ ✓
+- $1010$ has 2 $0$s, remove $1$s → $00$ ✓
+- $1001$ has 2 $0$s, remove $1$s → $00$ ✓
+- $0110$ has 2 $0$s, remove $1$s → $00$ ✓
+- $0$ has 1 $0$, remove $1$s → $0$ ✗
+- $000$ has 3 $0$s, remove $1$s → $000$ ✗
+- $11$ has 0 $0$s, remove $1$s → $\varepsilon$ ✗
+- $01$ has 1 $0$, remove $1$s → $0$ ✗
+- $10$ has 1 $0$, remove $1$s → $0$ ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

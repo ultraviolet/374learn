@@ -1,0 +1,53 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+$$\mathsf{PPPREFIX}(L) = \{x \mid x \text{ is a proper-proper prefix of some string } w \in L\}.$$
+
+Or alternatively,
+
+$$\mathsf{PPPREFIX}(L) = \{ x \mid xy \in L ~\text{for some}~ y\in\Sigma^* ~\text{such that}~ |y|\ge 2 \}.$$
+
+Given a string $w$, a prefix is any string $x$ such that there is a string $y$ such
+that $xy=w$. A proper prefix of $w$ is a string $x$ such that there is a $y$ with
+$|y| \geq 1$ such that $xy=w$. We will call a string $x$ a proper-proper prefix
+of $w$ if there is a string y such that $|y| \geq 2$ and $xy = w$.
+
+For example, if $w = abcde$, then $abc, ab, a,$ and $\epsilon$ are proper-proper prefixes of $w$,
+but $abcd$ and $abcde$ are not.
+
+<hr>
+Suppose that $L = \{ 111, 1111 \}$. What strings are contained in $\mathsf{PPPREFIX}(L)$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">ε</pl-answer>
+    <pl-answer correct="true">1</pl-answer>
+    <pl-answer correct="true">11</pl-answer>
+    <pl-answer correct="false">111</pl-answer>
+    <pl-answer correct="false">1111</pl-answer>
+    <pl-answer correct="false">11111</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $x$ such that $xy \in L = \{111, 1111\}$ for some $y$ with $|y| \geq 2$.
+
+- $\epsilon$ is in $\mathsf{PPPREFIX}(L)$ because $\epsilon \cdot 111 = 111 \in L$ (here $y = 111$ and $|y| = 3 \geq 2$) ✓
+- $1$ is in $\mathsf{PPPREFIX}(L)$ because $1 \cdot 11 = 111 \in L$ (here $y = 11$ and $|y| = 2 \geq 2$) ✓
+- $11$ is in $\mathsf{PPPREFIX}(L)$ because $11 \cdot 11 = 1111 \in L$ (here $y = 11$ and $|y| = 2 \geq 2$) ✓
+- $111$ is not in $\mathsf{PPPREFIX}(L)$ because:
+  - For $111 \cdot y = 111$ we need $y = \epsilon$ with $|y| = 0 < 2$ ✗
+  - For $111 \cdot y = 1111$ we need $y = 1$ with $|y| = 1 < 2$ ✗
+- $1111$ is not in $\mathsf{PPPREFIX}(L)$ because:
+  - For $1111 \cdot y = 1111$ we need $y = \epsilon$ with $|y| = 0 < 2$ ✗
+  - We cannot extend $1111$ to get any string in $L$ ✗
+- $11111$ is not in $\mathsf{PPPREFIX}(L)$ because no string starting with $11111$ is in $L$ ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

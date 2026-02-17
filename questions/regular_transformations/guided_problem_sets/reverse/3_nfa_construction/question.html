@@ -1,0 +1,67 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{w \in \Sigma^* \mid w^R \in L\}
+$$
+
+where $w^R$ denotes the reverse of string $w$.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Note:** For this transformation, we introduce a new initial state $s'$ that is not in $Q$. This new state has epsilon transitions to all states that were accepting in $M$.
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' = \{s'\} \cup$
+<pl-string-input answers-name="states" correct-answer="Q" show-help-text=false size=5 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="s'" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+For the transition function, we need to specify:
+1. Transitions for the new initial state $s'$
+2. Reversed transitions for all states in $Q$
+
+$\delta' (s', \varepsilon) =$
+<pl-string-input answers-name="transition-new-initial-epsilon" correct-answer="A" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' (s', 0) =$
+<pl-string-input answers-name="transition-new-initial-0" correct-answer="{}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' (s', 1) =$
+<pl-string-input answers-name="transition-new-initial-1" correct-answer="{}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+For any state $q \in Q$ and symbol $a \in \{0, 1\}$:
+
+$\delta' (q, a) = \{p \in Q \mid$
+<pl-string-input answers-name="transition-reversed-condition" correct-answer="δ(p, a) = q" show-help-text=false size=30 allow-blank=true></pl-string-input>
+$\}$
+
+$\delta' (q, \varepsilon) =$
+<pl-string-input answers-name="transition-q-epsilon" correct-answer="{}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states" correct-answer="{s}" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

@@ -1,0 +1,45 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+The function $\mathit{parity\_runs}(w)$ returns the string formed by replacing each maximal substring of identical bits in $w$ with $1$ if the length of the substring is odd, and with $0$ if the length is even.
+
+For example:
+- $\mathit{parity\_runs}(11000010) = 0011$ (run of two $1$s → $0$, run of four $0$s → $0$, run of one $0$ → $1$, run of one $1$ → $1$, run of one $0$ → $1$)
+- $\mathit{parity\_runs}(111) = 1$ (run of three $1$s → $1$)
+- $\mathit{parity\_runs}(1100) = 00$ (run of two $1$s → $0$, run of two $0$s → $0$)
+
+We define the language transformation as:
+$$L' = \{w \in \Sigma^* \mid \mathit{parity\_runs}(w) \in L\}$$
+
+<hr>
+Suppose that $L = \{ 01 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">110</pl-answer>
+    <pl-answer correct="true">001</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">0011</pl-answer>
+    <pl-answer correct="false">1100</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that $\mathit{parity\_runs}(w) = 01$.
+
+- $\mathit{parity\_runs}(110) = 01$ ✓ (run of two $1$s → $0$, run of one $0$ → $1$)
+- $\mathit{parity\_runs}(001) = 01$ ✓ (run of two $0$s → $0$, run of one $1$ → $1$)
+- $\mathit{parity\_runs}(01) = 11$ ✗ (run of one $0$ → $1$, run of one $1$ → $1$)
+- $\mathit{parity\_runs}(10) = 11$ ✗ (run of one $1$ → $1$, run of one $0$ → $1$)
+- $\mathit{parity\_runs}(0011) = 00$ ✗ (run of two $0$s → $0$, run of two $1$s → $0$)
+- $\mathit{parity\_runs}(1100) = 00$ ✗ (run of two $1$s → $0$, run of two $0$s → $0$)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

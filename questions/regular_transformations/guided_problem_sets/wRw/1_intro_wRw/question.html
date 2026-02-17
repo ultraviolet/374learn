@@ -1,0 +1,47 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+For a string $w$, we define $w^R$ as the reverse of $w$. For example, if $w = 010$, then $w^R = 010$.
+
+We define the language transformation as:
+$$L' = \{w \mid w^Rw \in L\}$$
+
+In other words, a string $w$ is in $L'$ if and only if the reverse of $w$ followed by $w$ is in $L$.
+
+For example:
+- If $w = 01$ and $w^Rw = 1001 \in L$, then $w \in L'$
+- If $w = 10$ and $w^Rw = 0110 \in L$, then $w \in L'$
+- If $w = 0$ and $w^Rw = 00 \in L$, then $w \in L'$
+
+<hr>
+Suppose that $L = \{ 1001, 0110, 00 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">01</pl-answer>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="true">0</pl-answer>
+    <pl-answer correct="false">11</pl-answer>
+    <pl-answer correct="false">1001</pl-answer>
+    <pl-answer correct="false">0110</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that $w^Rw \in L = \{1001, 0110, 00\}$.
+
+- For $w = 01$: $w^R = 10$, so $w^Rw = 1001 \in L$ ✓
+- For $w = 10$: $w^R = 01$, so $w^Rw = 0110 \in L$ ✓
+- For $w = 0$: $w^R = 0$, so $w^Rw = 00 \in L$ ✓
+- For $w = 11$: $w^R = 11$, so $w^Rw = 1111 \notin L$ ✗
+- For $w = 1001$: $w^R = 1001$, so $w^Rw = 10011001 \notin L$ ✗
+- For $w = 0110$: $w^R = 0110$, so $w^Rw = 01100110 \notin L$ ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

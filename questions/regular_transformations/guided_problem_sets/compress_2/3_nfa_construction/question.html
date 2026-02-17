@@ -1,0 +1,64 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{\mathit{compress}(w) \mid w \in L\}
+$$
+
+where $\mathit{compress}(w)$ compresses every run of $0$s in $w$ by half.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Note:** For this transformation, we use two labels: `normal` (not in middle of expanding) and `expanding` (just fed first 0 of a pair, need to feed second 0).
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-2" correct-answer="{normal, expanding}" show-help-text=false size=20 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, normal)" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{normal}), 0) =$
+<pl-string-input answers-name="transition-normal-0" correct-answer="{(δ(q, 0), normal), (δ(q, 0), expanding)}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{normal}), 1) =$
+<pl-string-input answers-name="transition-normal-1" correct-answer="{(δ(q, 1), normal)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{expanding}), 0) =$
+<pl-string-input answers-name="transition-expanding-0" correct-answer="{(δ(q, 0), normal), (δ(q, 0), expanding)}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{expanding}), 1) =$
+<pl-string-input answers-name="transition-expanding-1" correct-answer="{(δ(q, 1), normal)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states-1" correct-answer="A" show-help-text=false size=1 allow-blank=true></pl-string-input>
+$\times$
+<pl-string-input answers-name="accepting-states-2" correct-answer="{normal, expanding}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

@@ -1,0 +1,45 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+The function $\mathit{skip}(w)$ returns the subsequence of $w$ containing only the odd-positioned symbols of $w$ (1st, 3rd, 5th, etc.).
+
+For example:
+- $\mathit{skip}(010101) = 000$ (takes positions 1, 3, 5: the 0s)
+- $\mathit{skip}(1100) = 10$ (takes positions 1, 3: the 1 and the 0)
+- $\mathit{skip}(1) = 1$ (takes position 1: the 1)
+
+We define the language transformation as:
+$$L' = \{\mathit{skip}(w) \mid w \in L\}$$
+
+<hr>
+Suppose that $L = \{ 01, 10 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">0</pl-answer>
+    <pl-answer correct="true">1</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">00</pl-answer>
+    <pl-answer correct="false">11</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings that are $\mathit{skip}(w)$ for some $w \in L = \{01, 10\}$.
+
+- $\mathit{skip}(01) = 0$ ✓ (takes position 1: the 0)
+- $\mathit{skip}(10) = 1$ ✓ (takes position 1: the 1)
+- $01$ ✗ (would need a 4-character string in $L$, but $L$ only has 2-character strings)
+- $10$ ✗ (would need a 4-character string in $L$, but $L$ only has 2-character strings)
+- $00$ ✗ (would need $\mathit{skip}(w) = 00$, requiring a 4-character string starting with 0 at positions 1 and 3, but no such string is in $L$)
+- $11$ ✗ (would need $\mathit{skip}(w) = 11$, requiring a 4-character string starting with 1 at positions 1 and 3, but no such string is in $L$)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

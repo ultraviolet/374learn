@@ -1,0 +1,54 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+We define the language transformation as:
+$$L' = \{x1yz \mid xy1z \in L\}$$
+
+In other words, if a string in $L$ has a $1$ at some position (specifically, a string of the form $xy1z$), then the string formed by moving that $1$ one position to the right (forming $x1yz$) is in $L'$.
+
+For example:
+- If $0011 \in L$, then $0101 \in L'$ (the $1$ at position 2 moves to position 1)
+- If $1100 \in L$, then $1010 \in L'$ (the $1$ at position 1 moves to position 2)
+- If $101 \in L$, then $110 \in L'$ (the $1$ at position 1 moves to position 2)
+
+Note: The transformation applies to **one specific occurrence** of $1$ in the string. If there are multiple $1$s, any one of them could potentially be moved.
+
+<hr>
+Suppose that $L = \{ 01, 10 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="true">01</pl-answer>
+    <pl-answer correct="false">00</pl-answer>
+    <pl-answer correct="false">11</pl-answer>
+    <pl-answer correct="false">001</pl-answer>
+    <pl-answer correct="false">100</pl-answer>
+    <pl-answer correct="false">010</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w = x1yz$ such that $xy1z \in L$.
+
+From $01 \in L$:
+- Let $x = \epsilon, y = \epsilon, z = \epsilon$: Then $xy1z = 01 \in L$ and $x1yz = 10 \in L'$ ✓
+
+From $10 \in L$:
+- Let $x = \epsilon, y = \epsilon, z = \epsilon$: Then $xy1z = 10 \in L$ and $x1yz = 01 \in L'$ ✓
+
+Note that we can only move a $1$ that already exists in the string, and we can only move it one position to the right. Since $L$ only contains strings of length 2 with exactly one $1$, moving that $1$ one position to the right gives us both possible length-2 strings with one $1$.
+
+Strings like $00$, $11$, $001$, etc. cannot be in $L'$ because:
+- $00$ would require $0\underline{1}0 \in L$ (doesn't exist)
+- $11$ would require $1\underline{1}1 \in L$ (doesn't exist, and $L$ only has length-2 strings)
+- $001$ would require $00\underline{1}1 \in L$ or $0\underline{1}01 \in L$ (both don't exist)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

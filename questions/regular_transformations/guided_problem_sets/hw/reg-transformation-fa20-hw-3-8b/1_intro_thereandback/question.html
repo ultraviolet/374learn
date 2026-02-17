@@ -1,0 +1,66 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+For a string $w$, we define $w^R$ as the reverse of $w$. For example, if $w = 0110$, then $w^R = 0110$.
+
+We define the language transformation as:
+$$L' = \{xy \mid x \in L, y^R \in L\}$$
+
+In other words, a string $w = xy$ is in $L'$ if we can split it into two parts $x$ and $y$ such that both $x$ is in $L$ and $y^R$ (the reverse of $y$) is also in $L$.
+
+For example:
+- If $w = 10011$ and we split it as $x = 10$ and $y = 011$, then $w \in L'$ if both $10 \in L$ and $011^R = 110 \in L$
+- If $w = 1010$ and we split it as $x = 10$ and $y = 10$, then $w \in L'$ if both $10 \in L$ and $10^R = 01 \in L$
+
+<hr>
+Suppose that $L = \{ 0, 10, 110 \}$. What strings are contained in $L'$?
+
+Remember: A string $w$ is in $L'$ if we can find ANY valid split $w = xy$ where $x \in L$ and $y^R \in L$.
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">00</pl-answer>
+    <pl-answer correct="true">010</pl-answer>
+    <pl-answer correct="true">0011</pl-answer>
+    <pl-answer correct="true">100</pl-answer>
+    <pl-answer correct="true">1010</pl-answer>
+    <pl-answer correct="true">10011</pl-answer>
+    <pl-answer correct="true">1100</pl-answer>
+    <pl-answer correct="true">11010</pl-answer>
+    <pl-answer correct="true">110011</pl-answer>
+    <pl-answer correct="false">0</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+    <pl-answer correct="false">11</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w = xy$ such that $x \in L = \{0, 10, 110\}$ and $y^R \in L$.
+
+For each choice of $x \in L$, we can choose $y$ such that $y^R \in L$:
+- If $x = 0$: $y^R$ can be $0$, $10$, or $110$, so $y$ can be $0$, $01$, or $011$
+  - $xy$ can be $00$, $010$, or $0011$ ✓
+- If $x = 10$: $y^R$ can be $0$, $10$, or $110$, so $y$ can be $0$, $01$, or $011$
+  - $xy$ can be $100$, $1010$, or $10011$ ✓
+- If $x = 110$: $y^R$ can be $0$, $10$, or $110$, so $y$ can be $0$, $01$, or $011$
+  - $xy$ can be $1100$, $11010$, or $110011$ ✓
+
+So $L' = \{00, 010, 0011, 100, 1010, 10011, 1100, 11010, 110011\}$.
+
+The other strings are not in $L'$:
+- For $w = 0$: We cannot split it into non-empty parts where both conditions hold
+- For $w = 10$: We need $x \in L$ and $y^R \in L$. Checking all splits:
+  - Split as $x = \varepsilon, y = 10$: but $\varepsilon \notin L$ ✗
+  - Split as $x = 1, y = 0$: but $1 \notin L$ ✗
+  - Split as $x = 10, y = \varepsilon$: but $\varepsilon \notin L$ ✗
+- Similar reasoning shows $01$ and $11$ are not in $L'$
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

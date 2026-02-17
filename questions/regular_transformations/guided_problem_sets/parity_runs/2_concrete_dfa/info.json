@@ -1,0 +1,10 @@
+{
+    "uuid": "ae40e89d-8326-47ff-a603-db06896949de",
+    "title": "Apply Transformation to a Concrete DFA",
+    "topic": "Regular Language Transformations",
+    "tags": [
+        "Guided Practice",
+        "parity_runs"
+    ],
+    "type": "v3"
+}

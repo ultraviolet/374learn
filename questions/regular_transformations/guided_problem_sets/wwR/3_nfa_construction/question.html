@@ -1,0 +1,56 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{w \mid ww^R \in L\}
+$$
+
+where $w^R$ denotes the reverse of string $w$.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Hint:** The construction uses states of the form $(q_i, q_j)$ where $q_i$ simulates reading $w$ forward on $M$ and $q_j$ simulates reading $w$ backward on $M$. We need epsilon transitions from a new initial state to guess where the backward simulation should start (which must be in a final state of $M$ for $ww^R$ to be accepted).
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q × Q" show-help-text=false size=10 remove-spaces="true" allow-blank=true></pl-string-input>
+$\cup$
+<pl-string-input answers-name="states-2" correct-answer="{START}" show-help-text=false size=20 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="START" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+$\delta'(\text{START}, \varepsilon) =$
+<pl-string-input answers-name="transition-start-epsilon" correct-answer="{(s, q) | q ∈ A}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+$\delta'(\text{START}, a) =$
+<pl-string-input answers-name="transition-start-a" correct-answer="{}" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+$\delta' ((q_i, q_j), a) =$
+<pl-string-input answers-name="transition-pair" correct-answer="{(δ(qi, a), r) | r ∈ Q, δ(r, a) = qj}" show-help-text=false size=50 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states" correct-answer="{(q, q) | q ∈ Q}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

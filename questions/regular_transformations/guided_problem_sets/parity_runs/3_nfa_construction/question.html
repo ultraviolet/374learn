@@ -1,0 +1,88 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{w \in \Sigma^* \mid \mathit{parity\_runs}(w) \in L\}
+$$
+
+where $\mathit{parity\_runs}(w)$ returns the string formed by replacing each maximal substring of identical bits in $w$ with $1$ if the length of the substring is odd, and with $0$ if the length is even.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Note:** For this transformation, we use five labels: `start` (beginning, no bits read yet), `read0_odd` (odd number of 0s in current run), `read0_even` (even number of 0s in current run), `read1_odd` (odd number of 1s in current run), and `read1_even` (even number of 1s in current run).
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-2" correct-answer="{start, read0_odd, read0_even, read1_odd, read1_even}" show-help-text=false size=50 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, start)" show-help-text=false size=15 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{start}), 0) =$
+<pl-string-input answers-name="transition-start-0" correct-answer="{(q, read0_odd)}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{start}), 1) =$
+<pl-string-input answers-name="transition-start-1" correct-answer="{(q, read1_odd)}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{read0\_odd}), 0) =$
+<pl-string-input answers-name="transition-read0odd-0" correct-answer="{(q, read0_even)}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{read0\_odd}), 1) =$
+<pl-string-input answers-name="transition-read0odd-1" correct-answer="{(δ(q, 1), read1_odd)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{read0\_even}), 0) =$
+<pl-string-input answers-name="transition-read0even-0" correct-answer="{(q, read0_odd)}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{read0\_even}), 1) =$
+<pl-string-input answers-name="transition-read0even-1" correct-answer="{(δ(q, 0), read1_odd)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{read1\_odd}), 0) =$
+<pl-string-input answers-name="transition-read1odd-0" correct-answer="{(δ(q, 1), read0_odd)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{read1\_odd}), 1) =$
+<pl-string-input answers-name="transition-read1odd-1" correct-answer="{(q, read1_even)}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{read1\_even}), 0) =$
+<pl-string-input answers-name="transition-read1even-0" correct-answer="{(δ(q, 0), read0_odd)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{read1\_even}), 1) =$
+<pl-string-input answers-name="transition-read1even-1" correct-answer="{(q, read1_odd)}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states-1" correct-answer="A" show-help-text=false size=1 allow-blank=true></pl-string-input>
+$\times$
+<pl-string-input answers-name="accepting-states-2" correct-answer="{read0_odd, read0_even, read1_odd, read1_even}" show-help-text=false size=50 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

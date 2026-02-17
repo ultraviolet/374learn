@@ -1,0 +1,44 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+The function $\mathit{compress}(w)$ takes a string $w$ as input, and returns the string formed by compressing every run of $0$s in $w$ by half. Specifically, every run of $2n$ $0$s is compressed to length $n$, and every run of $2n + 1$ $0$s is compressed to length $n + 1$.
+
+For example:
+- $\mathit{compress}(11000010) = 110010$ (the run of four $0$s becomes two $0$s, the single $0$ stays)
+- $\mathit{compress}(00010) = 010$ (the run of three $0$s becomes two $0$s)
+
+We define the language transformation as:
+$$L' = \{w \in \Sigma^* \mid \mathit{compress}(w) \in L\}$$
+
+<hr>
+Suppose that $L = \{ 10 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="true">100</pl-answer>
+    <pl-answer>01</pl-answer>
+    <pl-answer>001</pl-answer>
+    <pl-answer>1000</pl-answer>
+    <pl-answer>010</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that $\mathit{compress}(w) = 10$.
+
+- $\mathit{compress}(10) = 10$ ✓ (single $0$ stays)
+- $\mathit{compress}(100) = 10$ ✓ (two $0$s compress to one $0$)
+- $\mathit{compress}(01) = 01$ ✗
+- $\mathit{compress}(001) = 01$ ✗ (two $0$s compress to one $0$)
+- $\mathit{compress}(1000) = 100$ ✗ (three $0$s compress to two $0$s)
+- $\mathit{compress}(010) = 010$ ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

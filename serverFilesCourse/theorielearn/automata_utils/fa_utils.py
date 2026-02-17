@@ -70,7 +70,7 @@ def check_dfa(
 
 
 def states_to_string(obj: Any) -> str:
-    if isinstance(obj, set):
+    if isinstance(obj, (set, frozenset)):
         if not obj:
             return "∅"
 

@@ -1,0 +1,10 @@
+{
+    "uuid": "65313c4e-aa1b-44de-87ac-ed0ed2820e9b",
+    "title": "Apply Transformation to a Concrete DFA",
+    "topic": "Regular Language Transformations",
+    "tags": [
+        "Guided Practice",
+        "flipEvens"
+    ],
+    "type": "v3"
+}

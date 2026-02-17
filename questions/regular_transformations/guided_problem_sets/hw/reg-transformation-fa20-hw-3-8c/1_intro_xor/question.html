@@ -1,0 +1,59 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+For strings $x, y \in \{0,1\}^*$ of the same length, we define $\text{XOR}(x,y)$ as the element-wise XOR of $x$ and $y$. For each index $i$, $z_i = x_i \text{ XOR } y_i$.
+
+For example:
+- $\text{XOR}(010, 110) = 100$
+- $\text{XOR}(11, 00) = 11$
+- $\text{XOR}(101, 101) = 000$
+
+We define the language transformation as:
+$$L' = \{z \mid z = \text{XOR}(x, y) \text{ for some } x \in L \text{ and } y \in L \text{ such that } |x| = |y|\}$$
+
+In other words, a string $z$ is in $L'$ if and only if there exist two strings $x$ and $y$ in $L$ of the same length such that $z = \text{XOR}(x, y)$.
+
+<hr>
+Suppose that $L = \{ 01, 10, 111 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">00</pl-answer>
+    <pl-answer correct="true">11</pl-answer>
+    <pl-answer correct="true">000</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">111</pl-answer>
+    <pl-answer correct="false">001</pl-answer>
+    <pl-answer correct="false">110</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $z$ such that $z = \text{XOR}(x, y)$ for some $x, y \in L = \{01, 10, 111\}$ with $|x| = |y|$.
+
+For strings of length 2 from $L$: $\{01, 10\}$
+- $\text{XOR}(01, 01) = 00$ ✓
+- $\text{XOR}(01, 10) = 11$ ✓
+- $\text{XOR}(10, 01) = 11$ ✓ (already counted)
+- $\text{XOR}(10, 10) = 00$ ✓ (already counted)
+
+For strings of length 3 from $L$: $\{111\}$
+- $\text{XOR}(111, 111) = 000$ ✓
+
+So $L' = \{00, 11, 000\}$.
+
+Note:
+- We cannot XOR strings of different lengths (e.g., $01$ with $111$)
+- For other options:
+  - $01, 10, 111 \notin L'$ because they cannot be formed by XORing equal-length strings from $L$
+  - $001, 110 \notin L'$ for the same reason
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

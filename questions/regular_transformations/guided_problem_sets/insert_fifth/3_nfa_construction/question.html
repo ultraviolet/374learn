@@ -1,0 +1,64 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{xay \mid xy \in L ~\text{for some}~ x,y \in \Sigma^* ~\text{and}~ a \in \Sigma ~\text{such that}~ |x| = 4\}
+$$
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a DFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+**Note:** For this transformation, we track the position counter $i \in \{0,1,2,3,4\}$ to count how many characters we've read, and we use two labels: `before` (haven't reached position 5 yet or haven't inserted yet) and `after` (already inserted at position 5).
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-2" correct-answer="{0, 1, 2, 3, 4}" show-help-text=false size=20 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-3" correct-answer="{before}" show-help-text=false size=10 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\cup\; Q \times$
+<pl-string-input answers-name="states-4" correct-answer="{after}" show-help-text=false size=10 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, 0, before)" show-help-text=false size=15 allow-blank=true></pl-string-input>
+
+For $i \in \{0, 1, 2, 3\}$ and $a \in \{0,1\}$:
+
+$\delta' ((q, i, \text{before}), a) =$
+<pl-string-input answers-name="transition-before-counting" correct-answer="(δ(q, a), i+1, before)" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+
+For $a \in \{0,1\}$:
+
+$\delta' ((q, 4, \text{before}), a) =$
+<pl-string-input answers-name="transition-before-4" correct-answer="(q, after)" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+
+For $a \in \{0,1\}$:
+
+$\delta' ((q, \text{after}), a) =$
+<pl-string-input answers-name="transition-after" correct-answer="(δ(q, a), after)" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states-1" correct-answer="A" show-help-text=false size=1 allow-blank=true></pl-string-input>
+$\times$
+<pl-string-input answers-name="accepting-states-2" correct-answer="{after}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

@@ -1,0 +1,53 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+For a string $x \in \{0, 1\}^{*}$, let $x^F$ denote the string obtained by changing all 0's to 1's and all 1's to 0's in $x$. This is called "flipping" the string.
+
+For example:
+- $101^F = 010$ (all bits are flipped)
+- $000^F = 111$ (all 0s become 1s)
+- $11^F = 00$ (all 1s become 0s)
+
+We define the language transformation as:
+$$L' = \{uv^{F}w : uvw \in L ~\text{for some}~ u, v, w \in \{0, 1\}^{*}\}$$
+
+This means $L'$ contains all strings that can be obtained by taking a string in $L$, choosing some substring $v$ (possibly empty), flipping all the bits in that substring, and obtaining $uv^Fw$.
+
+<hr>
+Suppose that $L = \{ 00 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">00</pl-answer>
+    <pl-answer correct="true">11</pl-answer>
+    <pl-answer correct="true">01</pl-answer>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer>000</pl-answer>
+    <pl-answer>111</pl-answer>
+    <pl-answer>0</pl-answer>
+    <pl-answer>1</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings that can be formed by taking $00$ and flipping some substring.
+
+- $00$ ✓ (take $u=00, v=\varepsilon, w=\varepsilon$, so $uvw = 00$ and $uv^Fw = 00$)
+- $11$ ✓ (take $u=\varepsilon, v=00, w=\varepsilon$, so $uvw = 00$ and $uv^Fw = 11$)
+- $01$ ✓ (take $u=0, v=0, w=\varepsilon$, so $uvw = 00$ and $uv^Fw = 01$)
+- $10$ ✓ (take $u=\varepsilon, v=0, w=0$, so $uvw = 00$ and $uv^Fw = 10$)
+- $000$ ✗ (no way to get a 3-character string from $00$)
+- $111$ ✗ (no way to get a 3-character string from $00$)
+- $0$ ✗ (no way to get a 1-character string from $00$)
+- $1$ ✗ (no way to get a 1-character string from $00$)
+
+Note: The transformation doesn't change the length of the string, only flips bits in some substring.
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

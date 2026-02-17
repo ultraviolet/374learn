@@ -1,0 +1,51 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+The function $\mathit{take2skip2}(w)$ takes the first two symbols of $w$, skip the next two, takes the next two, skips the next two, and so on.
+
+For example:
+- $\mathit{take2skip2}(010) = 01$ (takes positions 1, 2: 01)
+- $\mathit{take2skip2}(01011001) = 0101$ (takes positions 1, 2, 5, 6: 01 and 01)
+- $\mathit{take2skip2}(1100) = 11$ (takes positions 1, 2: 11)
+- $\mathit{take2skip2}(0) = 0$ (takes position 1: 0)
+- $\mathit{take2skip2}(00) = 00$ (takes positions 1, 2: 00)
+
+We define the language transformation as:
+$$L' = \{\mathit{take2skip2}(w) \mid w \in L\}$$
+
+<hr>
+Suppose that $L = \{ 0011, 1100 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">00</pl-answer>
+    <pl-answer correct="true">11</pl-answer>
+    <pl-answer correct="false">0</pl-answer>
+    <pl-answer correct="false">1</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">0011</pl-answer>
+    <pl-answer correct="false">1100</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings that are $\mathit{take2skip2}(w)$ for some $w \in L = \{0011, 1100\}$.
+
+- $\mathit{take2skip2}(0011) = 00$ ✓ (takes positions 1, 2: the 00)
+- $\mathit{take2skip2}(1100) = 11$ ✓ (takes positions 1, 2: the 11)
+- $0$ ✗ (would need a 1-character string in $L$, but $L$ only has 4-character strings)
+- $1$ ✗ (would need a 1-character string in $L$, but $L$ only has 4-character strings)
+- $01$ ✗ (would need $\mathit{take2skip2}(w) = 01$, requiring a string starting with 01 at positions 1 and 2, but no such string is in $L$)
+- $10$ ✗ (would need $\mathit{take2skip2}(w) = 10$, requiring a string starting with 10 at positions 1 and 2, but no such string is in $L$)
+- $0011$ ✗ (would need an 8-character string in $L$ to produce 4 output characters, but $L$ only has 4-character strings)
+- $1100$ ✗ (would need an 8-character string in $L$ to produce 4 output characters, but $L$ only has 4-character strings)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

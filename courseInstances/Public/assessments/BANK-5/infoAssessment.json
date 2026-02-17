@@ -48,6 +48,265 @@
             ]
         },
         {
+            "title": "Regular Language Transformations GPS: Compress Type 1",
+            "questions": [
+                {
+                    "id": "regular_transformations/guided_problem_sets/compress_1/1_intro_compress_1",
+                    "points": 1
+                },
+                {
+                    "id": "regular_transformations/guided_problem_sets/compress_1/2_concrete_dfa",
+                    "points": 1
+                },
+                {
+                    "id": "regular_transformations/guided_problem_sets/compress_1/3_nfa_construction",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Thirds",
+            "questions": [
+                {
+                    "id": "regular_transformations/guided_problem_sets/thirds/1_intro_thirds",
+                    "points": 1
+                },
+                {
+                    "id": "regular_transformations/guided_problem_sets/thirds/2_concrete_dfa",
+                    "points": 1
+                },
+                {
+                    "id": "regular_transformations/guided_problem_sets/thirds/3_nfa_construction",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: wwR",
+            "questions": [
+                {
+                    "id": "regular_transformations/guided_problem_sets/wwR/1_intro_wwR",
+                    "points": 1
+                },
+                {
+                    "id": "regular_transformations/guided_problem_sets/wwR/2_concrete_dfa",
+                    "points": 1
+                },
+                {
+                    "id": "regular_transformations/guided_problem_sets/wwR/3_nfa_construction",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Delete0",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/delete0/1_intro_delete0", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete0/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete0/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Insert0",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/insert0/1_intro_insert0", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert0/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert0/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Reverse",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/reverse/1_intro_reverse", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/reverse/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/reverse/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Compress Type 2",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/compress_2/1_intro_compress_2", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/compress_2/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/compress_2/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Delete1star",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/delete1star/1_intro_delete1star", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete1star/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete1star/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Insert10",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/insert10/1_intro_insert10", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert10/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert10/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Skip",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/skip/1_intro_skip", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/skip/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/skip/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: FlipEvens",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/flipEvens/1_intro_flipEvens", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/flipEvens/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/flipEvens/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Delete1star Prefix",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/delete1star_prefix/1_intro_delete1star_prefix", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete1star_prefix/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete1star_prefix/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Delete Fifth",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/delete_fifth/1_intro_delete_fifth", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete_fifth/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete_fifth/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Insert Fifth",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/insert_fifth/1_intro_insert_fifth", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert_fifth/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert_fifth/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Inv Thirds",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/inv_thirds/1_intro_inv_thirds", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/inv_thirds/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/inv_thirds/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Mid",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/mid/1_intro_mid", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/mid/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/mid/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Parity Runs",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/parity_runs/1_intro_parity_runs", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/parity_runs/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/parity_runs/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Proper Proper Prefix",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/proper_proper_prefix/1_intro_proper_proper_prefix", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/proper_proper_prefix/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/proper_proper_prefix/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Take2Skip2 Type 1",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/take2skip2_1/1_intro_take2skip2_1", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/take2skip2_1/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/take2skip2_1/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Take2Skip2 Type 2",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/take2skip2_2/1_intro_take2skip2_2", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/take2skip2_2/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/take2skip2_2/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: wRw",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/wRw/1_intro_wRw", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/wRw/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/wRw/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: DelOnes (HW)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8a/1_intro_DelOnes", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8a/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8a/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: ThereAndBack (HW)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8b/1_intro_thereandback", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8b/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8b/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: XOR (HW)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8c/1_intro_xor", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8c/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8c/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Double (HW)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2a/1_intro_double", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2a/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2a/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Move 1 Forward (HW)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2c/1_intro", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2c/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2c/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: MoveBack8 (HW)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-3-2/1_intro_moveback8", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-3-2/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-3-2/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Half L (HW)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-old3-3/1_intro_half", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-old3-3/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-old3-3/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Regular Language Transformations GPS: Flip Substring (HW)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/flipSubstring/1_intro_flipSubstring", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/flipSubstring/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/flipSubstring/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
             "title": "Regular Language Transformations Coding",
             "questions": [
                 {

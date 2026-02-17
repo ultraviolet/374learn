@@ -1,0 +1,53 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{w \mid ww \in L\}
+$$
+
+In other words, $L'$ contains all strings $w$ such that concatenating $w$ with itself produces a string in $L$.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Hint:** The construction uses an epsilon transition from the start state to non-deterministically choose a "hinge" state $h$ where the first $w$ ends and the second $w$ begins. We track two simulations: one starting from $s$ (reading the first $w$) and one starting from $h$ (reading the second $w$). The accepting states should ensure that the first simulation ends at $h$ and the second simulation ends at an accepting state.
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+We will use a special START state, plus states of the form $(p, h, q)$ where $p, h, q \in Q$.
+
+$s' = \text{START}$
+
+What is $\delta'(\text{START}, \varepsilon)$?
+<pl-string-input answers-name="start-epsilon" correct-answer="{(s, h, h) | h in Q}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+For states $(p, h, q)$, on reading symbol $a$:
+- The first simulation updates $p$ by following $\delta(p, a)$
+- The hinge state $h$ remains constant
+- The second simulation updates $q$ by following $\delta(q, a)$
+
+$\delta' ((p, h, q), a) =$
+<pl-string-input answers-name="transition-triple" correct-answer="{(δ(p, a), h, δ(q, a))}" show-help-text=false size=50 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states" correct-answer="{(h, h, q) | h in Q, q in A}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

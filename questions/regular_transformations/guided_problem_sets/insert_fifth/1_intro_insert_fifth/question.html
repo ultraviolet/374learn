@@ -1,0 +1,41 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+$$L' = \{xay \mid xy \in L ~\text{for some}~ x,y \in \Sigma^* ~\text{and}~ a \in \Sigma ~\text{such that}~ |x| = 4\}$$
+
+This transformation inserts a character $a$ after exactly 4 characters from the original string.
+
+<hr>
+Suppose that $L = \{ 111111 \}$. What strings are contained in $L'$?
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">11110111</pl-answer>
+    <pl-answer correct="true">11111111</pl-answer>
+    <pl-answer>1111111</pl-answer>
+    <pl-answer>111101111</pl-answer>
+    <pl-answer>11111011</pl-answer>
+    <pl-answer>01111111</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings that can be formed by inserting a single character (either $0$ or $1$) after exactly 4 characters from the string $111111$.
+
+Since the original string is $111111$ (6 characters), we split it as $x = 1111$ (4 characters) and $y = 11$ (remaining 2 characters).
+Then we insert a character $a$ between them: $xay$.
+
+- $11110111$ ✓ (insert $0$ after 4 characters: $1111 \cdot 0 \cdot 11$)
+- $11111111$ ✓ (insert $1$ after 4 characters: $1111 \cdot 1 \cdot 11$)
+- $1111111$ ✗ (this is only 7 characters, we need to insert a character, not remove one)
+- $111101111$ ✗ (this would be inserting at position 5, not after position 4)
+- $11111011$ ✗ (this inserts $0$ after 5 characters, not 4)
+- $01111111$ ✗ (this inserts $0$ before the string, at position 0, not after position 4)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

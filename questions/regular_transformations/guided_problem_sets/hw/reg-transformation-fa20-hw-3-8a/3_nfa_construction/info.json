@@ -1,0 +1,11 @@
+{
+    "uuid": "f3c87af6-acec-4e2f-a5a9-57640ce17135",
+    "title": "Constructing the Final NFA",
+    "topic": "Regular Language Transformations",
+    "tags": [
+        "Guided Practice",
+        "DelOnes"
+    ],
+    "type": "v3",
+    "singleVariant": true
+}

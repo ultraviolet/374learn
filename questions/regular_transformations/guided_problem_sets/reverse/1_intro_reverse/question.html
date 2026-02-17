@@ -1,0 +1,46 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+For a string $w$, we define $w^R$ as the reverse of $w$. For example, if $w = 0110$, then $w^R = 0110$.
+
+We define the language transformation as:
+$$L' = \{w \in \Sigma^* \mid w^R \in L\}$$
+
+In other words, a string $w$ is in $L'$ if and only if reversing $w$ gives a string in $L$.
+
+For example:
+- If $w = 010$ and $w^R = 010 \in L$, then $w \in L'$
+- If $w = 0110$ and $w^R = 0110 \in L$, then $w \in L'$
+
+<hr>
+Suppose that $L = \{ 10, 110 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">01</pl-answer>
+    <pl-answer correct="true">011</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">110</pl-answer>
+    <pl-answer correct="false">001</pl-answer>
+    <pl-answer correct="false">100</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that $w^R \in L = \{10, 110\}$.
+
+- For $w = 01$: $w^R = 10 \in L$ ✓
+- For $w = 011$: $w^R = 110 \in L$ ✓
+- For $w = 10$: $w^R = 01 \notin L$ ✗
+- For $w = 110$: $w^R = 011 \notin L$ ✗
+- For $w = 001$: $w^R = 100 \notin L$ ✗
+- For $w = 100$: $w^R = 001 \notin L$ ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

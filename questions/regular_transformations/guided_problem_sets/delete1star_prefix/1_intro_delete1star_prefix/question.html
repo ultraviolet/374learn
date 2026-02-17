@@ -1,0 +1,50 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+$$L' = \{w \mid 1^n \cdot w \in L ~\text{for some}~ n \ge 0\}$$
+
+In other words, $L'$ consists of all strings that can be formed by taking a string in $L$ and removing a (possibly empty) prefix of consecutive 1s.
+
+For example:
+- If $1111w \in L$, then $w \in L'$ (we can remove the four 1s from the beginning)
+- If $11w \in L$, then $w \in L'$ (we can remove the two 1s from the beginning)
+- If $w \in L$, then $w \in L'$ (we can remove zero 1s, i.e., $n = 0$)
+
+Note: This transformation only removes 1s from the **beginning** of the string, not from the middle.
+
+<hr>
+Suppose that $L = \{ 1110 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">1110</pl-answer>
+    <pl-answer correct="true">110</pl-answer>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="true">0</pl-answer>
+    <pl-answer>11110</pl-answer>
+    <pl-answer>111</pl-answer>
+    <pl-answer>11</pl-answer>
+    <pl-answer>1</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that prepending some number of 1s to $w$ gives us $1110$.
+
+- $1110 \in L'$ ✓ (prepend zero 1s: $\varepsilon \cdot 1110 = 1110$)
+- $110 \in L'$ ✓ (prepend one 1: $1 \cdot 110 = 1110$)
+- $10 \in L'$ ✓ (prepend two 1s: $11 \cdot 10 = 1110$)
+- $0 \in L'$ ✓ (prepend three 1s: $111 \cdot 0 = 1110$)
+- $11110 \notin L'$ ✗ (would require removing a 1, not prepending)
+- $111 \notin L'$ ✗ (cannot prepend 1s to $111$ to get $1110$)
+- $11 \notin L'$ ✗ (cannot prepend 1s to $11$ to get $1110$)
+- $1 \notin L'$ ✗ (cannot prepend 1s to $1$ to get $1110$)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

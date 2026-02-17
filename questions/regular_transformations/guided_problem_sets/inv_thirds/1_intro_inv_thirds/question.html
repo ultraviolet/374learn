@@ -1,0 +1,60 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+The function $\mathit{thirds}(w)$ returns the subsequence of $w$ containing every third symbol (positions 3, 6, 9, etc.).
+
+For example:
+- $\mathit{thirds}(011000110) = 100$ (takes positions 3, 6, 9: the 1, 0, 0)
+- $\mathit{thirds}(01101) = 1$ (takes position 3: the 1)
+- $\mathit{thirds}(01) = \varepsilon$ (no position 3, so empty string)
+
+We define the inverse language transformation as:
+$$L' = \mathit{thirds}^{-1}(L) := \{w \in \Sigma^* \mid \mathit{thirds}(w) \in L\}$$
+
+In other words, $L'$ contains all strings $w$ such that when you extract every third symbol from $w$, you get a string in $L$.
+
+<hr>
+Suppose that $L = \{ 0, 1 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="false">0</pl-answer>
+    <pl-answer correct="false">1</pl-answer>
+    <pl-answer correct="true">000</pl-answer>
+    <pl-answer correct="true">010</pl-answer>
+    <pl-answer correct="true">100</pl-answer>
+    <pl-answer correct="true">110</pl-answer>
+    <pl-answer correct="true">001</pl-answer>
+    <pl-answer correct="true">011</pl-answer>
+    <pl-answer correct="true">101</pl-answer>
+    <pl-answer correct="true">111</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that $\mathit{thirds}(w) \in L = \{0, 1\}$.
+
+For a string to be in $L'$, its third character (if it exists) must be either $0$ or $1$, and it should not have a 6th character (otherwise $\mathit{thirds}(w)$ would have length 2, which is not in $L$).
+
+- $0$ ✗ (has length 1, so $\mathit{thirds}(0) = \varepsilon \notin L$)
+- $1$ ✗ (has length 1, so $\mathit{thirds}(1) = \varepsilon \notin L$)
+- All 3-character strings are in $L'$:
+  - $000$: $\mathit{thirds}(000) = 0 \in L$ ✓
+  - $010$: $\mathit{thirds}(010) = 0 \in L$ ✓
+  - $100$: $\mathit{thirds}(100) = 0 \in L$ ✓
+  - $110$: $\mathit{thirds}(110) = 0 \in L$ ✓
+  - $001$: $\mathit{thirds}(001) = 1 \in L$ ✓
+  - $011$: $\mathit{thirds}(011) = 1 \in L$ ✓
+  - $101$: $\mathit{thirds}(101) = 1 \in L$ ✓
+  - $111$: $\mathit{thirds}(111) = 1 \in L$ ✓
+- Strings with 4 or 5 characters also work (positions 1, 2, 4, 5 can be anything, position 3 determines the result)
+- Strings with 6 or more characters would give $\mathit{thirds}(w)$ with length $\geq 2$, which is not in $L$
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

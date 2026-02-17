@@ -1,0 +1,53 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+$\mathit{flipEvens}$ inverts every even-indexed bit in a string $w$ (using 1-based indexing). For example, $\mathit{flipEvens}(01100) = 00110$.
+
+We define the language transformation as:
+$$L' = \{\mathit{flipEvens}(w) \mid w \in L\}$$
+
+In other words, a string $w'$ is in $L'$ if and only if $w' = \mathit{flipEvens}(w)$ for some $w \in L$.
+
+Note: We use 1-based indexing, so position 1 is odd, position 2 is even, position 3 is odd, etc.
+
+For example:
+- $\mathit{flipEvens}(010)$: position 1: keep $0$, position 2: flip $1 \to 0$, position 3: keep $0$, giving $000$
+- $\mathit{flipEvens}(0110)$: position 1: keep $0$, position 2: flip $1 \to 0$, position 3: keep $1$, position 4: flip $0 \to 1$, giving $0011$
+
+<hr>
+Suppose that $L = \{ 00, 11 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">01</pl-answer>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="false">00</pl-answer>
+    <pl-answer correct="false">11</pl-answer>
+    <pl-answer correct="false">001</pl-answer>
+    <pl-answer correct="false">110</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w'$ such that $w' = \mathit{flipEvens}(w)$ for some $w \in L = \{00, 11\}$.
+
+For $w = 00$:
+- Position 1 (odd): keep $0$
+- Position 2 (even): flip $0 \to 1$
+- Result: $\mathit{flipEvens}(00) = 01$ ✓
+
+For $w = 11$:
+- Position 1 (odd): keep $1$
+- Position 2 (even): flip $1 \to 0$
+- Result: $\mathit{flipEvens}(11) = 10$ ✓
+
+Therefore, $L' = \{01, 10\}$.
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

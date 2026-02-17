@@ -1,0 +1,59 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  \mathsf{PPPREFIX}(L) = \{x \mid xy \in L ~\text{for some}~ y\in\Sigma^* ~\text{such that}~ |y|\ge 2 \}.
+$$
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a DFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $\mathsf{PPPREFIX}(L)$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you to generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+**Key insight:** This transformation only modifies the accepting states. The states, transitions, and initial state remain the same as in $M$.
+
+A state $q$ should be accepting in $M'$ if and only if there exists a path of length 2 or more from $q$ to some accepting state in $M$.
+
+We define:
+$$\text{REACH}_{\geq 2}(q, A) = \text{true if there exists a path of length } \geq 2 \text{ from } q \text{ to some state in } A$$
+
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states" correct-answer="Q" show-help-text=false size=5 remove-spaces="true" allow-blank=true></pl-string-input>
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="s" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+For any state $q \in Q$ and symbol $a \in \{0, 1\}$:
+
+$\delta' (q, a) =$
+<pl-string-input answers-name="transition" correct-answer="δ(q, a)" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$A' = \{q \in Q \mid$
+<pl-string-input answers-name="accepting-condition" correct-answer="REACH_≥2(q, A)" show-help-text=false size=30 allow-blank=true></pl-string-input>
+$\}$
+
+<markdown>
+In other words, the new accepting states $A'$ consist of all states $q$ from which there exists a path of length at least 2 to some accepting state in $A$.
+
+Equivalently, we can define $A'$ as:
+$$A' = \{q \in Q \mid \exists w \in \Sigma^* \text{ with } |w| \geq 2 \text{ such that } \delta^*(q, w) \in A\}$$
+
+where $\delta^*(q, w)$ is the extended transition function that gives the state reached from $q$ after reading string $w$.
+</markdown>
+
+</markdown>
+</pl-question-panel>

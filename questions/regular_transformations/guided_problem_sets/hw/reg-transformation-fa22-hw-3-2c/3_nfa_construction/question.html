@@ -1,0 +1,68 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{x1yz \mid xy1z \in L\}
+$$
+
+In other words, if a string in $L$ has a $1$ at some position, then the string formed by moving that $1$ one position to the right is in $L'$.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct a NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Note:** For this transformation, each state in $M'$ has the form $(q, \ell)$ where $q \in Q$ and $\ell \in \{\text{normal}, \text{borrowed}\}$.
+
+The label indicates whether we have "borrowed" a $1$ that needs to be inserted later:
+- **normal**: We haven't borrowed a $1$ yet
+- **borrowed**: We've skipped a $1$ and need to insert it
+
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states" correct-answer="Q × {normal, borrowed}" show-help-text=false size=30 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, normal)" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+From a **normal** state $(q, \text{normal})$:
+
+$\delta' ((q, \text{normal}), 0) =$
+<pl-string-input answers-name="transition-normal-0" correct-answer="{(δ(q, 0), normal)}" show-help-text=false size=30 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{normal}), 1) =$
+<pl-string-input answers-name="transition-normal-1" correct-answer="{(δ(q, 1), normal), (q, borrowed)}" show-help-text=false size=50 allow-blank=true></pl-string-input>
+
+From a **borrowed** state $(q, \text{borrowed})$:
+
+$\delta' ((q, \text{borrowed}), 0) =$
+<pl-string-input answers-name="transition-borrowed-0" correct-answer="{(δ(δ(q, 1), 0), normal)}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+
+$\delta' ((q, \text{borrowed}), 1) =$
+<pl-string-input answers-name="transition-borrowed-1" correct-answer="{(δ(δ(q, 1), 1), normal)}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states" correct-answer="A × {normal}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+</markdown>
+</pl-question-panel>

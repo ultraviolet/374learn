@@ -1,0 +1,11 @@
+{
+    "uuid": "2994c293-3b3e-4302-b007-854c8f9ed320",
+    "title": "Constructing the Final NFA",
+    "topic": "Regular Language Transformations",
+    "tags": [
+        "Guided Practice",
+        "flipEvens"
+    ],
+    "type": "v3",
+    "singleVariant": true
+}

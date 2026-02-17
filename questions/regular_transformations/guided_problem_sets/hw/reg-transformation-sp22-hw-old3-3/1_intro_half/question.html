@@ -1,0 +1,47 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+We define the language transformation as:
+$$L' = \{w \mid ww \in L\}$$
+
+In other words, a string $w$ is in $L'$ if and only if $w$ concatenated with itself is in $L$.
+
+For example:
+- If $w = 01$ and $ww = 0101 \in L$, then $w \in L'$
+- If $w = 10$ and $ww = 1010 \in L$, then $w \in L'$
+- If $w = 0$ and $ww = 00 \in L$, then $w \in L'$
+
+<hr>
+Suppose that $L = \{ 0101, 1010, 00, 1111 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">01</pl-answer>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="true">0</pl-answer>
+    <pl-answer correct="true">11</pl-answer>
+    <pl-answer correct="false">0101</pl-answer>
+    <pl-answer correct="false">1010</pl-answer>
+    <pl-answer correct="false">00</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that $ww \in L = \{0101, 1010, 00, 1111\}$.
+
+- For $w = 01$: $ww = 0101 \in L$ ✓
+- For $w = 10$: $ww = 1010 \in L$ ✓
+- For $w = 0$: $ww = 00 \in L$ ✓
+- For $w = 11$: $ww = 1111 \in L$ ✓
+- For $w = 0101$: $ww = 01010101 \notin L$ ✗
+- For $w = 1010$: $ww = 10101010 \notin L$ ✗
+- For $w = 00$: $ww = 0000 \notin L$ ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

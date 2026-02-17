@@ -1,0 +1,55 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+Consider the following language transformation:
+
+We define the language transformation as:
+$$L' = \{w \mid xwy \in L ~\text{for some}~ x,y \in \Sigma^*\}$$
+
+In other words, a string $w$ is in $L'$ if and only if there exist strings $x$ and $y$ (possibly empty) such that $xwy$ is in $L$.
+
+For example:
+- If $L$ contains the string $0110$, then $L'$ contains $11$ (with $x=0$ and $y=0$)
+- If $L$ contains the string $0110$, then $L'$ contains $\varepsilon$ (the empty string, with $x=0110$ and $y=\varepsilon$)
+
+<hr>
+Suppose that $L = \{ 010, 110 \}$. What strings are contained in $L'$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel=true>
+    <pl-answer correct="true">ε (empty string)</pl-answer>
+    <pl-answer correct="true">0</pl-answer>
+    <pl-answer correct="true">1</pl-answer>
+    <pl-answer correct="true">01</pl-answer>
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="true">11</pl-answer>
+    <pl-answer correct="true">010</pl-answer>
+    <pl-answer correct="true">110</pl-answer>
+    <pl-answer correct="false">00</pl-answer>
+    <pl-answer correct="false">001</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ such that $xwy \in L = \{010, 110\}$ for some $x, y \in \Sigma^*$.
+
+Starting with $010 \in L$:
+- $w = \varepsilon$: $x=010, y=\varepsilon$ gives $010 \in L$ ✓
+- $w = 0$: $x=\varepsilon, y=10$ gives $010 \in L$ ✓
+- $w = 1$: $x=0, y=0$ gives $010 \in L$ ✓
+- $w = 01$: $x=\varepsilon, y=0$ gives $010 \in L$ ✓
+- $w = 10$: $x=0, y=\varepsilon$ gives $010 \in L$ ✓
+- $w = 010$: $x=\varepsilon, y=\varepsilon$ gives $010 \in L$ ✓
+
+Starting with $110 \in L$:
+- $w = 11$: $x=\varepsilon, y=0$ gives $110 \in L$ ✓
+
+For $w = 00$: we would need $x00y \in \{010, 110\}$, but no such $x, y$ exist ✗
+For $w = 001$: we would need $x001y \in \{010, 110\}$, but no such $x, y$ exist ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

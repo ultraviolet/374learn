@@ -1,0 +1,94 @@
+<pl-question-panel>
+<markdown>
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  L' = \{xy \mid x \in L, y^R \in L\}
+$$
+
+where $w^R$ denotes the reverse of string $w$.
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct an NFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $L'$.
+
+In the previous question, you got some practice with constructing $M'$ given a concrete $M$.
+Now, we are asking you to generalize that transformation to an abstract $M$.
+In other words, you should define the components of $M'$ *symbolically* by referring to the components of $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that in the definition of an NFA transition function, the output values are sets.
+When filling in the transition functions below, use the same format that you used
+for the concrete example in the previous problem.
+
+**Strategy:** We create two copies of the states of $M$:
+- States $(q, \text{fwd})$ represent that we are reading the prefix $x$ forward using $M$
+- States $(q, \text{rev})$ represent that we are reading the suffix $y$ in reverse using a reversed version of $M$
+
+We nondeterministically guess where to transition from the forward phase to the reverse phase.
+
+**Note:** In our notation, we write states as ordered pairs like $(q, \text{fwd})$ and $(q, \text{rev})$.
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' = \{(q, \text{fwd}) \mid q \in$
+<pl-string-input answers-name="states-fwd" correct-answer="Q" show-help-text=false size=5 remove-spaces="true" allow-blank=true></pl-string-input>
+$\} \cup \{(q, \text{rev}) \mid q \in$
+<pl-string-input answers-name="states-rev" correct-answer="Q" show-help-text=false size=5 remove-spaces="true" allow-blank=true></pl-string-input>
+$\}$
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, fwd)" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+For the transition function, we need to specify three types of transitions:
+
+**1. Forward transitions** (copying the behavior of $M$):
+
+For any state $q \in Q$ and symbol $a \in \{0, 1\}$:
+
+$\delta' ((q, \text{fwd}), a) = \{($
+<pl-string-input answers-name="transition-fwd" correct-answer="δ(q, a)" show-help-text=false size=15 allow-blank=true></pl-string-input>
+$, \text{fwd})\}$
+
+**2. Epsilon transitions** (guessing where to split $x$ and $y$):
+
+For any state $q \in Q$:
+
+If $q \in A$ (i.e., $q$ is an accepting state):
+
+$\;\;\;\;\delta' ((q, \text{fwd}), \varepsilon) = \{($
+<pl-string-input answers-name="transition-fwd-epsilon-accept" correct-answer="q" show-help-text=false size=10 allow-blank=true></pl-string-input>
+$, \text{rev})\}$
+
+Otherwise (if $q \notin A$):
+
+$\;\;\;\;\delta' ((q, \text{fwd}), \varepsilon) =$
+<pl-string-input answers-name="transition-fwd-epsilon-nonaccept" correct-answer="{}" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+**3. Reverse transitions** (reading $y$ backwards):
+
+For any state $q \in Q$ and symbol $a \in \{0, 1\}$:
+
+$\delta' ((q, \text{rev}), a) = \{(p, \text{rev}) \mid p \in Q \text{ and }$
+<pl-string-input answers-name="transition-rev-condition" correct-answer="δ(p, a) = q" show-help-text=false size=30 allow-blank=true></pl-string-input>
+$\}$
+
+For any state $q \in Q$:
+
+$\delta' ((q, \text{rev}), \varepsilon) =$
+<pl-string-input answers-name="transition-rev-epsilon" correct-answer="{}" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+**4. Accepting states:**
+
+$A' = \{($
+<pl-string-input answers-name="accepting-states" correct-answer="s" show-help-text=false size=10 allow-blank=true></pl-string-input>
+$, \text{rev})\}$
+
+</markdown>
+</pl-question-panel>
