@@ -1,0 +1,21 @@
+<pl-question-panel>
+<markdown>
+Provide a **regular expression** for the following language over the alphabet $\{I, L, N\}$:
+
+***All strings in $\{I, L, N\}^*$ where every run of $L$s has length exactly $2$.***
+
+This language contains $\varepsilon$, $ILLINI$, $ILLILLI$, and $INILLILLININI$,
+but does **not** contain $ILINNI$ (has a run of length 1) or $NILLLLL$ (has a run of length 5).
+
+*(Note: a "run" of $L$s is a maximal consecutive sequence of $L$s.)*
+
+<hr>
+
+**Regex format:** Use `+` for union, `*` for Kleene star, `e` for $\varepsilon$, and parentheses for grouping.
+Concatenation is implicit. The alphabet is $\{I, L, N\}$.
+</markdown>
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1" alphabet="ILN">
+(I+N)*(LL(I+N)(I+N)*)*(LL+e)
+</tl-regex-input>

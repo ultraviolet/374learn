@@ -1,0 +1,9 @@
+{
+    "uuid": "2a274952-4d0e-4579-889d-e4863e5b6870",
+    "title": "DFA: Strings Covered by ILL and INI Substrings",
+    "topic": "DFAs",
+    "tags": ["midterm1", "DFA", "ILN-alphabet"],
+    "type": "v3",
+    "singleVariant": true,
+    "showCorrectAnswer": false
+}

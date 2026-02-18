@@ -1,0 +1,9 @@
+{
+    "uuid": "48ea612d-ce2c-4af3-8032-7906ae8123d5",
+    "title": "DFA: Strings in {I,L,N}* Where Every Run of Ls Has Length 2",
+    "topic": "DFAs",
+    "tags": ["midterm1", "DFA", "ILN-alphabet"],
+    "type": "v3",
+    "singleVariant": true,
+    "showCorrectAnswer": false
+}

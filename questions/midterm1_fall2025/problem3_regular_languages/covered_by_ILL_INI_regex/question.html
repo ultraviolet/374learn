@@ -1,0 +1,24 @@
+<pl-question-panel>
+<markdown>
+Provide a **regular expression** for the following language over the alphabet $\{I, L, N\}$:
+
+***All strings that are covered by $ILL$ and $INI$ substrings.***
+
+A string $w$ is in this language if and only if every character in $w$ is contained in a
+substring of $w$ that is equal to either $ILL$ or $INI$.
+
+This language contains $\varepsilon$, $ILLINI$, and $INILLINIININI$,
+but does **not** contain $ILLILLI$ (the last $I$ is not covered), $ILINNI$, or $NILLLL$.
+
+<hr>
+
+**Regex format:** Use `+` for union, `*` for Kleene star, `e` for $\varepsilon$, and parentheses for grouping.
+Concatenation is implicit. The alphabet is $\{I, L, N\}$.
+
+*Hint: The string must be decomposable into blocks, where each block is of the form $(IN)^*ILL$ or $(IN)^*INI$.*
+</markdown>
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1" alphabet="ILN">
+((IN)*ILL+(IN)*INI)*
+</tl-regex-input>

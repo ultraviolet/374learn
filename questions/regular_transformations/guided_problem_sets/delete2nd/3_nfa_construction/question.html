@@ -1,0 +1,75 @@
+<pl-question-panel>
+<markdown>
+For any non-empty string $w$ with $|w| \geq 2$, let $\mathsf{Delete2nd}(w)$ denote the string obtained
+by deleting the second symbol in $w$.
+
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  \mathsf{DELETE2ND}(L) = \{ \mathsf{Delete2nd}(w) \mid |w| \geq 2 \text{ and } w \in L \}
+$$
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct an **NFA** $M' = (Q', \{0,1\}, \delta', s', A')$ with $\varepsilon$-transitions that accepts $\mathsf{DELETE2ND}(L)$.
+
+In the previous question, you practiced constructing $M'$ given a concrete $M$.
+Now, generalize the transformation to an abstract $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that NFA transition outputs are **sets**.
+
+**Note:** For this transformation, we use three labels:
+`0` (processed 0 output symbols), `1` (processed exactly 1 output symbol), `many` (processed more than 1 output symbol).
+
+The $\varepsilon$-transition from state $(q, 1)$ is the key: it **guesses** the deleted second character and feeds it to $M$.
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-2" correct-answer="{0, 1, many}" show-help-text=false size=20 remove-spaces="true" allow-blank=true></pl-string-input>
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, 0)" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+$\delta' ((q, 0), 0) =$
+<pl-string-input answers-name="transition-0-0" correct-answer="{(δ(q, 0), 1)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, 0), 1) =$
+<pl-string-input answers-name="transition-0-1" correct-answer="{(δ(q, 1), 1)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, 0), \varepsilon) =$
+<pl-string-input answers-name="transition-0-eps" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$\delta' ((q, 1), 0) =$
+<pl-string-input answers-name="transition-1-0" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$\delta' ((q, 1), 1) =$
+<pl-string-input answers-name="transition-1-1" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$\delta' ((q, 1), \varepsilon) =$
+<pl-string-input answers-name="transition-1-eps" correct-answer="{(δ(q, 0), many), (δ(q, 1), many)}" show-help-text=false size=35 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{many}), 0) =$
+<pl-string-input answers-name="transition-many-0" correct-answer="{(δ(q, 0), many)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{many}), 1) =$
+<pl-string-input answers-name="transition-many-1" correct-answer="{(δ(q, 1), many)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{many}), \varepsilon) =$
+<pl-string-input answers-name="transition-many-eps" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states-1" correct-answer="A" show-help-text=false size=1 allow-blank=true></pl-string-input>
+$\times$
+<pl-string-input answers-name="accepting-states-2" correct-answer="{many}" show-help-text=false size=10 allow-blank=true></pl-string-input>
+
+</markdown>

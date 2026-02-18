@@ -1,0 +1,18 @@
+<pl-question-panel>
+<markdown>
+For any string $w \in \{0,1\}^*$, let $w^C$ denote the **bitwise complement** of $w$;
+for example, $(00110)^C = 11001$.
+
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every regular language $L$ over $\{0,1\}$, the language $\{w^C \mid w \in L\}$ is also regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1">
+    <pl-answer correct="true" feedback="Swap the $0$-transitions and $1$-transitions in any DFA for $L$ to get a DFA for $\{w^C \mid w \in L\}$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Can you construct an automaton for {w^C | w ∈ L} directly from a DFA for L? What simple modification would work?">No</pl-answer>
+</pl-multiple-choice>

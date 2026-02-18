@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$ with at least two strings, $L^*$ contains infinite-length strings.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1">
+    <pl-answer correct="false" feedback="By definition, every string in $L^*$ is a finite concatenation of strings from $L$. What does that say about the length of strings in $L^*$?">Yes</pl-answer>
+    <pl-answer correct="true" feedback="All strings have finite length by definition. $L^*$ may be an infinite set, but every individual string in $L^*$ has finite length.">No</pl-answer>
+</pl-multiple-choice>

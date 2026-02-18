@@ -1,0 +1,8 @@
+{
+    "uuid": "9f6f68e9-3d56-4a62-9e70-9f4188ebb5c8",
+    "title": "True/False: Bitwise Complement of Regular Language is Regular",
+    "topic": "Regular Languages",
+    "tags": ["midterm1", "true-false", "regular-languages", "DFA-construction"],
+    "type": "v3",
+    "singleVariant": true
+}

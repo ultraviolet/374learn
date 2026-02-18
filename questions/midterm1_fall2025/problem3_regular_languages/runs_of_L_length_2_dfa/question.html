@@ -1,0 +1,34 @@
+<pl-question-panel>
+<markdown>
+Construct a **DFA** for the following language over the alphabet $\{I, L, N\}$:
+
+***All strings in $\{I, L, N\}^*$ where every run of $L$s has length exactly $2$.***
+
+This language contains $\varepsilon$, $ILLINI$, $ILLILLI$, and $INILLILLININI$,
+but does **not** contain $ILINNI$ (has a run of $L$s of length 1) or $NILLLLL$ (has a run of length 4).
+
+<hr>
+
+**Hints:**
+- Think about what information you need to track about the current position in the string.
+- Suggested state meanings: **$IN$** = last symbol read (if any) was not $L$; **$L$** = just read the first $L$ in a run; **$LL$** = just read the second $L$ in a run (this is the accepting state for L-runs).
+- Any transition not shown in your DFA should be treated as going to a **dead/dump state**.
+</markdown>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa" alphabet="ILN">
+  <correct-answer>
+  {
+      "states": ["IN", "L", "LL", "dump"],
+      "input_symbols": ["I", "L", "N"],
+      "transitions": {
+          "IN": {"I": "IN", "L": "L", "N": "IN"},
+          "L": {"I": "dump", "L": "LL", "N": "dump"},
+          "LL": {"I": "IN", "L": "dump", "N": "IN"},
+          "dump": {"I": "dump", "L": "dump", "N": "dump"}
+      },
+      "initial_state": "IN",
+      "final_states": ["IN", "LL"]
+  }
+  </correct-answer>
+</tl-fsm-builder>

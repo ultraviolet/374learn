@@ -1,0 +1,46 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+For any non-empty string $w$ with $|w| \geq 2$, let $\mathsf{Delete2nd}(w)$ denote the string obtained
+by deleting the second symbol in $w$. We define:
+
+$$\mathsf{Insert2nd}(L) = \{ w \in \Sigma^* \mid |w| \geq 2 \text{ and } \mathsf{Delete2nd}(w) \in L \}$$
+
+In other words, $\mathsf{Insert2nd}(L)$ contains all strings $w$ of length at least $2$ such that
+deleting the second symbol of $w$ yields a string in $L$.
+
+For example, with $L = \{0\}$:
+- $\mathsf{Delete2nd}(00) = 0$, so $00 \in \mathsf{Insert2nd}(\{0\})$
+- $\mathsf{Delete2nd}(10) = 0$, so $10 \in \mathsf{Insert2nd}(\{0\})$
+- $\mathsf{Delete2nd}(01) = 1 \neq 0$, so $01 \notin \mathsf{Insert2nd}(\{0\})$
+
+<hr>
+Suppose that $L = \{ 10 \}$. What strings are contained in $\mathsf{Insert2nd}(L)$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel="true">
+    <pl-answer correct="true">100</pl-answer>
+    <pl-answer correct="true">110</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+    <pl-answer correct="false">1000</pl-answer>
+    <pl-answer correct="false">010</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ of length $\geq 2$ where $\mathsf{Delete2nd}(w) = 10$.
+
+- $\mathsf{Delete2nd}(100) = 10$ ✓ (delete the second $0$: $1 \cdot \underline{0} \cdot 0 \to 10$)
+- $\mathsf{Delete2nd}(110) = 10$ ✓ (delete the second $1$: $1 \cdot \underline{1} \cdot 0 \to 10$)
+- $10$: has length $2$, but $\mathsf{Delete2nd}(10) = 1 \neq 10$ ✗
+- $01$: $\mathsf{Delete2nd}(01) = 0 \neq 10$ ✗
+- $1000$: $\mathsf{Delete2nd}(1000) = 100 \neq 10$ ✗
+- $010$: $\mathsf{Delete2nd}(010) = 00 \neq 10$ ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

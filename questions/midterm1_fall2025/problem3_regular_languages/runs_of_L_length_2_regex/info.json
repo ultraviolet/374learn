@@ -1,0 +1,8 @@
+{
+    "uuid": "4adca76b-ca64-4162-a15a-4c1e1cfab2b4",
+    "title": "Regex: Strings in {I,L,N}* Where Every Run of Ls Has Length 2",
+    "topic": "Regular Expressions",
+    "tags": ["midterm1", "regular-expressions", "ILN-alphabet"],
+    "type": "v3",
+    "singleVariant": true
+}

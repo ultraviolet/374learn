@@ -1,0 +1,44 @@
+<pl-question-panel>
+<markdown>
+Construct a **DFA** for the following language over the alphabet $\{I, L, N\}$:
+
+***All strings that are covered by $ILL$ and $INI$ substrings.***
+
+A string $w$ is in this language if and only if every character in $w$ is contained in a
+substring of $w$ that is equal to either $ILL$ or $INI$.
+
+This language contains $\varepsilon$, $ILLINI$, and $INILLINIININI$,
+but does **not** contain $ILLILLI$, $ILINNI$, or $NILLLL$.
+
+<hr>
+
+**Hints:**
+- The DFA tracks "what is the partial progress toward completing an $ILL$ or $INI$ pattern?"
+- Suggested state meanings:
+  - **$ILL$**: Haven't read anything yet, or just completed an $ILL$ or $INI$ block (initial and accepting state).
+  - **$I$**: Just read $I$ (after the start or after completing $ILL$/$INI$).
+  - **$IL$**: Just read $IL$ (in progress toward $ILL$).
+  - **$IN$**: Just read $IN$ (in progress toward $INI$).
+  - **$INI$**: Just completed $INI$ (accepting state).
+  - Any transition that cannot lead to a valid cover goes to a **dead/dump state**.
+</markdown>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa" alphabet="ILN">
+  <correct-answer>
+  {
+      "states": ["ILL", "I", "IL", "IN", "INI", "dump"],
+      "input_symbols": ["I", "L", "N"],
+      "transitions": {
+          "ILL": {"I": "I", "L": "dump", "N": "dump"},
+          "I":   {"I": "dump", "L": "IL", "N": "IN"},
+          "IL":  {"I": "dump", "L": "ILL", "N": "dump"},
+          "IN":  {"I": "INI", "L": "dump", "N": "dump"},
+          "INI": {"I": "I", "L": "IL", "N": "IN"},
+          "dump": {"I": "dump", "L": "dump", "N": "dump"}
+      },
+      "initial_state": "ILL",
+      "final_states": ["ILL", "INI"]
+  }
+  </correct-answer>
+</tl-fsm-builder>

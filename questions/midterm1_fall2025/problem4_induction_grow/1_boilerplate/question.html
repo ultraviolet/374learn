@@ -1,0 +1,21 @@
+<pl-question-panel>
+<markdown>
+Consider the following recursively defined function on strings over $\{0, 1\}$:
+
+$$\mathsf{grow}(w) = \begin{cases} \varepsilon & \text{if } w = \varepsilon \\ \mathbf{1} \cdot \mathsf{grow}(x) & \text{if } w = \mathbf{0}x \text{ for some string } x \\ \mathbf{01} \cdot \mathsf{grow}(x) & \text{if } w = \mathbf{1}x \text{ for some string } x \end{cases}$$
+
+For example, $\mathsf{grow}(10001) = 0111101$.
+
+We want to prove that for all strings $w \in \{0,1\}^*$:
+$$\#(\mathbf{0}, \mathsf{grow}(\mathsf{grow}(w))) \geq \#(\mathbf{0}, \mathsf{grow}(w))$$
+
+To set up a proof by strong induction on the **length** of $w$, select the correct boilerplate.
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="boilerplate" weight="1">
+    <pl-answer correct="true">Let $w$ be an arbitrary string in $\{0,1\}^*$. Assume for all strings $x$ with $|x| < |w|$ that $\#(\mathbf{0}, \mathsf{grow}(\mathsf{grow}(x))) \geq \#(\mathbf{0}, \mathsf{grow}(x))$.</pl-answer>
+    <pl-answer correct="false" feedback="This is weak induction on length, but the proof requires the hypothesis for *shorter* strings (strong induction).">Let $n \geq 0$. Assume the statement holds for all strings of length exactly $n$. We prove it for strings of length $n+1$.</pl-answer>
+    <pl-answer correct="false" feedback="We're doing induction on strings, not on natural numbers.">Let $n \geq 0$. Assume the statement holds for all $k < n$. We prove it for $n$.</pl-answer>
+    <pl-answer correct="false" feedback="Structural induction on strings has cases ε, 0x, 1x — these correspond to the recursive structure of grow, which is what we need.">Let $w$ be an arbitrary string. We prove the statement directly without induction.</pl-answer>
+</pl-multiple-choice>

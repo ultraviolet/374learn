@@ -1,0 +1,31 @@
+<pl-question-panel>
+<markdown>
+Consider the following recursively defined function:
+
+$$\mathsf{grow}(w) = \begin{cases} \varepsilon & \text{if } w = \varepsilon \\ \mathbf{1} \cdot \mathsf{grow}(x) & \text{if } w = \mathbf{0}x \\ \mathbf{01} \cdot \mathsf{grow}(x) & \text{if } w = \mathbf{1}x \end{cases}$$
+
+We want to prove: $\#(\mathbf{0}, \mathsf{grow}(\mathsf{grow}(w))) \geq \#(\mathbf{0}, \mathsf{grow}(w))$ for all $w$.
+
+**Induction hypothesis:** For all strings $x$ with $|x| < |w|$, $\#(\mathbf{0}, \mathsf{grow}(\mathsf{grow}(x))) \geq \#(\mathbf{0}, \mathsf{grow}(x))$.
+
+Now consider the **inductive case**: $w = \mathbf{1}x$ for some string $x$.
+
+*(Note: Since $|x| < |w|$, we may apply the induction hypothesis to $x$.)*
+
+Put the following steps in the correct order to prove this case.
+</markdown>
+</pl-question-panel>
+
+<pl-order-blocks solution-placement="bottom" feedback="first-wrong" answers-name="ic1" source-blocks-order="random" indentation="false" grading-method="dag">
+  <pl-answer correct="true" tag="1" depends="">$\#(\mathbf{0}, \mathsf{grow}(\mathsf{grow}(w))) = \#(\mathbf{0}, \mathsf{grow}(\mathsf{grow}(\mathbf{1}x))) \quad$ (because $w = \mathbf{1}x$)</pl-answer>
+  <pl-answer correct="true" tag="2" depends="1">$= \#(\mathbf{0}, \mathsf{grow}(\mathbf{01} \cdot \mathsf{grow}(x))) \quad$ (by definition of $\mathsf{grow}$: $\mathsf{grow}(\mathbf{1}x) = \mathbf{01} \cdot \mathsf{grow}(x)$)</pl-answer>
+  <pl-answer correct="true" tag="3" depends="2">$= \#(\mathbf{0}, \mathbf{101} \cdot \mathsf{grow}(\mathsf{grow}(x))) \quad$ (by definition of $\mathsf{grow}$ twice: $\mathsf{grow}(\mathbf{0}y) = \mathbf{1}\cdot\mathsf{grow}(y)$ and $\mathsf{grow}(\mathbf{1}z) = \mathbf{01}\cdot\mathsf{grow}(z)$)</pl-answer>
+  <pl-answer correct="true" tag="4" depends="3">$= 1 + \#(\mathbf{0}, \mathsf{grow}(\mathsf{grow}(x))) \quad$ (by definition of $\#$: $\#(\mathbf{0}, \mathbf{101} \cdot z) = 1 + \#(\mathbf{0}, z)$)</pl-answer>
+  <pl-answer correct="true" tag="5" depends="4">$\geq 1 + \#(\mathbf{0}, \mathsf{grow}(x)) \quad$ (by induction hypothesis applied to $x$)</pl-answer>
+  <pl-answer correct="true" tag="6" depends="5">$= \#(\mathbf{0}, \mathbf{01} \cdot \mathsf{grow}(x)) \quad$ (by definition of $\#$: $\#(\mathbf{0}, \mathbf{01} \cdot z) = 1 + \#(\mathbf{0}, z)$)</pl-answer>
+  <pl-answer correct="true" tag="7" depends="6">$= \#(\mathbf{0}, \mathsf{grow}(\mathbf{1}x)) \quad$ (by definition of $\mathsf{grow}$)</pl-answer>
+  <pl-answer correct="true" tag="8" depends="7">$= \#(\mathbf{0}, \mathsf{grow}(w)) \quad$ (because $w = \mathbf{1}x$)</pl-answer>
+  <!-- Distractors -->
+  <pl-answer correct="false">$= \#(\mathbf{0}, \mathbf{01} \cdot \mathsf{grow}(\mathsf{grow}(x))) \quad$ (by definition of $\mathsf{grow}$)</pl-answer>
+  <pl-answer correct="false">$= \#(\mathbf{0}, \mathsf{grow}(x)) \quad$ (by induction hypothesis)</pl-answer>
+</pl-order-blocks>

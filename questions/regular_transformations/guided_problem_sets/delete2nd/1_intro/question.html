@@ -1,0 +1,46 @@
+<pl-question-panel>
+<markdown>
+For regular language transformation problems, it's important that you fully
+understand the transformation in question. A good first step is to think about
+a very simple language and consider what strings are accepted by the transformed language.
+
+For any non-empty string $w$ with $|w| \geq 2$, let $\mathsf{Delete2nd}(w)$ denote the string obtained
+by deleting the second symbol in $w$. We define:
+
+$$\mathsf{DELETE2ND}(L) = \{ \mathsf{Delete2nd}(w) \mid |w| \geq 2 \text{ and } w \in L \}$$
+
+For example:
+- $\mathsf{Delete2nd}(01) = 0$ (delete the second character $1$: $0\underline{1} \to 0$)
+- $\mathsf{Delete2nd}(000) = 00$ (delete the second $0$: $0\underline{0}0 \to 00$)
+
+<hr>
+Suppose that $L = \{ 100, 110 \}$. What strings are contained in $\mathsf{DELETE2ND}(L)$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel="true">
+    <pl-answer correct="true">10</pl-answer>
+    <pl-answer correct="false">100</pl-answer>
+    <pl-answer correct="false">110</pl-answer>
+    <pl-answer correct="false">1</pl-answer>
+    <pl-answer correct="false">00</pl-answer>
+    <pl-answer correct="false">01</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We compute $\mathsf{Delete2nd}(w)$ for each $w \in L$:
+
+- $\mathsf{Delete2nd}(100) = 10$ ✓ (delete the $\underline{0}$: $1\underline{0}0 \to 10$)
+- $\mathsf{Delete2nd}(110) = 10$ ✓ (delete the second $\underline{1}$: $1\underline{1}0 \to 10$)
+
+Both strings in $L$ map to $10$, so $\mathsf{DELETE2ND}(L) = \{10\}$.
+
+- $100$: Would require a string $w$ of length 4 in $L$ with $\mathsf{Delete2nd}(w) = 100$, but $L$ has no length-4 strings. ✗
+- $110$: Same argument. ✗
+- $1$: $\mathsf{Delete2nd}$ of a length-3 string gives a length-2 result, so $1$ (length 1) cannot appear. ✗
+- $00$: Would require $w$ of length 3 with $\mathsf{Delete2nd}(w) = 00$. Options: $000, 010, 0?0$ — none are in $L$. ✗
+- $01$: Would require $w$ of length 3 with $\mathsf{Delete2nd}(w) = 01$. Options: $001, 011$ — none are in $L$. ✗
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

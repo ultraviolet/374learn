@@ -1,0 +1,8 @@
+{
+    "uuid": "d1c2ec64-12b5-4364-b546-73caab593401",
+    "title": "True/False: Language {0^a 0^b | a=b} is Regular",
+    "topic": "Regular Languages",
+    "tags": ["midterm1", "true-false", "regular-languages", "DFA"],
+    "type": "v3",
+    "singleVariant": true
+}

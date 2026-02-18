@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if $L^*$ is regular, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1">
+    <pl-answer correct="false" feedback="Can you find a non-regular language L where L* is still regular? Hint: think about what happens when you add 0 and 1 to an irregular language.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Counterexample: if $L$ is any non-regular language, then $L \cup \{0, 1\}$ is also irregular, but $(L \cup \{0, 1\})^* = \{0,1\}^*$ is regular.">No</pl-answer>
+</pl-multiple-choice>
