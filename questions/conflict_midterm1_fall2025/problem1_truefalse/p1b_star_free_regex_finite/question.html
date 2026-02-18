@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Every regular expression that does not contain a Kleene star (or Kleene plus) represents a finite language.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Without $*$ or $+$, a regular expression of length $n$ can only describe strings of length at most $n$, so the language is finite.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Without repetition operators, how long can the strings matched by the regex be? Is it possible to generate arbitrarily long strings?">No</pl-answer>
+</pl-multiple-choice>

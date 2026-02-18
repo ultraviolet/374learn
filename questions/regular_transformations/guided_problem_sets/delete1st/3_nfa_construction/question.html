@@ -1,0 +1,85 @@
+<pl-question-panel>
+<markdown>
+For any non-empty string $w$, let $\mathsf{Delete1st}(w)$ denote the string obtained by
+deleting the **entire first maximal run** of identical symbols from $w$.
+
+Given a language $L \subseteq \{0,1\}^*$, we define
+
+$$
+  \mathsf{DELETE1ST}(L) = \{ \mathsf{Delete1st}(w) \mid w \in L \}
+$$
+
+---
+
+We assume that we have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+Using this, we will construct an **NFA** $M' = (Q', \{0,1\}, \delta', s', A')$ with $\varepsilon$-transitions that accepts $\mathsf{DELETE1ST}(L)$.
+
+In the previous question, you practiced constructing $M'$ given a concrete $M$.
+Now, generalize the transformation to an abstract $M$.
+
+You will need to copy and paste these characters for some of your answers: `δ`, `ε`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+
+Recall that NFA transition outputs are **sets**.
+
+**Note:** For this transformation, we use four labels:
+`start` (initial), `first0` (guessing run of 0s), `first1` (guessing run of 1s), `after` (reading actual output).
+
+$\varepsilon$-transitions from `start`, `first0`, and `first1` simulate the deleted first run through $M$ without consuming any output characters.
+When in `first0` or `first1`, $M'$ transitions to `after` by reading the first actual output character (which terminates the maximal first run).
+<hr>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-2" correct-answer="{start, first0, first1, after}" show-help-text=false size=30 remove-spaces="true" allow-blank=true></pl-string-input>
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, start)" show-help-text=false size=12 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{start}), 0) =$
+<pl-string-input answers-name="transition-start-0" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{start}), 1) =$
+<pl-string-input answers-name="transition-start-1" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{start}), \varepsilon) =$
+<pl-string-input answers-name="transition-start-eps" correct-answer="{(δ(q, 0), first0), (δ(q, 1), first1)}" show-help-text=false size=40 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{first0}), 0) =$
+<pl-string-input answers-name="transition-first0-0" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{first0}), 1) =$
+<pl-string-input answers-name="transition-first0-1" correct-answer="{(δ(q, 1), after)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{first0}), \varepsilon) =$
+<pl-string-input answers-name="transition-first0-eps" correct-answer="{(δ(q, 0), first0)}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{first1}), 0) =$
+<pl-string-input answers-name="transition-first1-0" correct-answer="{(δ(q, 0), after)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{first1}), 1) =$
+<pl-string-input answers-name="transition-first1-1" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{first1}), \varepsilon) =$
+<pl-string-input answers-name="transition-first1-eps" correct-answer="{(δ(q, 1), first1)}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{after}), 0) =$
+<pl-string-input answers-name="transition-after-0" correct-answer="{(δ(q, 0), after)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{after}), 1) =$
+<pl-string-input answers-name="transition-after-1" correct-answer="{(δ(q, 1), after)}" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta' ((q, \text{after}), \varepsilon) =$
+<pl-string-input answers-name="transition-after-eps" correct-answer="∅" show-help-text=false size=5 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-states-1" correct-answer="A" show-help-text=false size=1 allow-blank=true></pl-string-input>
+$\times$
+<pl-string-input answers-name="accepting-states-2" correct-answer="{after, first0, first1}" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+</markdown>

@@ -1,0 +1,8 @@
+{
+    "uuid": "c9d0e1f2-a3b4-5678-cdef-789012345678",
+    "title": "True/False: Kleene star of a CFL is a CFL",
+    "topic": "Context-Free Languages",
+    "tags": ["conflict-midterm1", "true-false", "context-free", "closure", "fa25"],
+    "type": "v3",
+    "singleVariant": true
+}

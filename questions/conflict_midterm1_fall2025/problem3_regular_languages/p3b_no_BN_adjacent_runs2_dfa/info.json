@@ -1,0 +1,9 @@
+{
+    "uuid": "a9b0c1d2-e3f4-5678-a012-012345678901",
+    "title": "DFA: Strings in {A,B,N}* with No B-N Adjacent and All Runs Length at Most 2",
+    "topic": "DFAs",
+    "tags": ["conflict-midterm1", "DFA", "ABN-alphabet", "fa25"],
+    "type": "v3",
+    "singleVariant": true,
+    "showCorrectAnswer": false
+}

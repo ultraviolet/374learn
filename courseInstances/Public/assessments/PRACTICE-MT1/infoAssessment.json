@@ -16,135 +16,57 @@
         {
             "title": "Problem 1: True/False",
             "questions": [
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1a_finite_star_regular",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1b_finite_star_cf",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1c_Lstar_regular_implies_L",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1d_complement_regular",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1e_fooling_set_nfa",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1f_01star_fooling_set",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1g_fooling_set_regular",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1h_0a0b_regular",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1i_nfa_complement",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem1_truefalse/p1j_Lstar_infinite",
-                    "points": 1
-                }
+                {"id": "midterm1_fall2025/problem1_truefalse/p1a_finite_star_regular", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1b_finite_star_cf", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1c_Lstar_regular_implies_L", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1d_complement_regular", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1e_fooling_set_nfa", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1f_01star_fooling_set", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1g_fooling_set_regular", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1h_0a0b_regular", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1i_nfa_complement", "points": 1},
+                {"id": "midterm1_fall2025/problem1_truefalse/p1j_Lstar_infinite", "points": 1}
             ]
         },
         {
             "title": "Problem 2a: INSERT2ND Transformation (GPS)",
             "questions": [
-                {
-                    "id": "regular_transformations/guided_problem_sets/insert2nd/1_intro",
-                    "points": 1
-                },
-                {
-                    "id": "regular_transformations/guided_problem_sets/insert2nd/2_concrete_dfa",
-                    "points": 1
-                },
-                {
-                    "id": "regular_transformations/guided_problem_sets/insert2nd/3_dfa_construction",
-                    "points": 1
-                }
+                {"id": "regular_transformations/guided_problem_sets/insert2nd/1_intro", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert2nd/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert2nd/3_dfa_construction", "points": 1}
             ]
         },
         {
             "title": "Problem 2b: DELETE2ND Transformation (GPS)",
             "questions": [
-                {
-                    "id": "regular_transformations/guided_problem_sets/delete2nd/1_intro",
-                    "points": 1
-                },
-                {
-                    "id": "regular_transformations/guided_problem_sets/delete2nd/2_concrete_nfa",
-                    "points": 1
-                },
-                {
-                    "id": "regular_transformations/guided_problem_sets/delete2nd/3_nfa_construction",
-                    "points": 1
-                }
+                {"id": "regular_transformations/guided_problem_sets/delete2nd/1_intro", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete2nd/2_concrete_nfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete2nd/3_nfa_construction", "points": 1}
             ]
         },
         {
             "title": "Problem 3: Regular Languages over {I, L, N}",
             "questions": [
-                {
-                    "id": "midterm1_fall2025/problem3_regular_languages/runs_of_L_length_2_regex",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem3_regular_languages/runs_of_L_length_2_dfa",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem3_regular_languages/covered_by_ILL_INI_regex",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem3_regular_languages/covered_by_ILL_INI_dfa",
-                    "points": 1
-                }
+                {"id": "midterm1_fall2025/problem3_regular_languages/runs_of_L_length_2_regex", "points": 1},
+                {"id": "midterm1_fall2025/problem3_regular_languages/runs_of_L_length_2_dfa", "points": 1},
+                {"id": "midterm1_fall2025/problem3_regular_languages/covered_by_ILL_INI_regex", "points": 1},
+                {"id": "midterm1_fall2025/problem3_regular_languages/covered_by_ILL_INI_dfa", "points": 1}
             ]
         },
         {
             "title": "Problem 4: Induction Proof for grow(grow(w))",
             "questions": [
-                {
-                    "id": "midterm1_fall2025/problem4_induction_grow/1_boilerplate",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem4_induction_grow/2_base_case",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem4_induction_grow/3_inductive_case_0x",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem4_induction_grow/4_inductive_case_1x",
-                    "points": 1
-                }
+                {"id": "midterm1_fall2025/problem4_induction_grow/1_boilerplate", "points": 1},
+                {"id": "midterm1_fall2025/problem4_induction_grow/2_base_case", "points": 1},
+                {"id": "midterm1_fall2025/problem4_induction_grow/3_inductive_case_0x", "points": 1},
+                {"id": "midterm1_fall2025/problem4_induction_grow/4_inductive_case_1x", "points": 1}
             ]
         },
         {
             "title": "Problem 5: Fooling Sets and CFGs",
             "questions": [
-                {
-                    "id": "midterm1_fall2025/problem5_fooling_cfg/fooling_set_S",
-                    "points": 1
-                },
-                {
-                    "id": "midterm1_fall2025/problem5_fooling_cfg/cfg_S",
-                    "points": 1
-                }
+                {"id": "midterm1_fall2025/problem5_fooling_cfg/fooling_set_S", "points": 1},
+                {"id": "midterm1_fall2025/problem5_fooling_cfg/cfg_S", "points": 1}
             ]
         }
     ]

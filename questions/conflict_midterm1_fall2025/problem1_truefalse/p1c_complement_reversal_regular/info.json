@@ -1,0 +1,8 @@
+{
+    "uuid": "70d5b4a4-abb5-4bfd-af7c-2ffafcc48d90",
+    "title": "True/False: {w^C | w^R in L} is regular",
+    "topic": "Regular Languages",
+    "tags": ["conflict-midterm1", "true-false", "DFA-construction", "fa25"],
+    "type": "v3",
+    "singleVariant": true
+}

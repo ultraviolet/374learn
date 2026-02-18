@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^a 0^b \mid a, b \geq 0 \text{ and } a > b\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Since $0^a 0^b = 0^{a+b}$, the language equals $\{0^n \mid n \geq 0,\, \exists\, a > b \geq 0 \text{ with } a + b = n\}$. For any $n \geq 1$, choose $a = n, b = 0$ (since $n > 0$), so every nonempty string of $0$s is in the language. For $n = 0$: we'd need $a > b$ with $a + b = 0$, which forces $a = b = 0$, contradicting $a > b$. So the language is exactly $00^*$, which is regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The condition $a > b$ looks like it might force non-regularity, but remember that $0^a 0^b = 0^{a+b}$ — the alphabet only has $0$s. What strings are in this language?">No</pl-answer>
+</pl-multiple-choice>

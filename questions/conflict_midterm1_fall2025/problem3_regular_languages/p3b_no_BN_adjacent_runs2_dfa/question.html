@@ -1,0 +1,46 @@
+<pl-question-panel>
+<markdown>
+Construct a **DFA** for the following language over the alphabet $\{A, B, N\}$:
+
+***All strings in $\{A, B, N\}^*$ in which $B$ and $N$ are never adjacent, and every maximal run of identical symbols has length at most $2$.***
+
+This language contains $\varepsilon$, $A$, $BB$, $NN$, $ANA$, $BAN$, and $BAANNANA$,
+but does **not** contain $ANBAN$ ($B$ and $N$ are adjacent) or $ABAAANANABBB$ (has a run of $3$ consecutive $A$s).
+
+<hr>
+
+**Hints:**
+- Track what character(s) ended the most recent run. You need to know:
+  (1) Are $B$ and $N$ currently adjacent? (2) Has any run exceeded length 2?
+- Suggested state meanings (all states except $\mathit{dump}$ are accepting):
+  - **$s$**: No symbols read yet (initial and accepting state).
+  - **$A$**: Last symbol was $A$ (first $A$ in a potential run).
+  - **$AA$**: Last two symbols were $AA$ (a full run of $A$s).
+  - **$B$**: Last symbol was $B$ (single $B$).
+  - **$N$**: Last symbol was $N$ (single $N$).
+  - **$XX$**: Last two symbols were $BB$ or $NN$ (a full run of $B$s or $N$s).
+  - **$\mathit{dump}$**: A violation occurred (dead/trap state, not accepting).
+- From $B$: reading $N$ goes to $\mathit{dump}$ (adjacent $B$ and $N$). From $N$: reading $B$ goes to $\mathit{dump}$.
+- From $XX$: reading $B$ or $N$ goes to $\mathit{dump}$ (run too long or adjacent $BN$).
+</markdown>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa" alphabet="ABN">
+  <correct-answer>
+  {
+      "states": ["s", "A", "AA", "B", "N", "XX", "dump"],
+      "input_symbols": ["A", "B", "N"],
+      "transitions": {
+          "s":    {"A": "A",    "B": "B",    "N": "N"},
+          "A":    {"A": "AA",   "B": "B",    "N": "N"},
+          "AA":   {"A": "dump", "B": "B",    "N": "N"},
+          "B":    {"A": "A",    "B": "XX",   "N": "dump"},
+          "N":    {"A": "A",    "B": "dump", "N": "XX"},
+          "XX":   {"A": "A",    "B": "dump", "N": "dump"},
+          "dump": {"A": "dump", "B": "dump", "N": "dump"}
+      },
+      "initial_state": "s",
+      "final_states": ["s", "A", "AA", "B", "N", "XX"]
+  }
+  </correct-answer>
+</tl-fsm-builder>

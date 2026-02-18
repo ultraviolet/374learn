@@ -1,0 +1,8 @@
+{
+    "uuid": "d6e7f8a9-b0c1-2345-def6-789012345678",
+    "title": "Regex: Strings in {A,B,N}* Where Every N is Directly Between Two As",
+    "topic": "Regular Expressions",
+    "tags": ["conflict-midterm1", "regular-expressions", "ABN-alphabet", "fa25"],
+    "type": "v3",
+    "singleVariant": true
+}

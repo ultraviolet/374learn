@@ -1,0 +1,55 @@
+<pl-question-panel>
+<markdown>
+Let $S$ be the set of all strings in $(\mathsf{BAN} + \mathsf{ANA})^*$ in which the blocks $\mathsf{BAN}$ and $\mathsf{ANA}$
+appear the **same number of times**.
+
+For example, $S$ contains $\mathsf{BANANA}$ (one $\mathsf{BAN}$ and one $\mathsf{ANA}$) and $\varepsilon$ (zero each),
+but $S$ does not contain $\mathsf{ANABANBAN}$ (one $\mathsf{ANA}$ and two $\mathsf{BAN}$).
+
+We want to prove that $S$ is **not** a regular language using a fooling set.
+
+**Step 1:** We use the fooling set $F = (\mathsf{BAN})^*$. Select the correct definition of $F$.
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="F_def" weight="1">
+    <pl-answer correct="true">$F = \{ (\mathsf{BAN})^i \mid i \geq 0 \} = \{ \varepsilon, \mathsf{BAN}, \mathsf{BANBAN}, \mathsf{BANBANBAN}, \ldots \}$</pl-answer>
+    <pl-answer correct="false" feedback="This is the full language S, not the fooling set (BAN)*.">$F = S$ itself</pl-answer>
+    <pl-answer correct="false" feedback="A finite set cannot be an infinite fooling set. We need F to be infinite to prove non-regularity.">$F = \{ \mathsf{BAN}, \mathsf{BANBAN} \}$</pl-answer>
+</pl-multiple-choice>
+
+<pl-question-panel>
+<markdown>
+---
+
+**Step 2:** Let $x = (\mathsf{BAN})^i$ and $y = (\mathsf{BAN})^j$ be distinct strings in $F$, so $i \neq j$.
+We need to find a distinguishing suffix $z$ such that $xz \in S$ but $yz \notin S$ (or vice versa).
+
+What is the correct choice of $z$?
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="z_choice" weight="1">
+    <pl-answer correct="true">$z = (\mathsf{ANA})^i$</pl-answer>
+    <pl-answer correct="false" feedback="With z = (ANA)^j, we get xz = (BAN)^i(ANA)^j ∈ S iff i = j. But we can't ensure this distinguishes all pairs.">$z = (\mathsf{ANA})^j$</pl-answer>
+    <pl-answer correct="false" feedback="z = ε: then xz = (BAN)^i ∈ S only if i = 0. This doesn't work for all pairs.">$z = \varepsilon$</pl-answer>
+    <pl-answer correct="false" feedback="z = ANA only balances the case i = 1.">$z = \mathsf{ANA}$</pl-answer>
+</pl-multiple-choice>
+
+<pl-question-panel>
+<markdown>
+---
+
+**Step 3:** With $z = (\mathsf{ANA})^i$, verify the fooling set conditions.
+
+Which of the following statements are **true**? (Select all that apply.)
+</markdown>
+</pl-question-panel>
+
+<pl-checkbox answers-name="conditions" weight="1">
+    <pl-answer correct="true">$xz = (\mathsf{BAN})^i(\mathsf{ANA})^i \in S$ because $\mathsf{BAN}$ appears $i$ times and $\mathsf{ANA}$ appears $i$ times.</pl-answer>
+    <pl-answer correct="true">$yz = (\mathsf{BAN})^j(\mathsf{ANA})^i \notin S$ because $\mathsf{BAN}$ appears $j$ times, $\mathsf{ANA}$ appears $i$ times, and $i \neq j$.</pl-answer>
+    <pl-answer correct="true">Since $z$ distinguishes every pair of distinct strings in $F$, $F$ is a valid fooling set for $S$.</pl-answer>
+    <pl-answer correct="true">Since $F$ is infinite, $S$ cannot be regular.</pl-answer>
+    <pl-answer correct="false" feedback="xz and yz are both in S only when i = j, which is excluded since x ≠ y.">$xz \in S$ and $yz \in S$ for all distinct $x, y \in F$.</pl-answer>
+</pl-checkbox>

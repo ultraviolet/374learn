@@ -1,0 +1,73 @@
+{
+    "uuid": "b8c4d7e2-1a93-4f06-8d51-2e7b9f5c3a18",
+    "type": "Homework",
+    "title": "Conflict Midterm 1 (Fall 2025)",
+    "set": "Practice Tests",
+    "number": "2",
+    "allowIssueReporting": false,
+    "allowAccess": [
+        {
+            "mode": "Public",
+            "credit": 100,
+            "startDate": "2025-01-01T12:59:59"
+        }
+    ],
+    "zones": [
+        {
+            "title": "Problem 1: True/False",
+            "questions": [
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1a_every_language_regular_or_cf", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1b_star_free_regex_finite", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1c_complement_reversal_regular", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1d_fooling_set_at_most_states", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1e_fooling_set_equal_count", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1f_intersection_finite_regular", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1g_regex_equality_00_11", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1h_zero_concatenation_regular", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1i_fooling_set_star_infinite", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem1_truefalse/p1j_cfl_kleene_star_cfl", "points": 1}
+            ]
+        },
+        {
+            "title": "Problem 2a: INSERT1ST Transformation (GPS)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/insert1st/1_intro", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert1st/2_concrete_dfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/insert1st/3_dfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Problem 2b: DELETE1ST Transformation (GPS)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/delete1st/1_intro", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete1st/2_concrete_nfa", "points": 1},
+                {"id": "regular_transformations/guided_problem_sets/delete1st/3_nfa_construction", "points": 1}
+            ]
+        },
+        {
+            "title": "Problem 3: Regular Languages over {A, B, N}",
+            "questions": [
+                {"id": "conflict_midterm1_fall2025/problem3_regular_languages/p3a_N_between_As_regex", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem3_regular_languages/p3a_N_between_As_dfa", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem3_regular_languages/p3b_no_BN_adjacent_runs2_regex", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem3_regular_languages/p3b_no_BN_adjacent_runs2_dfa", "points": 1}
+            ]
+        },
+        {
+            "title": "Problem 4: Induction — |grow(grow(w))| = 2·#(0,w) + 3·#(1,w)",
+            "questions": [
+                {"id": "conflict_midterm1_fall2025/problem4_induction_grow/1_boilerplate", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem4_induction_grow/2_base_case", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem4_induction_grow/3_inductive_case_0x", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem4_induction_grow/4_inductive_case_1x", "points": 1}
+            ]
+        },
+        {
+            "title": "Problem 5: Fooling Sets and CFGs (BAN/ANA)",
+            "questions": [
+                {"id": "conflict_midterm1_fall2025/problem5_fooling_cfg/fooling_set_S", "points": 1},
+                {"id": "conflict_midterm1_fall2025/problem5_fooling_cfg/cfg_S", "points": 1}
+            ]
+        }
+    ]
+}

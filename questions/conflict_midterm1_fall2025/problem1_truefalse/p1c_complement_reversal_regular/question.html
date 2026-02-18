@@ -1,0 +1,19 @@
+<pl-question-panel>
+<markdown>
+For any string $w \in \{0,1\}^*$, let $w^C$ denote the **bitwise complement** of $w$ (replace every
+$0$ with $1$ and vice versa), and let $w^R$ denote the **reversal** of $w$.
+For example, $(000110)^C = 111001$ and $(000110)^R = 011000$.
+
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every regular language $L \subseteq \{0,1\}^*$, the language $\{w^C \mid w^R \in L\}$ is also regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Take a DFA for $L$, reverse all transitions and swap start/accepting states (giving a DFA/NFA for $L^R$), then swap the $\mathbf{0}$- and $\mathbf{1}$-transitions (giving $\{w^C \mid w \in L^R\} = \{w^C \mid w^R \in L\}$).">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Think about how to construct an automaton for this language from a DFA for $L$. Consider the operations of reversal and bitwise complement separately.">No</pl-answer>
+</pl-multiple-choice>

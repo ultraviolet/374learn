@@ -1,0 +1,28 @@
+<pl-question-panel>
+<markdown>
+Consider the following recursively defined function:
+
+$$\mathsf{grow}(w) = \begin{cases} \varepsilon & \text{if } w = \varepsilon \\ \mathbf{1} \cdot \mathsf{grow}(x) & \text{if } w = \mathbf{0}x \\ \mathbf{01} \cdot \mathsf{grow}(x) & \text{if } w = \mathbf{1}x \end{cases}$$
+
+We want to prove: $|\mathsf{grow}(\mathsf{grow}(w))| = 2 \cdot \#(\mathbf{0}, w) + 3 \cdot \#(\mathbf{1}, w)$ for all $w \in \{0,1\}^*$.
+
+**Induction hypothesis:** For all strings $x$ with $|x| < |w|$, $|\mathsf{grow}(\mathsf{grow}(x))| = 2 \cdot \#(\mathbf{0}, x) + 3 \cdot \#(\mathbf{1}, x)$.
+
+Now consider the **base case**: $w = \varepsilon$.
+
+Put the following steps in the correct order to prove the base case.
+</markdown>
+</pl-question-panel>
+
+<pl-order-blocks solution-placement="bottom" feedback="first-wrong" answers-name="bc" source-blocks-order="random" indentation="false" grading-method="dag">
+  <pl-answer correct="true" tag="1" depends="">$|\mathsf{grow}(\mathsf{grow}(w))| = |\mathsf{grow}(\mathsf{grow}(\varepsilon))| \quad$ (because $w = \varepsilon$)</pl-answer>
+  <pl-answer correct="true" tag="2" depends="1">$= |\mathsf{grow}(\varepsilon)| \quad$ (by definition of $\mathsf{grow}$: $\mathsf{grow}(\varepsilon) = \varepsilon$)</pl-answer>
+  <pl-answer correct="true" tag="3" depends="2">$= |\varepsilon| \quad$ (by definition of $\mathsf{grow}$: $\mathsf{grow}(\varepsilon) = \varepsilon$)</pl-answer>
+  <pl-answer correct="true" tag="4" depends="3">$= 0 \quad$ (by definition of $|\cdot|$: $|\varepsilon| = 0$)</pl-answer>
+  <pl-answer correct="true" tag="5" depends="4">$= 2 \cdot \#(\mathbf{0}, \varepsilon) + 3 \cdot \#(\mathbf{1}, \varepsilon) \quad$ (since $\#(\mathbf{0}, \varepsilon) = \#(\mathbf{1}, \varepsilon) = 0$, so $2 \cdot 0 + 3 \cdot 0 = 0$)</pl-answer>
+  <pl-answer correct="true" tag="6" depends="5">$= 2 \cdot \#(\mathbf{0}, w) + 3 \cdot \#(\mathbf{1}, w) \quad$ (because $w = \varepsilon$)</pl-answer>
+  <!-- Distractors -->
+  <pl-answer correct="false">$= |\mathsf{grow}(w)| \quad$ (by definition of $\mathsf{grow}$)</pl-answer>
+  <pl-answer correct="false">$= 2 \cdot \#(\mathbf{0}, w) + 3 \cdot \#(\mathbf{1}, w) \quad$ (by induction hypothesis)</pl-answer>
+  <pl-answer correct="false">$= |\varepsilon| + |\varepsilon| \quad$ (by applying $\mathsf{grow}$ twice to $\varepsilon$)</pl-answer>
+</pl-order-blocks>

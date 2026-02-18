@@ -1,0 +1,21 @@
+<pl-question-panel>
+<markdown>
+Provide a **regular expression** for the following language over the alphabet $\{A, B, N\}$:
+
+***All strings in $\{A, B, N\}^*$ where every $N$ is directly between two $A$s.***
+
+Formally, for every occurrence of $N$ at position $i$ in the string, position $i-1$ must be $A$ and position $i+1$ must be $A$.
+
+This language contains $\varepsilon$, $ANA$, $BANANA$, and $ABAAANANABBB$,
+but does **not** contain $ANBAN$ (the first $N$ is followed by $B$, not $A$) or $BAANNANA$ (the first $N$ is followed by another $N$, not $A$).
+
+<hr>
+
+**Regex format:** Use `+` for union, `*` for Kleene star, `e` for $\varepsilon$, and parentheses for grouping.
+Concatenation is implicit. The alphabet is $\{A, B, N\}$.
+</markdown>
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1" alphabet="ABN">
+(B*(A(NA)*)*)*
+</tl-regex-input>

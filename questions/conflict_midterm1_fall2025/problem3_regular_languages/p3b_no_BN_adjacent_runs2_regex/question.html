@@ -1,0 +1,21 @@
+<pl-question-panel>
+<markdown>
+Provide a **regular expression** for the following language over the alphabet $\{A, B, N\}$:
+
+***All strings in $\{A, B, N\}^*$ in which $B$ and $N$ are never adjacent, and every maximal run of identical symbols has length at most $2$.***
+
+This language contains $\varepsilon$, $A$, $BB$, $NN$, $ANA$, $BAN$, and $BAANNANA$,
+but does **not** contain $ANBAN$ ($B$ and $N$ are adjacent) or $ABAAANANABBB$ (has a run of $3$ consecutive $A$s).
+
+*(Note: a "run" of symbol $X$ is a maximal consecutive sequence of $X$s.)*
+
+<hr>
+
+**Regex format:** Use `+` for union, `*` for Kleene star, `e` for $\varepsilon$, and parentheses for grouping.
+Concatenation is implicit. The alphabet is $\{A, B, N\}$.
+</markdown>
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1" alphabet="ABN">
+(e+A+AA)((B+BB+N+NN)(A+AA))*(e+B+BB+N+NN)
+</tl-regex-input>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The regular expressions $(00+11)^*$ and $(00)^*(11)^*$ describe the same language.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Consider the string $1100$. It is in $(00+11)^*$ (as $11 \cdot 00$), but it is not in $(00)^*(11)^*$ — that language requires all $00$-blocks to come before all $11$-blocks.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Counterexample: $1100 \in (00+11)^*$ (decompose as $11 \cdot 00$), but $1100 \notin (00)^*(11)^*$ because $(00)^*(11)^*$ requires all the $00$-blocks to appear before any $11$-blocks.">No</pl-answer>
+</pl-multiple-choice>

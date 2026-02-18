@@ -1,0 +1,46 @@
+<pl-question-panel>
+<markdown>
+For any non-empty string $w$, let $\mathsf{Delete1st}(w)$ denote the string obtained by
+deleting the **entire first maximal run** of identical symbols from $w$.
+
+For example:
+- $\mathsf{Delete1st}(001100) = 1100$ (delete the initial run $00$)
+- $\mathsf{Delete1st}(111010) = 010$ (delete the initial run $111$)
+- $\mathsf{Delete1st}(1) = \varepsilon$ (the whole string is one run)
+
+We define:
+$$\mathsf{DELETE1ST}(L) = \{ \mathsf{Delete1st}(w) \mid w \in L \}$$
+
+In other words, $\mathsf{DELETE1ST}(L)$ is obtained by deleting the first maximal run from
+every string in $L$.
+
+For example, with $L = \{10, 110\}$:
+- $\mathsf{Delete1st}(10) = 0$ (delete the initial run $1$)
+- $\mathsf{Delete1st}(110) = 0$ (delete the initial run $11$)
+
+So $\mathsf{DELETE1ST}(\{10, 110\}) = \{0\}$.
+
+<hr>
+Suppose that $L = \{100, 1100\}$. What strings are contained in $\mathsf{DELETE1ST}(L)$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel="true">
+    <pl-answer correct="true">00</pl-answer>
+    <pl-answer correct="false">0</pl-answer>
+    <pl-answer correct="false">100</pl-answer>
+    <pl-answer correct="false">1100</pl-answer>
+    <pl-answer correct="false">000</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We apply $\mathsf{Delete1st}$ to each string in $L$:
+
+- $\mathsf{Delete1st}(100) = 00$ ✓ (delete the initial run $1$: $\underline{1} \cdot 00 \to 00$)
+- $\mathsf{Delete1st}(1100) = 00$ ✓ (delete the initial run $11$: $\underline{11} \cdot 00 \to 00$)
+
+So $\mathsf{DELETE1ST}(\{100, 1100\}) = \{00\}$.
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

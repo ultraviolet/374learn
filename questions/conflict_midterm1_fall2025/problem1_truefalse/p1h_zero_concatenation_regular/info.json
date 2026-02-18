@@ -1,0 +1,8 @@
+{
+    "uuid": "a7b8c9d0-e1f2-3456-abcd-567890123456",
+    "title": "True/False: {0^a 0^b | a > b} is regular",
+    "topic": "Regular Languages",
+    "tags": ["conflict-midterm1", "true-false", "regular-languages", "fa25"],
+    "type": "v3",
+    "singleVariant": true
+}

@@ -1,0 +1,17 @@
+<pl-question-panel>
+<markdown>
+Let $L = \{w \in \{0,1\}^* \mid \#(0, w) = \#(1, w)\}$ be the language of strings with equal numbers of $0$s and $1$s.
+
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The set $F = (100)^* = \{\varepsilon, 100, 100100, 100100100, \ldots\}$ is a fooling set for $L$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! For any two distinct strings $x = (100)^i$ and $y = (100)^j$ with $i \neq j$, we need a suffix $z$ such that $xz \in L$ but $yz \notin L$ (or vice versa). Take $z = (011)^i \cdot 1^{2(j-i)}$ — more simply: $x \cdot (011)^i$ has equal counts, but $y \cdot (011)^i$ does not (since $x$ and $y$ have different lengths/counts). In fact, $z = (011)^i$ works: $xz = (100)^i(011)^i \in L$ since each $100$ is balanced by one $011$ ($\#(0)=2i,\#(1)=2i$ — wait, actually $\#(0,(100)^i)=2i, \#(1,(100)^i)=i$ and $\#(0,(011)^i)=i, \#(1,(011)^i)=2i$, so $xz$ has $3i$ zeros and $3i$ ones: $xz \in L$. But $yz = (100)^j(011)^i$ has $2j+i$ zeros and $j+2i$ ones; these are equal iff $j=i$, so for $j \neq i$, $yz \notin L$. Thus $F$ is a valid fooling set.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Try to verify the fooling set condition: for any two distinct $x, y \in F$, does there exist a suffix $z$ with $xz \in L$ but $yz \notin L$?">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,8 @@
+{
+    "uuid": "7ea795df-d93e-4ee6-9de1-24d34941dc4d",
+    "title": "True/False: Fooling set size 374 implies DFA has at most 374 states",
+    "topic": "Fooling Sets",
+    "tags": ["conflict-midterm1", "true-false", "fooling-sets", "fa25"],
+    "type": "v3",
+    "singleVariant": true
+}

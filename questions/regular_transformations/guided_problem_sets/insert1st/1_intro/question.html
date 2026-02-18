@@ -1,0 +1,49 @@
+<pl-question-panel>
+<markdown>
+For any non-empty string $w$, let $\mathsf{Delete1st}(w)$ denote the string obtained by
+deleting the **entire first maximal run** of identical symbols from $w$.
+
+For example:
+- $\mathsf{Delete1st}(001100) = 1100$ (delete the initial run $00$)
+- $\mathsf{Delete1st}(111010) = 010$ (delete the initial run $111$)
+- $\mathsf{Delete1st}(1) = \varepsilon$ (the whole string is one run)
+
+We define:
+$$\mathsf{INSERT1ST}(L) = \{ w \in \{0,1\}^* \mid w \neq \varepsilon \text{ and } \mathsf{Delete1st}(w) \in L \}$$
+
+In other words, $\mathsf{INSERT1ST}(L)$ contains all non-empty strings $w$ such that
+deleting the first maximal run of $w$ yields a string in $L$.
+
+For example, with $L = \{1\}$:
+- $\mathsf{Delete1st}(01) = 1 \in L$, so $01 \in \mathsf{INSERT1ST}(\{1\})$
+- $\mathsf{Delete1st}(001) = 1 \in L$, so $001 \in \mathsf{INSERT1ST}(\{1\})$
+- $\mathsf{Delete1st}(10) = 0 \notin L$, so $10 \notin \mathsf{INSERT1ST}(\{1\})$
+- $\mathsf{Delete1st}(11) = \varepsilon \notin L$, so $11 \notin \mathsf{INSERT1ST}(\{1\})$
+
+<hr>
+Suppose that $L = \{10\}$. What strings are contained in $\mathsf{INSERT1ST}(L)$?
+
+<pl-checkbox answers-name="what-strings-contained" hide-answer-panel="true">
+    <pl-answer correct="true">010</pl-answer>
+    <pl-answer correct="true">0010</pl-answer>
+    <pl-answer correct="false">10</pl-answer>
+    <pl-answer correct="false">110</pl-answer>
+    <pl-answer correct="false">100</pl-answer>
+    <pl-answer correct="false">0100</pl-answer>
+</pl-checkbox>
+
+<pl-answer-panel>
+<markdown>
+**Explanation:** We need strings $w$ where $\mathsf{Delete1st}(w) = 10$.
+
+- $\mathsf{Delete1st}(010) = 10$ ✓ (delete the initial run $0$: $\underline{0} \cdot 10 \to 10$)
+- $\mathsf{Delete1st}(0010) = 10$ ✓ (delete the initial run $00$: $\underline{00} \cdot 10 \to 10$)
+- $\mathsf{Delete1st}(10) = 0$ ✗ (delete the initial run $1$: $\underline{1} \cdot 0 \to 0$)
+- $\mathsf{Delete1st}(110) = 0$ ✗ (delete the initial run $11$: $\underline{11} \cdot 0 \to 0$)
+- $\mathsf{Delete1st}(100) = 00$ ✗ (delete the initial run $1$: $\underline{1} \cdot 00 \to 00$)
+- $\mathsf{Delete1st}(0100) = 100$ ✗ (delete the initial run $0$: $\underline{0} \cdot 100 \to 100$)
+</markdown>
+</pl-answer-panel>
+
+</markdown>
+</pl-question-panel>

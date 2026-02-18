@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The Kleene star of any context-free language is also context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Context-free languages are closed under Kleene star. If $G$ is a CFG for $L$ with start symbol $S$, then adding the production $S \to SS \mid \varepsilon$ (and renaming if needed) gives a CFG for $L^*$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Context-free languages are closed under Kleene star. Given a CFG for $L$, can you modify it to accept $L^*$?">No</pl-answer>
+</pl-multiple-choice>

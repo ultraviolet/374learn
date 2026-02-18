@@ -1,0 +1,8 @@
+{
+    "uuid": "f8a9b0c1-d2e3-4567-f012-901234567890",
+    "title": "Regex: Strings in {A,B,N}* with No B-N Adjacent and All Runs Length at Most 2",
+    "topic": "Regular Expressions",
+    "tags": ["conflict-midterm1", "regular-expressions", "ABN-alphabet", "fa25"],
+    "type": "v3",
+    "singleVariant": true
+}

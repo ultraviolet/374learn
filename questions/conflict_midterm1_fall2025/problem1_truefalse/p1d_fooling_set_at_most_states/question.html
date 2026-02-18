@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ has a fooling set of size $374$, then every DFA that accepts $L$ has at most $374$ states.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The fooling set lower bound says every DFA has <em>at least</em> as many states as the fooling set size, not at most. A DFA could have far more than 374 states.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! A fooling set of size 374 proves that every DFA for $L$ has <em>at least</em> 374 states — it gives a lower bound, not an upper bound. There is no upper bound implied.">No</pl-answer>
+</pl-multiple-choice>

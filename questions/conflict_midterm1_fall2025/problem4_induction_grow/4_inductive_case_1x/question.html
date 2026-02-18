@@ -1,0 +1,32 @@
+<pl-question-panel>
+<markdown>
+Consider the following recursively defined function:
+
+$$\mathsf{grow}(w) = \begin{cases} \varepsilon & \text{if } w = \varepsilon \\ \mathbf{1} \cdot \mathsf{grow}(x) & \text{if } w = \mathbf{0}x \\ \mathbf{01} \cdot \mathsf{grow}(x) & \text{if } w = \mathbf{1}x \end{cases}$$
+
+We want to prove: $|\mathsf{grow}(\mathsf{grow}(w))| = 2 \cdot \#(\mathbf{0}, w) + 3 \cdot \#(\mathbf{1}, w)$ for all $w \in \{0,1\}^*$.
+
+**Induction hypothesis:** For all strings $x$ with $|x| < |w|$, $|\mathsf{grow}(\mathsf{grow}(x))| = 2 \cdot \#(\mathbf{0}, x) + 3 \cdot \#(\mathbf{1}, x)$.
+
+Now consider the **inductive case**: $w = \mathbf{1}x$ for some string $x$.
+
+*(Note: Since $|x| < |w|$, we may apply the induction hypothesis to $x$.)*
+
+Put the following steps in the correct order to prove this case.
+</markdown>
+</pl-question-panel>
+
+<pl-order-blocks solution-placement="bottom" feedback="first-wrong" answers-name="ic1" source-blocks-order="random" indentation="false" grading-method="dag">
+  <pl-answer correct="true" tag="1" depends="">$|\mathsf{grow}(\mathsf{grow}(w))| = |\mathsf{grow}(\mathsf{grow}(\mathbf{1}x))| \quad$ (because $w = \mathbf{1}x$)</pl-answer>
+  <pl-answer correct="true" tag="2" depends="1">$= |\mathsf{grow}(\mathbf{01} \cdot \mathsf{grow}(x))| \quad$ (by definition of $\mathsf{grow}$: $\mathsf{grow}(\mathbf{1}x) = \mathbf{01} \cdot \mathsf{grow}(x)$)</pl-answer>
+  <pl-answer correct="true" tag="4" depends="2">$= |\mathbf{1} \cdot \mathbf{01} \cdot \mathsf{grow}(\mathsf{grow}(x))| \quad$ (by definition of $\mathsf{grow}$: $\mathsf{grow}(\mathbf{0}y) = \mathbf{1} \cdot \mathsf{grow}(y)$ and $\mathsf{grow}(\mathbf{1}y) = \mathbf{01} \cdot \mathsf{grow}(y)$, with $y = \mathsf{grow}(x)$)</pl-answer>
+  <pl-answer correct="true" tag="5" depends="4">$= 3 + |\mathsf{grow}(\mathsf{grow}(x))| \quad$ (by definition of $|\cdot|$: $|\mathbf{101} \cdot z| = 3 + |z|$)</pl-answer>
+  <pl-answer correct="true" tag="6" depends="5">$= 3 + 2 \cdot \#(\mathbf{0}, x) + 3 \cdot \#(\mathbf{1}, x) \quad$ (by induction hypothesis applied to $x$)</pl-answer>
+  <pl-answer correct="true" tag="7" depends="6">$= 2 \cdot \#(\mathbf{0}, x) + 3 \cdot (1 + \#(\mathbf{1}, x)) \quad$ (arithmetic)</pl-answer>
+  <pl-answer correct="true" tag="8" depends="7">$= 2 \cdot \#(\mathbf{0}, \mathbf{1}x) + 3 \cdot \#(\mathbf{1}, \mathbf{1}x) \quad$ (by definition of $\#$: $\#(\mathbf{0}, \mathbf{1}x) = \#(\mathbf{0}, x)$, $\#(\mathbf{1}, \mathbf{1}x) = 1 + \#(\mathbf{1}, x)$)</pl-answer>
+  <pl-answer correct="true" tag="9" depends="8">$= 2 \cdot \#(\mathbf{0}, w) + 3 \cdot \#(\mathbf{1}, w) \quad$ (because $w = \mathbf{1}x$)</pl-answer>
+  <!-- Distractors -->
+  <pl-answer correct="false">$= |\mathsf{grow}(\mathbf{01} \cdot \mathsf{grow}(\mathbf{1}x))| \quad$ (by definition of $\mathsf{grow}$: $\mathsf{grow}(\mathbf{1}x) = \mathbf{01} \cdot \mathsf{grow}(\mathbf{1}x)$)</pl-answer>
+  <pl-answer correct="false">$= 2 + |\mathsf{grow}(\mathsf{grow}(x))| \quad$ (by definition of $|\cdot|$: $|\mathbf{01} \cdot z| = 2 + |z|$)</pl-answer>
+  <pl-answer correct="false">$= 3 + 2 \cdot \#(\mathbf{0}, w) + 3 \cdot \#(\mathbf{1}, w) \quad$ (by induction hypothesis applied to $w$)</pl-answer>
+</pl-order-blocks>

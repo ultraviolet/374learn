@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L$ is not a regular language, then for every fooling set $F$ for $L$, the language $F^*$ is infinite.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: the empty set $\emptyset$ is a fooling set for any language (the condition is vacuously true). But $\emptyset^* = \{\varepsilon\}$, which is finite. So $F = \emptyset$ is a fooling set for any irregular $L$, yet $F^*$ is finite.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Counterexample: $F = \emptyset$ is vacuously a fooling set for any language $L$ (there are no pairs $x \neq y$ to violate the condition). Yet $\emptyset^* = \{\varepsilon\}$ is finite. So the statement fails for any irregular $L$ using $F = \emptyset$.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,9 @@
+{
+    "uuid": "e7f8a9b0-c1d2-3456-ef01-890123456789",
+    "title": "DFA: Strings in {A,B,N}* Where Every N is Directly Between Two As",
+    "topic": "DFAs",
+    "tags": ["conflict-midterm1", "DFA", "ABN-alphabet", "fa25"],
+    "type": "v3",
+    "singleVariant": true,
+    "showCorrectAnswer": false
+}

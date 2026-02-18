@@ -1,0 +1,40 @@
+<pl-question-panel>
+<markdown>
+Construct a **DFA** for the following language over the alphabet $\{A, B, N\}$:
+
+***All strings in $\{A, B, N\}^*$ where every $N$ is directly between two $A$s.***
+
+Formally, for every occurrence of $N$ at position $i$ in the string, position $i-1$ must be $A$ and position $i+1$ must be $A$.
+
+This language contains $\varepsilon$, $ANA$, $BANANA$, and $ABAAANANABBB$,
+but does **not** contain $ANBAN$ (the first $N$ is followed by $B$, not $A$) or $BAANNANA$ (the first $N$ is followed by another $N$, not $A$).
+
+<hr>
+
+**Hints:**
+- Think about what the last character you read tells you about whether the next $N$ would be valid.
+- Suggested state meanings:
+  - **$B$**: No symbols read yet, or the last symbol was $B$; $N$ cannot appear next (initial and accepting state).
+  - **$A$**: Last symbol was $A$; an $N$ here would be valid (accepting state).
+  - **$N$**: Just read an $N$ after an $A$ (valid so far, but we still need an $A$ to follow); **not** accepting.
+  - **$\mathit{dump}$**: Detected an invalid $N$ placement (dead/trap state, not accepting).
+- Any transition into an invalid state goes to $\mathit{dump}$.
+</markdown>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa" alphabet="ABN">
+  <correct-answer>
+  {
+      "states": ["B", "A", "N", "dump"],
+      "input_symbols": ["A", "B", "N"],
+      "transitions": {
+          "B": {"A": "A", "B": "B", "N": "dump"},
+          "A": {"A": "A", "B": "B", "N": "N"},
+          "N": {"A": "A", "B": "dump", "N": "dump"},
+          "dump": {"A": "dump", "B": "dump", "N": "dump"}
+      },
+      "initial_state": "B",
+      "final_states": ["B", "A"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
