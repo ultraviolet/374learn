@@ -7,14 +7,5 @@
         "take2skip2_1"
     ],
     "type": "v3",
-    "singleVariant": true,
-    "gradingMethod": "External",
-    "externalGradingOptions": {
-        "enabled": true,
-        "image": "prairielearn/grader-python",
-        "serverFilesCourse": [
-            "/"
-        ],
-        "entrypoint": "/grade/serverFilesCourse/theorielearn/regular_transformation_concrete_example/run.sh"
-    }
+    "singleVariant": true
 }
