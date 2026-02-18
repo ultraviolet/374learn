@@ -3,22 +3,29 @@
   "name": "CS374 Bonus",
   "title": "based on TheorieLearn",
   "assessmentSets": [
+    
     {
-      "abbreviation": "GPS",
-      "name": "Guided Problem Sets",
-      "heading": "Example assessments for a theory course",
-      "color": "orange2"
+      "abbreviation": "Practice Tests",
+      "name": "Practice Tests",
+      "heading": "Practice Tests",
+      "color": "green2"
     },
     {
       "abbreviation": "BANK",
       "name": "Question Bank",
-      "heading": "Every GPS/Practice Problem we have by topic",
+      "heading": "Question Bank",
       "color": "blue3"
+    },
+    {
+      "abbreviation": "GPS",
+      "name": "Guided Problem Sets",
+      "heading": "GPS Samples",
+      "color": "orange2"
     },
     {
       "abbreviation": "ELEM",
       "name": "Elements + Utilities",
-      "heading": "Showcases and playgrounds of individual elements",
+      "heading": "Element Playground (Testing/Dev)",
       "color": "red2"
     }
   ],
