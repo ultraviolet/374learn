@@ -1,8 +1,19 @@
 {
     "uuid": "d236755b-989e-4817-97ba-6b65a208a088",
-    "title": "CFG for Language S: Equal ILL and INI Counts",
+    "title": "CFG Writing: Language S with Equal ILL and INI Counts",
     "topic": "Context-Free Grammars",
     "tags": ["midterm1", "CFG", "ILN-alphabet", "non-regular"],
     "type": "v3",
-    "singleVariant": true
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/CFGs/run.sh",
+        "timeout": 10
+    }
 }

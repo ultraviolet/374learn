@@ -1,8 +1,19 @@
 {
     "uuid": "f4a5b6c7-d8e9-0123-f012-567890123456",
-    "title": "Fooling Set Proof: BAN/ANA Language is Not Regular",
+    "title": "Fooling Set Coding: BAN/ANA Language is Not Regular",
     "topic": "Fooling Sets",
     "tags": ["conflict-midterm1", "fooling-sets", "non-regular", "ABN-alphabet", "fa25"],
     "type": "v3",
-    "singleVariant": true
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/fooling_sets/run.sh",
+        "timeout": 5
+    }
 }

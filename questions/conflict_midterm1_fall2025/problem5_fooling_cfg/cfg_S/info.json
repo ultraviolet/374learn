@@ -1,8 +1,19 @@
 {
     "uuid": "a5b6c7d8-e9f0-1234-a012-678901234567",
-    "title": "CFG for Language S: Equal BAN and ANA Counts",
+    "title": "CFG Writing: Language L with Equal BAN and ANA Counts",
     "topic": "Context-Free Grammars",
     "tags": ["conflict-midterm1", "CFG", "ABN-alphabet", "non-regular", "fa25"],
     "type": "v3",
-    "singleVariant": true
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/CFGs/run.sh",
+        "timeout": 10
+    }
 }

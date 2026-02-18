@@ -1,55 +1,44 @@
 <pl-question-panel>
 <markdown>
-Let $S$ be the set of all strings in $(ILL + INI)^*$ in which the substrings $ILL$ and $INI$
-appear the **same number of times**.
+Let $S$ be the set of all strings in $(\texttt{ill} + \texttt{ini})^*$ in which the substrings $\texttt{ill}$ and $\texttt{ini}$ appear the **same number of times**.
 
-For example, $S$ contains $ILLINI$, $INIINIILLILL$, and $\varepsilon$,
-but $S$ does not contain $INIILLILL$, $INILL$, or $NIL$.
+For example, $S$ contains $\texttt{illini}$, $\texttt{iniill}$, $\texttt{illiniillini}$, and $\varepsilon$,
+but $S$ does not contain $\texttt{illill}$ or $\texttt{iniiniill}$.
 
-**Describe a context-free grammar for $S$.**
+**Provide a context-free grammar that generates $S$.**
 
-*(Hint: Think of matching ILL and INI in a balanced way, similar to balanced parentheses.
-Each ILL should be "matched" with an INI, and they can be interleaved recursively.)*
+<hr></hr>
 
-Write your grammar in the form: $S \to \text{rules}$ where rules are separated by $|$.
-Use $\varepsilon$ for the empty string.
+##### Instructions
+
+Write your grammar rules below, **one rule per line**:
+
+```
+NONTERMINAL -> alternative₁ | alternative₂ | ...
+```
+
+- **Nonterminals** start with an uppercase letter: `S`, `A`, `B`, `Start`, …
+- **Terminals** are written as **lowercase** letters: `i`, `l`, `n`
+- **Epsilon** (empty string ε) is written as `e`
+- The nonterminal on the **first rule** is the start symbol
+
+**Example** — a grammar for the language $\{\texttt{foo}^n \texttt{bar}^n \mid n \geq 0\}$ could be written as:
+```
+S -> foo S bar | e
+```
 </markdown>
+
+<pl-file-editor
+    file-name="grammar.txt"
+    ace-mode="ace/mode/text"
+    min-lines="10">
+# Write your grammar rules here. Use lowercase for terminals!
+S -> e
+</pl-file-editor>
+
 </pl-question-panel>
 
-<pl-question-panel>
-<markdown>
-Here are some properties your grammar must satisfy:
-- It must generate exactly the strings in $S$ (strings in $(ILL + INI)^*$ with equal numbers of $ILL$ and $INI$).
-- $\varepsilon$ must be in the language (zero $ILL$s and zero $INI$s).
-- $ILLINI$ must be in the language.
-- $INIILL$ must be in the language.
-- $ILLILLINIINI$ must be in the language.
-
-Select the correct context-free grammar for $S$:
-</markdown>
-</pl-question-panel>
-
-<pl-multiple-choice answers-name="cfg" weight="1">
-    <pl-answer correct="true">$S \to \varepsilon \mid ILL \cdot S \cdot INI \cdot S \mid INI \cdot S \cdot ILL \cdot S$</pl-answer>
-    <pl-answer correct="false" feedback="This generates (ILL·INI)* which only allows ILL immediately followed by INI, not interleaved.">$S \to \varepsilon \mid ILL \cdot INI \cdot S$</pl-answer>
-    <pl-answer correct="false" feedback="This generates (ILL + INI)* (all strings from the alphabet), not just those with equal counts.">$S \to \varepsilon \mid ILL \cdot S \mid INI \cdot S$</pl-answer>
-    <pl-answer correct="false" feedback="This allows ILL and INI to appear in any order without matching counts. For example, ILLILL would be generated.">$S \to \varepsilon \mid S \cdot S \mid ILL \mid INI$</pl-answer>
-</pl-multiple-choice>
-
-<pl-question-panel>
-<markdown>
----
-
-Using the correct grammar for $S$ from above,
-verify that the following strings have parse trees. Select all strings that are in $S$ according to this grammar.
-</markdown>
-</pl-question-panel>
-
-<pl-checkbox answers-name="in_S" weight="1">
-    <pl-answer correct="true">$\varepsilon$</pl-answer>
-    <pl-answer correct="true">$ILLINI$</pl-answer>
-    <pl-answer correct="true">$INIILL$</pl-answer>
-    <pl-answer correct="true">$ILLINIILLINI$</pl-answer>
-    <pl-answer correct="false" feedback="ILLILL has two ILL and zero INI, so the counts are not equal.">$ILLILL$</pl-answer>
-    <pl-answer correct="false" feedback="INIINIILL has two INI and one ILL, so counts are not equal.">$INIINIILL$</pl-answer>
-</pl-checkbox>
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+</pl-submission-panel>

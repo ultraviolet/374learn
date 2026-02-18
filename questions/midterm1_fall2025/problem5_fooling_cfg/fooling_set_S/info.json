@@ -1,8 +1,19 @@
 {
     "uuid": "e21552bb-fadc-4fa5-81eb-75edf8a8c553",
-    "title": "Fooling Set Proof: Language S is Not Regular",
+    "title": "Fooling Set Coding: Language S is Not Regular",
     "topic": "Fooling Sets",
     "tags": ["midterm1", "fooling-sets", "non-regular", "ILN-alphabet"],
     "type": "v3",
-    "singleVariant": true
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/fooling_sets/run.sh",
+        "timeout": 5
+    }
 }

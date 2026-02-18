@@ -1,41 +1,44 @@
 <pl-question-panel>
 <markdown>
-Let $S$ be the set of all strings in $(\mathsf{BAN} + \mathsf{ANA})^*$ in which the blocks $\mathsf{BAN}$ and $\mathsf{ANA}$
-appear the **same number of times**.
+Let $L$ be the set of all strings in $(\texttt{ban} + \texttt{ana})^*$ in which the substrings $\texttt{ban}$ and $\texttt{ana}$ appear the **same number of times**.
 
-For example, $S$ contains $\varepsilon$ (zero each), $\mathsf{BANANA}$ ($\mathsf{BAN} \cdot \mathsf{ANA}$, one each),
-and $\mathsf{ANABAN}$ ($\mathsf{ANA} \cdot \mathsf{BAN}$, one each),
-but $S$ does not contain $\mathsf{BANBAN}$ (two $\mathsf{BAN}$, zero $\mathsf{ANA}$) or $\mathsf{ANABANBAN}$ (one $\mathsf{ANA}$, two $\mathsf{BAN}$).
+For example, $L$ contains $\varepsilon$, $\texttt{banana}$, $\texttt{anaban}$, and $\texttt{banbananaana}$,
+but $L$ does not contain $\texttt{banban}$ or $\texttt{anaana}$.
 
-**Describe a context-free grammar for $S$.**
+**Provide a context-free grammar that generates $L$.**
 
-*(Hint: Think of matching $\mathsf{BAN}$ and $\mathsf{ANA}$ blocks in a balanced way, similar to balanced parentheses.
-Each $\mathsf{BAN}$ must be "matched" with an $\mathsf{ANA}$, and they can be interleaved recursively.)*
+<hr></hr>
 
-Select the correct context-free grammar for $S$:
+##### Instructions
+
+Write your grammar rules below, **one rule per line**:
+
+```
+NONTERMINAL -> alternative₁ | alternative₂ | ...
+```
+
+- **Nonterminals** start with an uppercase letter: `S`, `A`, `B`, `Start`, …
+- **Terminals** are written as **lowercase** letters: `b`, `a`, `n`
+- **Epsilon** (empty string ε) is written as `e`
+- The nonterminal on the **first rule** is the start symbol
+
+**Example** — a grammar for the language $\{\texttt{foo}^n \texttt{bar}^n \mid n \geq 0\}$ could be written as:
+```
+S -> foo S bar | e
+```
 </markdown>
+
+<pl-file-editor
+    file-name="grammar.txt"
+    ace-mode="ace/mode/text"
+    min-lines="10">
+# Write your grammar rules here. Use lowercase for terminals!
+S -> e
+</pl-file-editor>
+
 </pl-question-panel>
 
-<pl-multiple-choice answers-name="cfg" weight="1">
-    <pl-answer correct="true">$S \to \varepsilon \mid \mathsf{BAN} \cdot S \cdot \mathsf{ANA} \cdot S \mid \mathsf{ANA} \cdot S \cdot \mathsf{BAN} \cdot S$</pl-answer>
-    <pl-answer correct="false" feedback="This generates (BAN·ANA)*, which only allows BAN immediately followed by ANA (not interleaved). For example, ANABAN would not be generated.">$S \to \varepsilon \mid \mathsf{BAN} \cdot \mathsf{ANA} \cdot S$</pl-answer>
-    <pl-answer correct="false" feedback="This generates all of (BAN + ANA)* (any combination), not just those with equal counts. For example, BANBAN would be generated.">$S \to \varepsilon \mid \mathsf{BAN} \cdot S \mid \mathsf{ANA} \cdot S$</pl-answer>
-    <pl-answer correct="false" feedback="This allows the blocks BAN and ANA to combine freely without ensuring equal counts.">$S \to \varepsilon \mid S \cdot S \mid \mathsf{BAN} \mid \mathsf{ANA}$</pl-answer>
-</pl-multiple-choice>
-
-<pl-question-panel>
-<markdown>
----
-
-Using the correct grammar for $S$ above, verify which strings are in $S$. Select all strings that are in $S$.
-</markdown>
-</pl-question-panel>
-
-<pl-checkbox answers-name="in_S" weight="1">
-    <pl-answer correct="true">$\varepsilon$</pl-answer>
-    <pl-answer correct="true">$\mathsf{BANANA}$</pl-answer>
-    <pl-answer correct="true">$\mathsf{ANABAN}$</pl-answer>
-    <pl-answer correct="true">$\mathsf{BANBANANAANA}$</pl-answer>
-    <pl-answer correct="false" feedback="BANBAN = BAN·BAN has two BAN and zero ANA, so the counts are not equal.">$\mathsf{BANBAN}$</pl-answer>
-    <pl-answer correct="false" feedback="ANAANA = ANA·ANA has zero BAN and two ANA, so the counts are not equal.">$\mathsf{ANAANA}$</pl-answer>
-</pl-checkbox>
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+</pl-submission-panel>

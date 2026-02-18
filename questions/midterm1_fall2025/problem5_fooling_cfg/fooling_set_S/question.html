@@ -1,55 +1,43 @@
 <pl-question-panel>
 <markdown>
-Let $S$ be the set of all strings in $(ILL + INI)^*$ in which the substrings $ILL$ and $INI$
-appear the **same number of times**.
+Let $S$ be the set of all strings in $(\texttt{ILL} + \texttt{INI})^*$ in which the substrings $\texttt{ILL}$ and $\texttt{INI}$ appear the **same number of times**.
 
-For example, $S$ contains $ILLINI$ (one $ILL$ and one $INI$) and $\varepsilon$ (zero each),
-but $S$ does not contain $INIILLILL$ (one $INI$ and two $ILL$).
+Construct an *infinite* fooling set to prove that $S$ is not regular.
 
-We want to prove that $S$ is **not** a regular language using a fooling set.
+<hr></hr>
 
-**Step 1:** We use the fooling set $F = (ILL)^*$. Select the correct definition of $F$.
+##### Instructions
+
+Given a positive integer $i$, `getFoolingSetElement(i)` returns the $i^\text{th}$ element of your fooling set:
+$$F = \{ \mathsf{getFoolingSetElement}(i) \mid i \in \mathbb{N} \}$$
+
+Given two distinct positive integers $i$ and $j$, `getDistinguishingSuffix(i, j)` returns a string $z$ such that exactly one of $x_iz$ and $x_jz$ is in $S$ (where $x_k = \mathsf{getFoolingSetElement}(k)$).
+
+```python
+# Example for L = {0^n1^n | n >= 0} using F = {0^i | i >= 1}:
+def getFoolingSetElement(i: int) -> str:
+    return '0' * i
+
+def getDistinguishingSuffix(i: int, j: int) -> str:
+    return '1' * min(i, j)
+```
+
+Note: strings use **uppercase** letters — e.g., `'ILL' * i` and `'INI' * i`.
 </markdown>
+
+<pl-file-editor
+    file-name="user_code.py"
+    ace-mode="ace/mode/python">
+def getFoolingSetElement(i: int) -> str:
+    return '' # Your code here
+
+def getDistinguishingSuffix(i: int, j: int) -> str:
+    return '' # Your code here
+</pl-file-editor>
+
 </pl-question-panel>
 
-<pl-multiple-choice answers-name="F_def" weight="1">
-    <pl-answer correct="true">$F = \{ (ILL)^i \mid i \geq 0 \} = \{ \varepsilon, ILL, ILLILL, ILLILLILL, \ldots \}$</pl-answer>
-    <pl-answer correct="false" feedback="This is (ILL + INI)*, not (ILL)*.">$F = S$ itself</pl-answer>
-    <pl-answer correct="false" feedback="This would be a finite set, but we need an infinite fooling set.">$F = \{ ILL, ILLILL \}$</pl-answer>
-</pl-multiple-choice>
-
-<pl-question-panel>
-<markdown>
----
-
-**Step 2:** Let $x = (ILL)^i$ and $y = (ILL)^j$ be distinct strings in $F$, so $i \neq j$.
-We need to find a distinguishing suffix $z$ such that $xz \in S$ but $yz \notin S$ (or vice versa).
-
-What is the correct choice of $z$?
-</markdown>
-</pl-question-panel>
-
-<pl-multiple-choice answers-name="z_choice" weight="1">
-    <pl-answer correct="true">$z = (INI)^i$</pl-answer>
-    <pl-answer correct="false" feedback="With z = (INI)^j, both xz and yz might be in S or both not in S depending on i and j.">$z = (INI)^j$</pl-answer>
-    <pl-answer correct="false" feedback="z = ε: xz = (ILL)^i has i occurrences of ILL and 0 of INI, so xz ∈ S only if i = 0.">$z = \varepsilon$</pl-answer>
-    <pl-answer correct="false" feedback="z = INI only fixes the count relative to i=1.">$z = INI$</pl-answer>
-</pl-multiple-choice>
-
-<pl-question-panel>
-<markdown>
----
-
-**Step 3:** With $z = (INI)^i$, verify the fooling set conditions.
-
-Which of the following statements are **true**? (Select all that apply.)
-</markdown>
-</pl-question-panel>
-
-<pl-checkbox answers-name="conditions" weight="1">
-    <pl-answer correct="true">$xz = (ILL)^i(INI)^i \in S$ because $ILL$ appears $i$ times and $INI$ appears $i$ times.</pl-answer>
-    <pl-answer correct="true">$yz = (ILL)^j(INI)^i \notin S$ because $ILL$ appears $j$ times, $INI$ appears $i$ times, and $i \neq j$.</pl-answer>
-    <pl-answer correct="true">Since $z$ distinguishes every pair of distinct strings in $F$, $F$ is a fooling set for $S$.</pl-answer>
-    <pl-answer correct="true">Since $F$ is infinite, $S$ cannot be regular.</pl-answer>
-    <pl-answer correct="false" feedback="xz and yz are both in S only when i = j, which is excluded since x ≠ y.">$xz \in S$ and $yz \in S$ for all distinct $x, y \in F$.</pl-answer>
-</pl-checkbox>
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+</pl-submission-panel>

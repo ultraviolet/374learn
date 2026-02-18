@@ -64,6 +64,16 @@ def _tokenize_alt(text):
         elif c.isdigit():
             rhs.append(c)  # plain str terminal
             i += 1
+        elif c.islower():
+            # Lowercase run → terminal characters (e.g. "ban", "ill", "ini")
+            # Note: a standalone alternative of just "e"/"eps"/"epsilon" is
+            # already handled above as epsilon before we reach this loop.
+            j = i + 1
+            while j < len(stripped) and stripped[j].islower():
+                j += 1
+            for ch in stripped[i:j]:
+                rhs.append(ch)
+            i = j
         elif c in ("'", '"'):
             end = stripped.index(c, i + 1)
             for ch in stripped[i + 1 : end]:
@@ -73,7 +83,7 @@ def _tokenize_alt(text):
             raise ValueError(
                 f"Unexpected character {c!r} in alternative {text!r}. "
                 "Nonterminals must start with an uppercase letter; "
-                "terminals are digits (0, 1); use 'e' for epsilon."
+                "terminals are lowercase letters or digits; use 'e' for epsilon."
             )
     return rhs
 
