@@ -11,7 +11,7 @@ Give a brief explanation of your answer.
 </markdown>
 </pl-question-panel>
 
-<pl-multiple-choice answers-name="ans" weight="1">
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
     <pl-answer correct="false" feedback="Check whether every pair of distinct strings in $(01)^*$ can be distinguished. Try $x = 01$ and $y = 0101$, and attempt to find a suffix $z$ such that $01 \cdot z \in L$ but $0101 \cdot z \notin L$ (or vice versa).">Yes</pl-answer>
     <pl-answer correct="true" feedback="There is no distinguishing suffix for $01$ and $0101$: any $z$ with $\#(0,z) - \#(1,z) = -1$ puts both $01 \cdot z$ and $0101 \cdot z$ in $L$, and any other $z$ puts neither in $L$.">No</pl-answer>
 </pl-multiple-choice>
