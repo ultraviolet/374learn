@@ -6,246 +6,1096 @@
   "number": "1",
   "multipleInstance": true,
   "allowIssueReporting": false,
-  "allowAccess": [{ "mode": "Public", "credit": 100, "startDate": "2025-01-01T12:59:59" }],
+  "allowAccess": [
+    {
+      "mode": "Public",
+      "credit": 100,
+      "startDate": "2025-01-01T12:59:59"
+    }
+  ],
   "zones": [
     {
       "title": "Zone 1: Regular Expressions",
       "numberChoose": 2,
       "questions": [
-        { "id": "regular_expressions/practice/00_before_11", "points": 1 },
-        { "id": "regular_expressions/practice/010_and_#0_mod_3", "points": 1 },
-        { "id": "regular_expressions/practice/010_and_at_least_3_1s", "points": 1 },
-        { "id": "regular_expressions/practice/010_or_at_least_3_1s", "points": 1 },
-        { "id": "regular_expressions/practice/012_g4_0_2_1", "points": 1 },
-        { "id": "regular_expressions/practice/0_at_div_5", "points": 1 },
-        { "id": "regular_expressions/practice/0_w_0-w_is_anything", "points": 1 },
-        { "id": "regular_expressions/practice/at_least_3_0s", "points": 1 },
-        { "id": "regular_expressions/practice/balanced_prefix_1", "points": 1 },
-        { "id": "regular_expressions/practice/balanced_prefix_2", "points": 1 },
-        { "id": "regular_expressions/practice/contains000", "points": 1 },
-        { "id": "regular_expressions/practice/contains222", "points": 1 },
-        { "id": "regular_expressions/practice/count_1001_at_least_2", "points": 1 },
-        { "id": "regular_expressions/practice/end_in_1011", "points": 1 },
-        { "id": "regular_expressions/practice/even000s", "points": 1 },
-        { "id": "regular_expressions/practice/even_01_substrings", "points": 1 },
-        { "id": "regular_expressions/practice/even_0s_even_1s", "points": 1 },
-        { "id": "regular_expressions/practice/even_runs_of_1s", "points": 1 },
-        { "id": "regular_expressions/practice/everything_except_000", "points": 1 },
-        { "id": "regular_expressions/practice/exactly_one_1", "points": 1 },
-        { "id": "regular_expressions/practice/except_11", "points": 1 },
-        { "id": "regular_expressions/practice/long0runs", "points": 1 },
-        { "id": "regular_expressions/practice/no0001substring", "points": 1 },
-        { "id": "regular_expressions/practice/no000substring", "points": 1 },
-        { "id": "regular_expressions/practice/no010substring", "points": 1 },
-        { "id": "regular_expressions/practice/no_0111", "points": 1 },
-        { "id": "regular_expressions/practice/no_101_0_div_3", "points": 1 },
-        { "id": "regular_expressions/practice/no_111_substring", "points": 1 },
-        { "id": "regular_expressions/practice/no_palindrome_prefix_len_2", "points": 1 },
-        { "id": "regular_expressions/practice/no_subseq_010", "points": 1 },
-        { "id": "regular_expressions/practice/no_subseq_0101010", "points": 1 },
-        { "id": "regular_expressions/practice/no_substring_len_3_palindrome", "points": 1 },
-        { "id": "regular_expressions/practice/num0s_is_2mod3", "points": 1 },
-        { "id": "regular_expressions/practice/odd0runs", "points": 1 },
-        { "id": "regular_expressions/practice/regex-fa21-mid-1-1b", "points": 1 },
-        { "id": "regular_expressions/practice/regex-fa21-mid-1x-1a", "points": 1 },
-        { "id": "regular_expressions/practice/regex-fa23-mid-1-5a", "points": 1 },
-        { "id": "regular_expressions/practice/regex-fa23-mid-1-5b", "points": 1 },
-        { "id": "regular_expressions/practice/regex-sp22-mid-1-3a", "points": 1 },
-        { "id": "regular_expressions/practice/regex-sp22-mid-1-5a", "points": 1 },
-        { "id": "regular_expressions/practice/regex-sp22-mid-1x-5a", "points": 1 },
-        { "id": "regular_expressions/practice/sp19-mid1-3c", "points": 1 },
-        { "id": "regular_expressions/practice/sp21-mid1-1a", "points": 1 },
-        { "id": "regular_expressions/practice/sp21-mid1-1b", "points": 1 },
-        { "id": "regular_expressions/practice/two_0s_and_one_1", "points": 1 },
-        { "id": "regular_expressions/practice/weighted_balanced_prefix_1", "points": 1 },
-        { "id": "regular_expressions/practice/weighted_balanced_prefix_2", "points": 1 },
-        { "id": "regular_expressions/practice/x_w_wR_y", "points": 1 }
+        {
+          "id": "regular_expressions/practice/00_before_11",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/010_and_#0_mod_3",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/010_and_at_least_3_1s",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/010_or_at_least_3_1s",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/012_g4_0_2_1",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/0_at_div_5",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/0_w_0-w_is_anything",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/at_least_3_0s",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/balanced_prefix_1",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/balanced_prefix_2",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/contains000",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/contains222",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/count_1001_at_least_2",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/end_in_1011",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/even000s",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/even_01_substrings",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/even_0s_even_1s",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/even_runs_of_1s",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/everything_except_000",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/exactly_one_1",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/except_11",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/long0runs",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no0001substring",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no000substring",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no010substring",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no_0111",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no_101_0_div_3",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no_111_substring",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no_palindrome_prefix_len_2",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no_subseq_010",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no_subseq_0101010",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/no_substring_len_3_palindrome",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/num0s_is_2mod3",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/odd0runs",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/regex-fa21-mid-1-1b",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/regex-fa21-mid-1x-1a",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/regex-fa23-mid-1-5a",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/regex-fa23-mid-1-5b",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/regex-sp22-mid-1-3a",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/regex-sp22-mid-1-5a",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/regex-sp22-mid-1x-5a",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/sp19-mid1-3c",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/sp21-mid1-1a",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/sp21-mid1-1b",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/two_0s_and_one_1",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/weighted_balanced_prefix_1",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/weighted_balanced_prefix_2",
+          "points": 1
+        },
+        {
+          "id": "regular_expressions/practice/x_w_wR_y",
+          "points": 1
+        }
       ]
     },
     {
       "title": "Zone 2: DFAs",
       "numberChoose": 2,
       "questions": [
-        { "id": "DFAs/practice/010_and_#0_mod_3", "points": 1 },
-        { "id": "DFAs/practice/010_and_at_least_3_1s", "points": 1 },
-        { "id": "DFAs/practice/010_or_at_least_3_1s", "points": 1 },
-        { "id": "DFAs/practice/0_at_div_5", "points": 1 },
-        { "id": "DFAs/practice/any_obfuscated", "points": 1 },
-        { "id": "DFAs/practice/anything_but_10", "points": 1 },
-        { "id": "DFAs/practice/at_least_3_0s", "points": 1 },
-        { "id": "DFAs/practice/balanced_prefix_1", "points": 1 },
-        { "id": "DFAs/practice/balanced_prefix_2", "points": 1 },
-        { "id": "DFAs/practice/contains000", "points": 1 },
-        { "id": "DFAs/practice/contains010", "points": 1 },
-        { "id": "DFAs/practice/count_1001_at_least_2", "points": 1 },
-        { "id": "DFAs/practice/dfa-fa21-mid-1-1b", "points": 1 },
-        { "id": "DFAs/practice/dfa-fa21-mid-1x-1a", "points": 1 },
-        { "id": "DFAs/practice/dfa-fa23-mid-1-5a", "points": 1 },
-        { "id": "DFAs/practice/dfa-fa23-mid-1-5b", "points": 1 },
-        { "id": "DFAs/practice/dfa-sp22-mid-1-2c", "points": 1 },
-        { "id": "DFAs/practice/dfa-sp22-mid-1x-2c", "points": 1 },
-        { "id": "DFAs/practice/even000s", "points": 1 },
-        { "id": "DFAs/practice/even_0s_even_1s", "points": 1 },
-        { "id": "DFAs/practice/even_and_not_div_3", "points": 1 },
-        { "id": "DFAs/practice/even_or_not_div_3", "points": 1 },
-        { "id": "DFAs/practice/everything_except_000", "points": 1 },
-        { "id": "DFAs/practice/long0runs", "points": 1 },
-        { "id": "DFAs/practice/no0001substring", "points": 1 },
-        { "id": "DFAs/practice/no000substring", "points": 1 },
-        { "id": "DFAs/practice/no010substring", "points": 1 },
-        { "id": "DFAs/practice/no_011001", "points": 1 },
-        { "id": "DFAs/practice/no_101_#0_3", "points": 1 },
-        { "id": "DFAs/practice/num0s_is_2mod3", "points": 1 },
-        { "id": "DFAs/practice/odd0runs", "points": 1 },
-        { "id": "DFAs/practice/sp19_mid1", "points": 1 },
-        { "id": "DFAs/practice/sp21-mid1-2", "points": 1 },
-        { "id": "DFAs/practice/two_0s_and_one_1", "points": 1 },
-        { "id": "DFAs/practice/weighted_balanced_prefix_1", "points": 1 },
-        { "id": "DFAs/practice/weighted_balanced_prefix_2", "points": 1 }
+        {
+          "id": "DFAs/practice/010_and_#0_mod_3",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/010_and_at_least_3_1s",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/010_or_at_least_3_1s",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/0_at_div_5",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/any_obfuscated",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/anything_but_10",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/at_least_3_0s",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/balanced_prefix_1",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/balanced_prefix_2",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/contains000",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/contains010",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/count_1001_at_least_2",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/dfa-fa21-mid-1-1b",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/dfa-fa21-mid-1x-1a",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/dfa-fa23-mid-1-5a",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/dfa-fa23-mid-1-5b",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/dfa-sp22-mid-1-2c",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/dfa-sp22-mid-1x-2c",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/even000s",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/even_0s_even_1s",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/even_and_not_div_3",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/even_or_not_div_3",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/everything_except_000",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/long0runs",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/no0001substring",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/no000substring",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/no010substring",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/no_011001",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/no_101_#0_3",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/num0s_is_2mod3",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/odd0runs",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/sp19_mid1",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/sp21-mid1-2",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/two_0s_and_one_1",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/weighted_balanced_prefix_1",
+          "points": 1
+        },
+        {
+          "id": "DFAs/practice/weighted_balanced_prefix_2",
+          "points": 1
+        }
       ]
     },
     {
       "title": "Zone 3: NFAs",
       "numberChoose": 2,
       "questions": [
-        { "id": "NFAs/practice/0star1star", "points": 1 },
-        { "id": "NFAs/practice/any_obfuscated", "points": 1 },
-        { "id": "NFAs/practice/anything_but_10", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa20-hw-3-7a", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa20-hw-3-7b", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa20-hw-3-7c", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa20-hw-3-7d", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa20-hw-3-7e", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa22-hw-3-1a", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa22-hw-3-1b", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa22-hw-3-1c", "points": 1 },
-        { "id": "NFAs/practice/nfa-fa22-hw-3-1d", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp21-hw-2-1a", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp21-hw-2-1b", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp21-lab-3-1", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp21-lab-3-2", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp21-lab-3-3", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp21-lab-3-4", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-hw-3-1a", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-hw-3-1b", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-hw-3-1c", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-hw-old3-1a", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-hw-old3-1b", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-mid-1-2a", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-mid-1-2b", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-mid-1x-2a", "points": 1 },
-        { "id": "NFAs/practice/nfa-sp22-mid-1x-2b", "points": 1 },
-        { "id": "NFAs/practice/one_1_out_of_5", "points": 1 }
+        {
+          "id": "NFAs/practice/0star1star",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/any_obfuscated",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/anything_but_10",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa20-hw-3-7a",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa20-hw-3-7b",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa20-hw-3-7c",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa20-hw-3-7d",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa20-hw-3-7e",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa22-hw-3-1a",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa22-hw-3-1b",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa22-hw-3-1c",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-fa22-hw-3-1d",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp21-hw-2-1a",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp21-hw-2-1b",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp21-lab-3-1",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp21-lab-3-2",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp21-lab-3-3",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp21-lab-3-4",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-hw-3-1a",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-hw-3-1b",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-hw-3-1c",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-hw-old3-1a",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-hw-old3-1b",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-mid-1-2a",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-mid-1-2b",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-mid-1x-2a",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/nfa-sp22-mid-1x-2b",
+          "points": 1
+        },
+        {
+          "id": "NFAs/practice/one_1_out_of_5",
+          "points": 1
+        }
       ]
     },
     {
       "title": "Zone 4: Fooling Sets",
       "numberChoose": 2,
       "questions": [
-        { "id": "fooling_sets/practice/m_neq_two_n", "points": 1 },
-        { "id": "fooling_sets/practice/zero_n_one_n", "points": 1 },
-        { "id": "fooling_sets/practice/zero_one_m_one_zero_n", "points": 1 },
-        { "id": "fooling_sets/practice/zero_one_n_one_zero_n", "points": 1 },
-        { "id": "fooling_sets/practice/zero_perfect_cube", "points": 1 },
-        { "id": "fooling_sets/practice/zero_perfect_square", "points": 1 },
-        { "id": "fooling_sets/practice/zero_power_of_two", "points": 1 },
-        { "id": "fooling_sets/practice/zero_three_n_one_two_n", "points": 1 },
-        { "id": "fooling_sets/coding/#0s_lessthan_twice#1s", "points": 1 },
-        { "id": "fooling_sets/coding/012_min", "points": 1 },
-        { "id": "fooling_sets/coding/012_star_prefix_palindrome", "points": 1 },
-        { "id": "fooling_sets/coding/01_10_subsequences", "points": 1 },
-        { "id": "fooling_sets/coding/01_star_prefix_palindrome", "points": 1 },
-        { "id": "fooling_sets/coding/0A_1w1_0C", "points": 1 },
-        { "id": "fooling_sets/coding/0^(nC2)", "points": 1 },
-        { "id": "fooling_sets/coding/0^i_0^sqrt{i}", "points": 1 },
-        { "id": "fooling_sets/coding/0^n1^n", "points": 1 },
-        { "id": "fooling_sets/coding/0^n^3", "points": 1 },
-        { "id": "fooling_sets/coding/0^{kj}_1_0^j", "points": 1 },
-        { "id": "fooling_sets/coding/0_to_3_to_n", "points": 1 },
-        { "id": "fooling_sets/coding/0i1j2k_i+j=k+1", "points": 1 },
-        { "id": "fooling_sets/coding/0p1q0r_p=q+r", "points": 1 },
-        { "id": "fooling_sets/coding/0p1q0r_r=p+q", "points": 1 },
-        { "id": "fooling_sets/coding/1_0n_1n_suffix", "points": 1 },
-        { "id": "fooling_sets/coding/abs_value_last_digit", "points": 1 },
-        { "id": "fooling_sets/coding/all_palindromes_len_divisible_by_3", "points": 1 },
-        { "id": "fooling_sets/coding/even_odd_blocks", "points": 1 },
-        { "id": "fooling_sets/coding/fibonacci", "points": 1 },
-        { "id": "fooling_sets/coding/gcd_is_1", "points": 1 },
-        { "id": "fooling_sets/coding/k_sqrt_k", "points": 1 },
-        { "id": "fooling_sets/coding/min_#0_#1_divisible_5", "points": 1 },
-        { "id": "fooling_sets/coding/odd_length_at_least_3_matching", "points": 1 },
-        { "id": "fooling_sets/coding/palindrome_prefix", "points": 1 },
-        { "id": "fooling_sets/coding/palindromes", "points": 1 },
-        { "id": "fooling_sets/coding/w#x_substring", "points": 1 },
-        { "id": "fooling_sets/coding/w_c_d^{#a(w)}", "points": 1 },
-        { "id": "fooling_sets/coding/w_wR_w", "points": 1 },
-        { "id": "fooling_sets/coding/w_wR_x_y", "points": 1 },
-        { "id": "fooling_sets/coding/ww", "points": 1 },
-        { "id": "fooling_sets/coding/x#y_diff_length", "points": 1 },
-        { "id": "fooling_sets/coding/x#y_equal_length", "points": 1 }
+        {
+          "id": "fooling_sets/practice/m_neq_two_n",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/practice/zero_n_one_n",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/practice/zero_one_m_one_zero_n",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/practice/zero_one_n_one_zero_n",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/practice/zero_perfect_cube",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/practice/zero_perfect_square",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/practice/zero_power_of_two",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/practice/zero_three_n_one_two_n",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/#0s_lessthan_twice#1s",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/012_min",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/012_star_prefix_palindrome",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/01_10_subsequences",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/01_star_prefix_palindrome",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0A_1w1_0C",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0^(nC2)",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0^i_0^sqrt{i}",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0^n1^n",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0^n^3",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0^{kj}_1_0^j",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0_to_3_to_n",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0i1j2k_i+j=k+1",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0p1q0r_p=q+r",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/0p1q0r_r=p+q",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/1_0n_1n_suffix",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/abs_value_last_digit",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/all_palindromes_len_divisible_by_3",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/even_odd_blocks",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/fibonacci",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/gcd_is_1",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/k_sqrt_k",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/min_#0_#1_divisible_5",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/odd_length_at_least_3_matching",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/palindrome_prefix",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/palindromes",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/w#x_substring",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/w_c_d^{#a(w)}",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/w_wR_w",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/w_wR_x_y",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/ww",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/x#y_diff_length",
+          "points": 1
+        },
+        {
+          "id": "fooling_sets/coding/x#y_equal_length",
+          "points": 1
+        }
       ]
     },
     {
       "title": "Zone 5: Language Transformations",
       "numberChoose": 2,
       "questions": [
-        { "id": "regular_transformations/coding/compress_1", "points": 1 },
-        { "id": "regular_transformations/coding/compress_2", "points": 1 },
-        { "id": "regular_transformations/coding/delete0", "points": 1 },
-        { "id": "regular_transformations/coding/delete1star", "points": 1 },
-        { "id": "regular_transformations/coding/delete1star_prefix", "points": 1 },
-        { "id": "regular_transformations/coding/delete_fifth", "points": 1 },
-        { "id": "regular_transformations/coding/flipEvens", "points": 1 },
-        { "id": "regular_transformations/coding/hw/reg-transformation-fa20-hw-3-8a", "points": 1 },
-        { "id": "regular_transformations/coding/hw/reg-transformation-fa20-hw-3-8b", "points": 1 },
-        { "id": "regular_transformations/coding/hw/reg-transformation-fa20-hw-3-8c", "points": 1 },
-        { "id": "regular_transformations/coding/hw/reg-transformation-fa22-hw-3-2a", "points": 1 },
-        { "id": "regular_transformations/coding/hw/reg-transformation-fa22-hw-3-2c", "points": 1 },
-        { "id": "regular_transformations/coding/hw/reg-transformation-sp22-hw-3-2", "points": 1 },
         {
-          "id": "regular_transformations/coding/hw/reg-transformation-sp22-hw-old3-3",
+          "id": "regular_transformations/guided_problem_sets/swap/1_intro_swap",
           "points": 1
         },
         {
-          "id": "regular_transformations/coding/hw/reg-transformation-sp22-hw-old3-4",
+          "id": "regular_transformations/guided_problem_sets/swap/2_concrete_dfa",
           "points": 1
         },
-        { "id": "regular_transformations/coding/insert0", "points": 1 },
-        { "id": "regular_transformations/coding/insert10", "points": 1 },
-        { "id": "regular_transformations/coding/insert_fifth", "points": 1 },
-        { "id": "regular_transformations/coding/inv_thirds", "points": 1 },
-        { "id": "regular_transformations/coding/mid", "points": 1 },
-        { "id": "regular_transformations/coding/parity_runs", "points": 1 },
-        { "id": "regular_transformations/coding/proper_proper_prefix", "points": 1 },
-        { "id": "regular_transformations/coding/reverse", "points": 1 },
-        { "id": "regular_transformations/coding/skip", "points": 1 },
-        { "id": "regular_transformations/coding/take2skip2_1", "points": 1 },
-        { "id": "regular_transformations/coding/take2skip2_2", "points": 1 },
-        { "id": "regular_transformations/coding/thirds", "points": 1 },
-        { "id": "regular_transformations/coding/w^Rw", "points": 1 },
-        { "id": "regular_transformations/coding/ww^R", "points": 1 }
+        {
+          "id": "regular_transformations/guided_problem_sets/swap/3_dfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert_01/1_intro_insert_01",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert_01/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert_01/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/compress_1/1_intro_compress_1",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/compress_1/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/compress_1/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/thirds/1_intro_thirds",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/thirds/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/thirds/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/wwR/1_intro_wwR",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/wwR/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/wwR/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete0/1_intro_delete0",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete0/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete0/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert0/1_intro_insert0",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert0/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert0/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/reverse/1_intro_reverse",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/reverse/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/reverse/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/compress_2/1_intro_compress_2",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/compress_2/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/compress_2/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete1star/1_intro_delete1star",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete1star/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete1star/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert10/1_intro_insert10",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert10/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert10/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/skip/1_intro_skip",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/skip/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/skip/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/flipEvens/1_intro_flipEvens",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/flipEvens/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/flipEvens/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete1star_prefix/1_intro_delete1star_prefix",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete1star_prefix/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete1star_prefix/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete_fifth/1_intro_delete_fifth",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete_fifth/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/delete_fifth/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert_fifth/1_intro_insert_fifth",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert_fifth/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/insert_fifth/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/inv_thirds/1_intro_inv_thirds",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/inv_thirds/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/inv_thirds/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/mid/1_intro_mid",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/mid/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/mid/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/parity_runs/1_intro_parity_runs",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/parity_runs/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/parity_runs/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/proper_proper_prefix/1_intro_proper_proper_prefix",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/proper_proper_prefix/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/proper_proper_prefix/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/take2skip2_1/1_intro_take2skip2_1",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/take2skip2_1/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/take2skip2_1/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/take2skip2_2/1_intro_take2skip2_2",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/take2skip2_2/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/take2skip2_2/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/wRw/1_intro_wRw",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/wRw/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/wRw/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8a/1_intro_DelOnes",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8a/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8a/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8b/1_intro_thereandback",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8b/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8b/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8c/1_intro_xor",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8c/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa20-hw-3-8c/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2a/1_intro_double",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2a/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2a/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2c/1_intro",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2c/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-fa22-hw-3-2c/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-3-2/1_intro_moveback8",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-3-2/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-3-2/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-old3-3/1_intro_half",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-old3-3/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/hw/reg-transformation-sp22-hw-old3-3/3_nfa_construction",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/flipSubstring/1_intro_flipSubstring",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/flipSubstring/2_concrete_dfa",
+          "points": 1
+        },
+        {
+          "id": "regular_transformations/guided_problem_sets/flipSubstring/3_nfa_construction",
+          "points": 1
+        }
       ]
     },
     {
       "title": "Zone 6: Context-Free Grammars",
       "numberChoose": 2,
       "questions": [
-        { "id": "CFGs/practice/m_neq_two_n", "points": 1 },
-        { "id": "CFGs/practice/not_ww", "points": 1 },
-        { "id": "CFGs/practice/not_zero_two_n_one_n", "points": 1 },
-        { "id": "CFGs/practice/twice_as_many_zeros_as_ones", "points": 1 },
-        { "id": "CFGs/practice/zero_two_n_one_n", "points": 1 },
-        { "id": "CFGs/practice/zero_n_one_n", "points": 1 },
-        { "id": "CFGs/practice/palindromes", "points": 1 },
-        { "id": "CFGs/practice/palindromes_even_ones", "points": 1 },
-        { "id": "CFGs/practice/palindromes_end_one", "points": 1 },
-        { "id": "CFGs/practice/palindromes_no_00", "points": 1 },
-        { "id": "CFGs/practice/equal_zeros_ones", "points": 1 },
-        { "id": "CFGs/practice/zero_2n_one_n", "points": 1 },
-        { "id": "CFGs/practice/sandwich", "points": 1 },
-        { "id": "CFGs/practice/at_least_as_many_ones", "points": 1 },
-        { "id": "CFGs/practice/twice_zeros_ones", "points": 1 },
-        { "id": "CFGs/practice/not_ww_write", "points": 1 }
+        {
+          "id": "CFGs/practice/m_neq_two_n",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/not_ww",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/not_zero_two_n_one_n",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/twice_as_many_zeros_as_ones",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/zero_two_n_one_n",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/zero_n_one_n",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/palindromes",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/palindromes_even_ones",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/palindromes_end_one",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/palindromes_no_00",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/equal_zeros_ones",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/zero_2n_one_n",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/sandwich",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/at_least_as_many_ones",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/twice_zeros_ones",
+          "points": 1
+        },
+        {
+          "id": "CFGs/practice/not_ww_write",
+          "points": 1
+        }
       ]
     }
   ],
