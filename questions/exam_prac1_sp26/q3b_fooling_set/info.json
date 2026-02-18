@@ -11,7 +11,7 @@
         "image": "prairielearn/grader-python",
         "serverFilesCourse": ["/"],
         "entrypoint": "/grade/serverFilesCourse/theorielearn/llm_grader/run.sh",
-        "timeout": 120,
+        "timeout": 300,
         "enableNetworking": true,
         "environment": {"GEMINI_API_KEY": ""}
     }
