@@ -52,11 +52,11 @@ def call_gemini(question_text: str, rubric: str, student_answer: str) -> tuple[f
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={api_key}"
     body = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json"},
+        "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json", "thinkingConfig": {"thinkingBudget": 4096}},
     }).encode()
 
     req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=270) as resp:
+    with urllib.request.urlopen(req, timeout=90) as resp:
         result = json.loads(resp.read())
 
     text = result["candidates"][0]["content"]["parts"][0]["text"]
