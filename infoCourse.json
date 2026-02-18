@@ -5,9 +5,9 @@
   "assessmentSets": [
     
     {
-      "abbreviation": "Practice Tests",
-      "name": "Practice Tests",
-      "heading": "Practice Tests",
+      "abbreviation": "GPT",
+      "name": "Guided Practice Tests",
+      "heading": "Guided Practice Tests",
       "color": "green2"
     },
     {
