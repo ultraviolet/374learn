@@ -1,0 +1,18 @@
+{
+    "uuid": "2a325ce5-bdf3-4f96-bf48-31711d2d2ecd",
+    "title": "Fooling Set: {w 0^n w | w ∈ Σ+, n > 0}",
+    "topic": "Regular Languages",
+    "tags": ["exam", "fooling-set"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/llm_grader/run.sh",
+        "timeout": 60,
+        "enableNetworking": true,
+        "environment": {"GEMINI_API_KEY": ""}
+    }
+}

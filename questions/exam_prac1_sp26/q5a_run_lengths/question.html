@@ -1,0 +1,67 @@
+<pl-question-panel>
+<markdown>
+Construct a **DFA** and a **regular expression** for the following language over the alphabet $\{0,1\}$:
+
+$$L_a = \{ w \in \{0,1\}^* \mid \text{every run of 1s in } w \text{ has even length, and every run of 0s has odd length} \}$$
+
+For example:
+- $\varepsilon \in L_a$ (no runs, vacuously OK)
+- $0 \in L_a$ (one run of 0s, length 1 — odd ✓)
+- $11 \in L_a$ (one run of 1s, length 2 — even ✓)
+- $011 \in L_a$ (0-run length 1 ✓, 1-run length 2 ✓)
+- $1100011 \in L_a$ (1-run length 2 ✓, 0-run length 3 ✓, 1-run length 2 ✓)
+- $1 \notin L_a$ (1-run length 1 — odd, but need even)
+- $00 \notin L_a$ (0-run length 2 — even, but need odd)
+- $10 \notin L_a$ (1-run length 1 — odd ✗)
+
+**Hint for DFA:** Track whether you are currently in a run of 0s or 1s, and whether that run's length so far is odd or even.
+</markdown>
+</pl-question-panel>
+
+<pl-question-panel>
+<markdown>
+**Part 1: DFA**
+
+Suggested state meanings:
+- **start**: no symbols read yet (or impossible starting configuration)
+- **0odd**: currently in a run of 0s of odd length (valid to end here)
+- **0even**: currently in a run of 0s of even length (invalid to end here)
+- **1odd**: currently in a run of 1s of odd length (invalid to end here)
+- **1even**: currently in a run of 1s of even length (valid to end here)
+- **dead**: encountered an invalid run ending
+
+Any transition not explicitly defined goes to **dead**.
+</markdown>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="dfa" fsm-type="dfa" alphabet="01">
+  <correct-answer>
+  {
+      "states": ["start", "0odd", "0even", "1odd", "1even", "dead"],
+      "input_symbols": ["0", "1"],
+      "transitions": {
+          "start": {"0": "0odd", "1": "1odd"},
+          "0odd":  {"0": "0even", "1": "1odd"},
+          "0even": {"0": "0odd",  "1": "dead"},
+          "1odd":  {"0": "dead",  "1": "1even"},
+          "1even": {"0": "0odd",  "1": "1odd"},
+          "dead":  {"0": "dead",  "1": "dead"}
+      },
+      "initial_state": "start",
+      "final_states": ["start", "0odd", "1even"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-question-panel>
+<markdown>
+**Part 2: Regular Expression**
+
+**Regex format:** Use `+` for union, `*` for Kleene star, `e` for $\varepsilon$, and parentheses for grouping.
+
+</markdown>
+</pl-question-panel>
+
+<tl-regex-input answers-name="regex" alphabet="01">
+(e+0(00)*)(11(11)*0(00)*)*(e+11(11)*)
+</tl-regex-input>

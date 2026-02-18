@@ -455,6 +455,19 @@ def nfa_from_json(json_nfa: NFAJsonDict) -> NFA:
     )
 
 
+def dfa_dump_json(dfa: DFA) -> DFAJsonDict:
+    return {
+        "states": [str(s) for s in dfa.states],
+        "input_symbols": list(dfa.input_symbols),
+        "transitions": {
+            str(state): {char: str(end) for char, end in path.items()}
+            for state, path in dfa.transitions.items()
+        },
+        "initial_state": str(dfa.initial_state),
+        "final_states": [str(s) for s in dfa.final_states],
+    }
+
+
 def dfa_from_json(json_dfa: DFAJsonDict) -> DFA:
     states = list_as_set(json_dfa["states"])
     input_symbols = list_as_set(json_dfa["input_symbols"])

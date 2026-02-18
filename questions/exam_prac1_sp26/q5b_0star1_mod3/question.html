@@ -1,0 +1,65 @@
+<pl-question-panel>
+<markdown>
+Construct a **DFA** and a **regular expression** for the following language over the alphabet $\{0,1\}$:
+
+$$L_b = \{ w \in 0^*10^* \mid |w| \equiv 0 \pmod{3} \}$$
+
+This is the set of strings that contain **exactly one 1** (surrounded by any number of 0s) **and whose total length is a multiple of 3**.
+
+For example:
+- $001 \in L_b$ (length 3 ✓, exactly one 1 ✓)
+- $010 \in L_b$ (length 3 ✓, exactly one 1 ✓)
+- $100 \in L_b$ (length 3 ✓, exactly one 1 ✓)
+- $000001000 \in L_b$ (length 9 ✓, exactly one 1 ✓)
+- $1 \notin L_b$ (length 1, not divisible by 3)
+- $0010 \notin L_b$ (length 4, not divisible by 3)
+- $011 \notin L_b$ (two 1s — not in $0^*10^*$)
+
+**Hint for DFA:** Track (a) how many characters have been read modulo 3, and (b) whether the unique 1 has been seen yet. Use a dead state for invalid strings (two 1s, or other violations of $0^*10^*$).
+</markdown>
+</pl-question-panel>
+
+<pl-question-panel>
+<markdown>
+**Part 1: DFA**
+
+Suggested state meanings:
+- **b0, b1, b2**: have not yet seen the 1; total characters read ≡ 0, 1, 2 (mod 3)
+- **a0, a1, a2**: have seen exactly one 1; total characters read ≡ 0, 1, 2 (mod 3)
+- **dead**: invalid (seen a second 1)
+
+The only accepting state is **a0** (seen the 1, and total length ≡ 0 mod 3).
+</markdown>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="dfa" fsm-type="dfa" alphabet="01">
+  <correct-answer>
+  {
+      "states": ["b0", "b1", "b2", "a0", "a1", "a2", "dead"],
+      "input_symbols": ["0", "1"],
+      "transitions": {
+          "b0":   {"0": "b1",   "1": "a1"},
+          "b1":   {"0": "b2",   "1": "a2"},
+          "b2":   {"0": "b0",   "1": "a0"},
+          "a0":   {"0": "a1",   "1": "dead"},
+          "a1":   {"0": "a2",   "1": "dead"},
+          "a2":   {"0": "a0",   "1": "dead"},
+          "dead": {"0": "dead", "1": "dead"}
+      },
+      "initial_state": "b0",
+      "final_states": ["a0"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-question-panel>
+<markdown>
+**Part 2: Regular Expression**
+
+**Regex format:** Use `+` for union, `*` for Kleene star, `e` for $\varepsilon$, and parentheses for grouping.
+</markdown>
+</pl-question-panel>
+
+<tl-regex-input answers-name="regex" alphabet="01">
+(000)*100(000)*+0(000)*10(000)*+00(000)*1(000)*
+</tl-regex-input>

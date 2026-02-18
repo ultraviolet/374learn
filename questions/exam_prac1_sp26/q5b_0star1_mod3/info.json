@@ -1,0 +1,9 @@
+{
+    "uuid": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+    "title": "DFA + Regex: 0*10* with Length Divisible by 3",
+    "topic": "DFAs",
+    "tags": ["exam", "DFA", "regex"],
+    "type": "v3",
+    "singleVariant": true,
+    "showCorrectAnswer": false
+}

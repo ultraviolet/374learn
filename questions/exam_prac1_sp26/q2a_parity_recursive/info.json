@@ -1,0 +1,18 @@
+{
+    "uuid": "fda9a145-9239-459d-a473-54a176d4863b",
+    "title": "Recursive Definition of Parity",
+    "topic": "Regular Languages",
+    "tags": ["exam"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/llm_grader/run.sh",
+        "timeout": 60,
+        "enableNetworking": true,
+        "environment": {"GEMINI_API_KEY": ""}
+    }
+}

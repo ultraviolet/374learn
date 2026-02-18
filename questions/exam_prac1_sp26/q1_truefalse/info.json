@@ -1,0 +1,18 @@
+{
+    "uuid": "4b87fce8-42bd-41a8-8082-745486891ed2",
+    "title": "True/False with Explanations",
+    "topic": "Regular Languages",
+    "tags": ["exam"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/llm_grader/run.sh",
+        "timeout": 60,
+        "enableNetworking": true,
+        "environment": {"GEMINI_API_KEY": ""}
+    }
+}

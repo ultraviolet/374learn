@@ -1,0 +1,77 @@
+{
+    "uuid": "c3d4e5f6-a7b8-4c5d-9e0f-1a2b3c4d5e6f",
+    "type": "Homework",
+    "title": "Practice Midterm 1 (Spring 2026, AI Beta)",
+    "set": "Guided Practice Tests",
+    "number": "3",
+    "allowIssueReporting": false,
+    "allowAccess": [
+        {
+            "mode": "Public",
+            "credit": 100,
+            "startDate": "2026-01-01T00:00:00"
+        }
+    ],
+    "zones": [
+        {
+            "title": "Problem 1: True/False + Explanation",
+            "questions": [
+                {"id": "exam_prac1_sp26/q1_truefalse", "points": 10}
+            ]
+        },
+        {
+            "title": "Problem 2a: Formal Recursive Definition of Parity",
+            "questions": [
+                {"id": "exam_prac1_sp26/q2a_parity_recursive", "points": 3}
+            ]
+        },
+        {
+            "title": "Problem 2b: OddParity(L) is Regular (Symbolic Construction)",
+            "questions": [
+                {"id": "exam_prac1_sp26/q2b_oddparity", "points": 3}
+            ]
+        },
+        {
+            "title": "Problem 2c: AddParity(L) is Regular (Symbolic Construction)",
+            "questions": [
+                {"id": "exam_prac1_sp26/q2c_addparity", "points": 3}
+            ]
+        },
+        {
+            "title": "Problem 3a: {0^n w 0^n | w ∈ Σ+, n > 0} is Regular",
+            "questions": [
+                {"id": "exam_prac1_sp26/q3a_regular", "points": 3}
+            ]
+        },
+        {
+            "title": "Problem 3b: {w 0^n w | w ∈ {0,1}+, n > 0} is Not Regular (Fooling Set)",
+            "questions": [
+                {"id": "exam_prac1_sp26/q3b_fooling_set", "points": 3}
+            ]
+        },
+        {
+            "title": "Problem 4a: Preimage of take2skip2 is Regular (DFA Construction)",
+            "questions": [
+                {"id": "regular_transformations/guided_problem_sets/take2skip2_1/3_nfa_construction", "points": 3}
+            ]
+        },
+        {
+            "title": "Problem 4b: Image of take2skip2 is Regular (NFA Construction)",
+            "questions": [
+                {"id": "exam_prac1_sp26/q4b_take2skip2_image", "points": 3}
+            ]
+        },
+        {
+            "title": "Problem 5a: DFA + Regex — Even-1-Runs, Odd-0-Runs",
+            "questions": [
+                {"id": "exam_prac1_sp26/q5a_run_lengths", "points": 3}
+            ]
+        },
+        {
+            "title": "Problem 5b: DFA + Regex — 0*10* with Length Divisible by 3",
+            "questions": [
+                {"id": "exam_prac1_sp26/q5b_0star1_mod3", "points": 3}
+            ]
+        }
+    ]
+}

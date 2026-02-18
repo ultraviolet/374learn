@@ -1,0 +1,52 @@
+<pl-question-panel>
+<markdown>
+Given a regular language $L$, define
+$$\mathsf{AddParity}(L) := \{\mathit{parity}(w) \cdot w \mid w \in L\}$$
+
+That is, $\mathsf{AddParity}(L)$ prepends the parity bit to each string in $L$.
+
+**Prove** that for every regular language $L$, $\mathsf{AddParity}(L)$ is also regular, by constructing a DFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $\mathsf{AddParity}(L)$.
+
+Assume you have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+
+**Construction idea:** $M'$ reads the first bit (the claimed parity), then simulates $M$ while also tracking the actual parity of the remaining input.
+
+**States:** Use a special start state $\mathsf{init}$, plus triples $(b, q, p)$ where:
+- $b \in \{0, 1\}$ is the claimed parity (first bit read),
+- $q \in Q$ is the current state of $M$,
+- $p \in \{\mathsf{even}, \mathsf{odd}\}$ is the actual parity of bits read so far (after the first bit).
+
+**Note:** `flip(even) = odd` and `flip(odd) = even`.
+
+You will need to copy and paste: `δ`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' = \{\mathsf{init}\} \;\cup\;$
+<pl-string-input answers-name="states-extra" correct-answer="{0, 1}" show-help-text=false size=8 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\; Q \;\times\;$
+<pl-string-input answers-name="states-parity" correct-answer="{even, odd}" show-help-text=false size=15 remove-spaces="true" allow-blank=true></pl-string-input>
+
+$s' = \mathsf{init}$
+
+$\delta'(\mathsf{init}, 0) =$
+<pl-string-input answers-name="trans-init-0" correct-answer="(0, s, even)" show-help-text=false size=18 allow-blank=true></pl-string-input>
+
+$\delta'(\mathsf{init}, 1) =$
+<pl-string-input answers-name="trans-init-1" correct-answer="(1, s, even)" show-help-text=false size=18 allow-blank=true></pl-string-input>
+
+$\delta'((b, q, p), 0) =$
+<pl-string-input answers-name="trans-0" correct-answer="(b, δ(q, 0), p)" show-help-text=false size=22 allow-blank=true></pl-string-input>
+
+$\delta'((b, q, p), 1) =$
+<pl-string-input answers-name="trans-1" correct-answer="(b, δ(q, 1), flip(p))" show-help-text=false size=28 allow-blank=true></pl-string-input>
+
+$A' = \{(b, q, p) \mid q \in $
+<pl-string-input answers-name="accepting-A" correct-answer="A" show-help-text=false size=1 allow-blank=true></pl-string-input>
+$\text{ and } b = p\}$
+
+*(Accept when $M$ accepts and the claimed parity equals the actual parity.)*
+</markdown>

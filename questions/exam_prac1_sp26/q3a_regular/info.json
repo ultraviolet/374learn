@@ -1,0 +1,18 @@
+{
+    "uuid": "b9a184d6-57b3-4dd4-a289-d2c661d4419f",
+    "title": "DFA + Regex: {0^n w 0^n | w ∈ Σ+, n > 0}",
+    "topic": "Regular Languages",
+    "tags": ["exam", "dfa", "regex"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/llm_grader/run.sh",
+        "timeout": 60,
+        "enableNetworking": true,
+        "environment": {"GEMINI_API_KEY": ""}
+    }
+}

@@ -1,0 +1,40 @@
+<pl-question-panel>
+<markdown>
+The *parity* of a bit-string $w$ is $0$ if $w$ has an even number of $\mathtt{1}$s, and $1$ if $w$ has an odd number.
+
+Given a regular language $L$, define
+$$\mathsf{OddParity}(L) := \{w \in L \mid \mathit{parity}(w) = 1\}$$
+
+**Prove** that for every regular language $L$, $\mathsf{OddParity}(L)$ is also regular, by constructing a DFA $M' = (Q', \{0,1\}, \delta', s', A')$ that accepts $\mathsf{OddParity}(L)$.
+
+Assume you have a DFA $M = (Q, \{0,1\}, \delta, s, A)$ that accepts $L$.
+
+**Note:** For this transformation we use two parity labels: `even` and `odd`.
+Define `flip(even) = odd` and `flip(odd) = even`.
+
+You will need to copy and paste: `δ`, `∅`
+
+<pl-template file-name="theorielearn/set-input-instructions/template.html" directory="serverFilesCourse"></pl-template>
+</markdown>
+</pl-question-panel>
+
+<markdown>
+$Q' =$
+<pl-string-input answers-name="states-1" correct-answer="Q" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="states-2" correct-answer="{even, odd}" show-help-text=false size=15 remove-spaces="true" allow-blank=true></pl-string-input>
+
+$s' =$
+<pl-string-input answers-name="start-state" correct-answer="(s, even)" show-help-text=false size=12 allow-blank=true></pl-string-input>
+
+$\delta'((q, p), 0) =$
+<pl-string-input answers-name="transition-0" correct-answer="(δ(q, 0), p)" show-help-text=false size=20 allow-blank=true></pl-string-input>
+
+$\delta'((q, p), 1) =$
+<pl-string-input answers-name="transition-1" correct-answer="(δ(q, 1), flip(p))" show-help-text=false size=25 allow-blank=true></pl-string-input>
+
+$A' =$
+<pl-string-input answers-name="accepting-1" correct-answer="A" show-help-text=false size=1 remove-spaces="true" allow-blank=true></pl-string-input>
+$\;\times\;$
+<pl-string-input answers-name="accepting-2" correct-answer="{odd}" show-help-text=false size=8 remove-spaces="true" allow-blank=true></pl-string-input>
+</markdown>

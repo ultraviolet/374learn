@@ -1,0 +1,9 @@
+{
+    "uuid": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "title": "DFA + Regex: Even-1-Runs, Odd-0-Runs",
+    "topic": "DFAs",
+    "tags": ["exam", "DFA", "regex"],
+    "type": "v3",
+    "singleVariant": true,
+    "showCorrectAnswer": false
+}
