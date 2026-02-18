@@ -1,0 +1,19 @@
+{
+    "uuid": "a8815e5e-61ee-42f0-914b-171a00320f66",
+    "title": "CFG: Palindromes with No 00",
+    "topic": "Context-Free Grammars",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/CFGs/run.sh",
+        "timeout": 10
+    }
+}

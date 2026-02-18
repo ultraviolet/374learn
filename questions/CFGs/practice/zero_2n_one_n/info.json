@@ -1,0 +1,19 @@
+{
+    "uuid": "498de3dd-3c87-45bb-8581-8ec32644b61f",
+    "title": "CFG Writing: 0^{2n} 1^n",
+    "topic": "Context-Free Grammars",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/CFGs/run.sh",
+        "timeout": 10
+    }
+}

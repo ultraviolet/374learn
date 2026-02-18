@@ -1,0 +1,19 @@
+{
+    "uuid": "9fade8b5-839e-4614-9a82-fdb05585dc38",
+    "title": "CFG Writing: At Least As Many 1s as 0s",
+    "topic": "Context-Free Grammars",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/CFGs/run.sh",
+        "timeout": 10
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "uuid": "a3592414-8196-4a31-ac8f-72c6d20cab46",
+    "title": "CFG Writing: 0^i 1^j 0^i (Sandwich)",
+    "topic": "Context-Free Grammars",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/CFGs/run.sh",
+        "timeout": 10
+    }
+}

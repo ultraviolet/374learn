@@ -14,7 +14,7 @@
     ],
     "zones": [
         {
-            "title": "Context Free Grammar Practice",
+            "title": "CFG Derivation Practice",
             "questions": [
                 {
                     "id": "CFGs/practice/m_neq_two_n",
@@ -34,6 +34,55 @@
                 },
                 {
                     "id": "CFGs/practice/zero_two_n_one_n",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "title": "CFG Writing Practice",
+            "questions": [
+                {
+                    "id": "CFGs/practice/zero_n_one_n",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/palindromes",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/palindromes_even_ones",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/palindromes_end_one",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/palindromes_no_00",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/equal_zeros_ones",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/zero_2n_one_n",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/sandwich",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/at_least_as_many_ones",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/twice_zeros_ones",
+                    "points": 1
+                },
+                {
+                    "id": "CFGs/practice/not_ww_write",
                     "points": 1
                 }
             ]

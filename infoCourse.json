@@ -17,6 +17,12 @@
       "color": "blue3"
     },
     {
+      "abbreviation": "RNG",
+      "name": "RNG",
+      "heading": "Random Practice Sets",
+      "color": "purple1"
+    },
+    {
       "abbreviation": "GPS",
       "name": "Guided Problem Sets",
       "heading": "GPS Samples",
