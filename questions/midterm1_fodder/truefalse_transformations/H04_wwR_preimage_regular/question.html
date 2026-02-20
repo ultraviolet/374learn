@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every regular language $L$, the language $\{w \mid w w^R \in L\}$ is also regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! For each state $q$ of the minimal DFA for $L$, define $L_q^{\text{left}} = \{w \mid \delta^*(q_0,w)=q\}$ (regular) and $L_q^{\text{right}} = \{w \mid \delta^*(q,w) \in A\}$ (regular). Then $\{w \mid ww^R \in L\} = \bigcup_q (L_q^{\text{left}} \cap \text{rev}(L_q^{\text{right}}))$, a finite union of intersections of regular languages—hence regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The language $\{w \mid ww^R \in L\}$ is regular for any regular $L$. For each DFA state $q$, the set of $w$ that take the start state to $q$ and whose reverse takes $q$ to an accepting state gives a regular set. The union over all states $q$ is regular.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,37 @@
+<pl-question-panel>
+<markdown>
+Define $\mathit{Evens}(w)$ as the string obtained by keeping only the characters at even positions (0-indexed: positions $0, 2, 4, \ldots$). Define the transformation $\mathit{Evens}^{-1}(L) = \{w \mid \mathit{Evens}(w) \in L\}$.
+
+Let $L$ be the language of all strings over $\{0,1\}$ where the **number of $\mathtt{1}$s is divisible by $3$**.
+
+Then $w \in \mathit{Evens}^{-1}(L)$ iff the number of $\mathtt{1}$s at even positions of $w$ is divisible by $3$.
+
+Construct a DFA for this language. **Hint:** Track (current position parity, count of $\mathtt{1}$s at even positions mod 3).
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["ep0", "ep1", "ep2", "op0", "op1", "op2"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "ep0": {"0": "op0", "1": "op1"},
+      "ep1": {"0": "op1", "1": "op2"},
+      "ep2": {"0": "op2", "1": "op0"},
+      "op0": {"0": "ep0", "1": "ep0"},
+      "op1": {"0": "ep1", "1": "ep1"},
+      "op2": {"0": "ep2", "1": "ep2"}
+    },
+    "initial_state": "ep0",
+    "final_states": ["ep0", "op0"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    States $ep_k$ and $op_k$ mean "currently at an even/odd position, and $k$ ones seen at even positions so far." From an even position: reading $\mathtt{0}$ keeps count, reading $\mathtt{1}$ increments it; both flip to odd position. From an odd position: any character keeps count and flips to even position. Accept when count $\equiv 0$.
+  </pl-hint>
+</pl-hidden-hints>

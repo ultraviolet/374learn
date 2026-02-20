@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all regular languages $L$, the language $L^*$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Regular languages are closed under Kleene star. If $R$ is a regular expression for $L$, then $R^*$ is a regular expression for $L^*$. Alternatively, given an NFA for $L$, add $\varepsilon$-transitions from every accepting state back to the start state (and make the start state accepting) to build an NFA for $L^*$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Regular languages are closed under Kleene star. The Kleene star is one of the three basic regular expression operations (union, concatenation, star), all of which preserve regularity.">No</pl-answer>
+</pl-multiple-choice>

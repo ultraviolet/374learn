@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L$ is regular and $L \cap L'$ is not regular, then $L'$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Proof by contradiction: suppose $L'$ were regular. Since $L$ is regular and $L'$ is regular, their intersection $L \cap L'$ would be regular (closure under intersection). But we assumed $L \cap L'$ is not regular — contradiction. So $L'$ cannot be regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="If $L$ and $L'$ were both regular, closure under intersection would make $L \cap L'$ regular. Since $L$ is regular but $L \cap L'$ is not, $L'$ must be non-regular.">No</pl-answer>
+</pl-multiple-choice>

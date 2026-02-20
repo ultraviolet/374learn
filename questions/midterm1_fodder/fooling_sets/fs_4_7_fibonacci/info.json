@@ -1,0 +1,22 @@
+{
+    "title": "Fooling Set: {0^(F_n) | n >= 0} (Fibonacci lengths)",
+    "topic": "Fooling Sets",
+    "tags": [
+        "midterm1",
+        "fooling-sets"
+    ],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/fooling_sets/run.sh",
+        "timeout": 10
+    },
+    "uuid": "9cd7e71d-25b8-4d3f-a5d2-5b20303f6cd0"
+}

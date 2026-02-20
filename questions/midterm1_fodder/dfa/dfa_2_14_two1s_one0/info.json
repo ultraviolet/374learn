@@ -1,0 +1,9 @@
+{
+  "uuid": "bb9114e2-190e-4890-8338-5e7480fa3add",
+  "title": "DFA: At least two 1s and at least one 0",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

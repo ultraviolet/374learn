@@ -1,0 +1,22 @@
+{
+    "title": "Fooling Set: {w#x#y | w,x,y not all equal}",
+    "topic": "Fooling Sets",
+    "tags": [
+        "midterm1",
+        "fooling-sets"
+    ],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/fooling_sets/run.sh",
+        "timeout": 10
+    },
+    "uuid": "4149c3df-7beb-4b28-b6af-b19945333078"
+}

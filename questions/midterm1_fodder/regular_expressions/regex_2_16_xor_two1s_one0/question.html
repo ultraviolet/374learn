@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ contains at least two } \mathtt{1}\text{s or at least one } \mathtt{0}, \textbf{but not both} \}$$
+
+As an example, $0$, $00$, $10$, $010$, $11$, and $111$ are in the language, but $\varepsilon$, $\mathtt{1}$, $011$, $110$, and $1100$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    111*+00*+00*10*+0*100*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        The complement of "A XOR B" is "neither A nor B" or "both A and B." Identify the strings in each case. Case 1: at least two $\mathtt{1}$s but no $\mathtt{0}$s. Case 2: at least one $\mathtt{0}$ but at most one $\mathtt{1}$.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        Case 1 ($\geq 2$ ones, no zeros): $1^{\geq 2} = 1\cdot 1\cdot 1^*$. Case 2 (no ones + zeros): $0^+$. Case 2 (one 1 + zeros): $0^+10^*$ (zero before 1) plus $0^*10^+$ (zero after 1).
+    </pl-hint>
+</pl-hidden-hints>

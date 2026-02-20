@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ is regular, then $\Sigma^* \setminus L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Regular languages are closed under complement. Given a DFA $M$ for $L$, simply swap the accepting and non-accepting states to get a DFA for $\Sigma^* \setminus L$. (Note: this swap-trick works for DFAs but not directly for NFAs, because NFAs may reject a string even if some computation accepts it.)">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Regular languages are closed under complement. If $L$ is regular with DFA $M = (Q, \Sigma, \delta, s, A)$, then $\Sigma^* \setminus L$ is recognized by the DFA $(Q, \Sigma, \delta, s, Q \setminus A)$ (swap accepting and non-accepting states).">No</pl-answer>
+</pl-multiple-choice>

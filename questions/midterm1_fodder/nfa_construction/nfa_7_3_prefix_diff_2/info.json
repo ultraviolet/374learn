@@ -1,0 +1,9 @@
+{
+  "uuid": "6ef42589-f25b-45bd-a1a7-79be50783e42",
+  "title": "DFA: Every prefix has |#0s - #1s| at most 2",
+  "topic": "NFA Construction",
+  "tags": ["midterm1", "dfa", "nfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

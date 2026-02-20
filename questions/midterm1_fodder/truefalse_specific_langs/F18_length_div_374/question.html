@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{w \in \{0,1\}^* \mid |w| \text{ is divisible by } 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! A DFA with 374 states tracks $|w| \bmod 374$ (incrementing by 1 on each input symbol). The accepting state is the one reached after reading a multiple-of-374 number of symbols.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="A DFA can track string length mod 374 using 374 states. This is a purely length-based condition, independent of the actual characters.">No</pl-answer>
+</pl-multiple-choice>

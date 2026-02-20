@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, the language $L^*$ is context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \{0^n1^n2^n \mid n \geq 1\}$ is not context-free. $L^*$ contains strings like $(0^n1^n2^n)^k$ for various $n,k$. Whether $L^*$ is context-free or not is actually a non-trivial question, but the key point is that closure under Kleene star only applies when $L$ is already context-free.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Closure under Kleene star only applies when $L$ is already context-free. There exist non-CFL languages whose Kleene star is also not context-free.">No</pl-answer>
+</pl-multiple-choice>

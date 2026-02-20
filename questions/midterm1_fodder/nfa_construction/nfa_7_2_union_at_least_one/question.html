@@ -1,0 +1,48 @@
+<pl-question-panel>
+<markdown>
+Construct an NFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings satisfying at least one of the following conditions:</center>***
+
+(a) The number of $\mathtt{0}$s is even.
+
+(b) The number of $\mathtt{1}$s is divisible by $3$.
+
+(c) The total length $|w|$ is divisible by $5$.
+
+Use the **union (NFA) construction**: add a new start state with $\varepsilon$-transitions to three separate automata, one for each condition.
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="nfa">
+  <correct-answer>
+  {
+    "states": ["start", "a0", "a1", "b0", "b1", "b2", "c0", "c1", "c2", "c3", "c4"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "start": {"": ["a0", "b0", "c0"]},
+      "a0": {"0": ["a1"], "1": ["a0"]},
+      "a1": {"0": ["a0"], "1": ["a1"]},
+      "b0": {"0": ["b0"], "1": ["b1"]},
+      "b1": {"0": ["b1"], "1": ["b2"]},
+      "b2": {"0": ["b2"], "1": ["b0"]},
+      "c0": {"0": ["c1"], "1": ["c1"]},
+      "c1": {"0": ["c2"], "1": ["c2"]},
+      "c2": {"0": ["c3"], "1": ["c3"]},
+      "c3": {"0": ["c4"], "1": ["c4"]},
+      "c4": {"0": ["c0"], "1": ["c0"]}
+    },
+    "initial_state": "start",
+    "final_states": ["a0", "b0", "c0"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Build three separate automata: (A) a 2-state DFA tracking zeros mod 2, (B) a 3-state DFA tracking ones mod 3, (C) a 5-state DFA tracking length mod 5. Then add a new start state with $\varepsilon$-transitions to each component's start state. Accept in any component's accept state. Total: $1 + 2 + 3 + 5 = 11$ states.
+  </pl-hint>
+</pl-hidden-hints>

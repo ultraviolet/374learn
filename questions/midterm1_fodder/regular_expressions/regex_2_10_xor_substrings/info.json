@@ -1,0 +1,9 @@
+{
+  "uuid": "b2c421b7-087c-4200-8c59-2f4319d0d14b",
+  "title": "Regular Expressions: Exactly one of substrings 10 or 01",
+  "topic": "Regular Expressions",
+  "tags": ["midterm1", "regular-expressions"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

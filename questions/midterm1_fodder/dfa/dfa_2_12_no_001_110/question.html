@@ -1,0 +1,35 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings that do not contain $\mathtt{001}$ or $\mathtt{110}$ as a substring.</center>***
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["e", "q0", "q1", "q00", "q11", "dead"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "e":    {"0": "q0",   "1": "q1"},
+      "q0":   {"0": "q00",  "1": "q1"},
+      "q1":   {"0": "q0",   "1": "q11"},
+      "q00":  {"0": "q00",  "1": "dead"},
+      "q11":  {"0": "dead", "1": "q11"},
+      "dead": {"0": "dead", "1": "dead"}
+    },
+    "initial_state": "e",
+    "final_states": ["e", "q0", "q1", "q00", "q11"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Track the last two characters seen. The dangerous patterns are $\mathtt{00}$ (one more $\mathtt{1}$ completes $\mathtt{001}$) and $\mathtt{11}$ (one more $\mathtt{0}$ completes $\mathtt{110}$). States: empty, last-was-$\mathtt{0}$, last-was-$\mathtt{1}$, last-two-were-$\mathtt{00}$, last-two-were-$\mathtt{11}$, dead.
+  </pl-hint>
+</pl-hidden-hints>

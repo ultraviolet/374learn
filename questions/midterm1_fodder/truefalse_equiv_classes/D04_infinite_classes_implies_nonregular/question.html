@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if $\equiv_L$ has infinitely many equivalence classes, then $L$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! This is the contrapositive of D.3: since regular $\Rightarrow$ finitely many classes (Myhill–Nerode), its contrapositive gives infinitely many classes $\Rightarrow$ not regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="By the Myhill–Nerode theorem, regular $\Leftrightarrow$ finitely many $\equiv_L$-classes. The contrapositive of one direction says: infinitely many classes implies not regular.">No</pl-answer>
+</pl-multiple-choice>

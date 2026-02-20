@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if there is a DFA that rejects every string not in $L$, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The condition only requires the DFA to reject strings outside $L$; the DFA may also reject strings inside $L$. The all-rejecting DFA rejects every string not in any language $L$ (since it rejects everything). Yet $L$ can be non-regular. For example, $L = \{0^n1^n \mid n \geq 0\}$ is satisfied by the all-rejecting DFA, but $L$ is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The all-rejecting DFA rejects every string for any language $L$, so the condition is trivially true for all languages. Recognizing $L$ requires a DFA that rejects exactly the strings not in $L$ (and accepts exactly those in $L$).">No</pl-answer>
+</pl-multiple-choice>

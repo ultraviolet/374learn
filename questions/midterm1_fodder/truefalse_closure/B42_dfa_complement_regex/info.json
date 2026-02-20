@@ -1,0 +1,8 @@
+{
+    "uuid": "dda54ef2-773d-4b2c-9ab3-be4c5df23ec5",
+    "title": "True/False: DFA Recognizes L Implies Complement Has Regular Expression",
+    "topic": "Regular Languages",
+    "tags": ["midterm1", "true-false", "closure-properties", "regular-languages"],
+    "type": "v3",
+    "singleVariant": true
+}

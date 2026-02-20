@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all context-free languages $A$, $B$, and $C$, the language $(A \cup B)^* \cdot C$ is also context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Context-free languages are closed under union (C.15 analog), Kleene star (C.16), and concatenation (C.15). So: $A \cup B$ is CFL, $(A \cup B)^*$ is CFL, and $(A \cup B)^* \cdot C$ is CFL.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="CFLs are closed under union, Kleene star, and concatenation. Applying these operations to CFLs always yields a CFL.">No</pl-answer>
+</pl-multiple-choice>

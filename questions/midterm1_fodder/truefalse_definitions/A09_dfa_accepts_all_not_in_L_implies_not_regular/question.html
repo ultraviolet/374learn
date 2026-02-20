@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if there is a DFA that accepts every string not in $L$, then $L$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \Sigma^*$. The all-accepting DFA accepts every string not in $L$ (vacuously, since there are no strings not in $\Sigma^*$). Yet $\Sigma^*$ is regular. Also, the all-accepting DFA accepts every string not in any $L$ regardless of whether $L$ is regular or not.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The all-accepting DFA accepts every string not in any language $L$. This condition is trivially satisfied for all languages, so it tells us nothing about whether $L$ is regular or not.">No</pl-answer>
+</pl-multiple-choice>

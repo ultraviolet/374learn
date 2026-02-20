@@ -1,0 +1,22 @@
+{
+    "title": "Fooling Set: Strings with more 0s than 1s",
+    "topic": "Fooling Sets",
+    "tags": [
+        "midterm1",
+        "fooling-sets"
+    ],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/fooling_sets/run.sh",
+        "timeout": 10
+    },
+    "uuid": "5cb6ed94-c8ee-45ec-a64b-ecd750f7e81f"
+}

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^m 1^n \mid 0 \leq m + n \leq 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The condition $m + n \leq 374$ means every string has length at most 374. The language is finite (there are only finitely many pairs $(m,n)$ with $m,n \geq 0$ and $m+n \leq 374$). Every finite language is regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Since $m,n \geq 0$ and $m+n \leq 374$, every string has length at most 374. There are only finitely many such strings, so the language is finite, hence regular.">No</pl-answer>
+</pl-multiple-choice>

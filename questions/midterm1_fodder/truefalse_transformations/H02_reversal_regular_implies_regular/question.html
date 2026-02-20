@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if the language $\{w^R \mid w \in L\}$ is regular, then $L$ is also regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! If $\text{rev}(L)$ is regular, then $\text{rev}(\text{rev}(L)) = L$ is also regular, since regular languages are closed under reversal (H.1). So $L = \text{rev}(\text{rev}(L))$ is regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="If $\text{rev}(L)$ is regular, apply H.1: the reversal of a regular language is regular. So $\text{rev}(\text{rev}(L)) = L$ is regular.">No</pl-answer>
+</pl-multiple-choice>

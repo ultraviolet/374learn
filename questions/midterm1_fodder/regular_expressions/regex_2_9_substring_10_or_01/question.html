@@ -1,0 +1,23 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ contains the substring } \mathtt{10} \text{ or the substring } \mathtt{01} \}$$
+
+As an example, $01$, $10$, $0100$, and $110$ are in the language, but $\varepsilon$, $0$, $111$, and $000$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (0+1)*(01+10)(0+1)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        What strings contain neither $01$ nor $10$? Strings with no adjacent pair of different characters — i.e., all $0$s or all $1$s. The language is everything else.
+    </pl-hint>
+</pl-hidden-hints>

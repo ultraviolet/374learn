@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ is not regular, then $\Sigma^* \setminus L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \{0^n1^n \mid n \geq 0\}$ is not regular, and $\Sigma^* \setminus L$ is also not regular. If $\Sigma^* \setminus L$ were regular, then $L = \Sigma^* \setminus (\Sigma^* \setminus L)$ would be regular by closure under complement, contradicting the assumption.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Non-regularity is preserved under complementation. If $L$ is not regular, then $\Sigma^* \setminus L$ is also not regular. (If the complement were regular, taking the complement again — which preserves regularity — would make $L$ regular, a contradiction.)">No</pl-answer>
+</pl-multiple-choice>

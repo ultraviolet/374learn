@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{w \in \{0,1\}^* \mid |\#(0,x) - \#(1,x)| < 374 \text{ for every prefix } x \text{ of } w\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! A DFA can track the running balance $b = \#0 - \#1$ as it reads $w$, clamped to $[-374, 374]$. Once $|b| \geq 374$, transition to a permanent reject state. At all other times, update $b$ by $+1$ (on $\mathtt{0}$) or $-1$ (on $\mathtt{1}$). This uses $2 \times 374 = 748$ non-dead states plus one dead state.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="A DFA tracks the running balance $\#0 - \#1$ in the range $[-373, 373]$ (going out of range causes immediate rejection). The balance is bounded, so only finitely many states are needed.">No</pl-answer>
+</pl-multiple-choice>

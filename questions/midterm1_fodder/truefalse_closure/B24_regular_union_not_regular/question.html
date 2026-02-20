@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L$ is regular and $L \cup L'$ is not regular, then $L'$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Proof by contradiction: suppose $L'$ were regular. Since $L$ is regular and $L'$ is regular, their union $L \cup L'$ would be regular (closure under union). But we assumed $L \cup L'$ is not regular — contradiction. So $L'$ cannot be regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="If $L$ and $L'$ were both regular, closure under union would guarantee $L \cup L'$ is regular. Since $L$ is regular but $L \cup L'$ is not regular, $L'$ must be non-regular.">No</pl-answer>
+</pl-multiple-choice>

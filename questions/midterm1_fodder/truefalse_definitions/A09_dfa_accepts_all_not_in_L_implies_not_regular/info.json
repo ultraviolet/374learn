@@ -1,0 +1,8 @@
+{
+    "uuid": "feec819d-9a80-4059-8ad1-d803d752fdf2",
+    "title": "True/False: DFA Accepting All Strings Not in L Implies L Not Regular",
+    "topic": "Regular Languages",
+    "tags": ["midterm1", "true-false", "definitions", "DFAs"],
+    "type": "v3",
+    "singleVariant": true
+}

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ does not have a fooling set of size 374, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! By contrapositive: if $L$ is not regular, then (by E.4) $L$ has an infinite fooling set $F$. Any 374-element subset of $F$ is a fooling set of size 374. So if $L$ has no fooling set of size 374, $L$ must be regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="If $L$ were not regular, it would have an infinite fooling set (E.4). Any finite subset of a fooling set is also a fooling set, so a non-regular $L$ would have a fooling set of size 374. The contrapositive gives: no fooling set of size 374 $\Rightarrow$ $L$ is regular.">No</pl-answer>
+</pl-multiple-choice>

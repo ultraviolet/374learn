@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, each equivalence class of $\equiv_L$ is itself a regular language.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \{0^n 1^n \mid n \geq 0\}$. Consider the class of strings that cannot be extended into $L$, i.e., $\{x \mid \forall z,\, xz \notin L\}$. This class equals $\{0^i 1^j \mid j > i\} \cup \{x \mid x \notin 0^*1^*\}$, whose complement $\{0^i 1^j \mid j \leq i\}$ is not regular (by the pumping lemma). Hence this equivalence class is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! For non-regular languages, equivalence classes of $\equiv_L$ can themselves be non-regular. For example, with $L = \{0^n 1^n\}$, the class of strings with empty right context (strings that cannot extend to any word in $L$) equals the complement of $\{0^i 1^j \mid j \leq i\}$, which is not regular.">No</pl-answer>
+</pl-multiple-choice>

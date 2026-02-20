@@ -1,0 +1,34 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>Every string of length at most 3.</center>***
+
+Describe each state in English (e.g., "strings of length exactly $k$ seen so far").
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["len0", "len1", "len2", "len3", "dead"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "len0": {"0": "len1", "1": "len1"},
+      "len1": {"0": "len2", "1": "len2"},
+      "len2": {"0": "len3", "1": "len3"},
+      "len3": {"0": "dead", "1": "dead"},
+      "dead": {"0": "dead", "1": "dead"}
+    },
+    "initial_state": "len0",
+    "final_states": ["len0", "len1", "len2", "len3"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Use one state per possible length (0, 1, 2, 3) plus a "too long" dead state. All states except "too long" are accepting.
+  </pl-hint>
+</pl-hidden-hints>

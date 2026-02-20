@@ -1,0 +1,35 @@
+<pl-question-panel>
+<markdown>
+Define $\mathit{Obliviate}(w)$ as $w$ with all $\mathtt{1}$s deleted (keeping only the $\mathtt{0}$s). Define $T(L) = \{\mathit{Obliviate}(w) \mid w \in L\}$.
+
+Let $L$ be the language of all strings over $\{0,1\}$ with an **even number of $\mathtt{0}$s and odd length**.
+
+If $w \in L$ has $k$ zeros and $m$ ones (with $k$ even and $k + m$ odd, so $m$ is odd), then $\mathit{Obliviate}(w) = \mathtt{0}^k$ where $k$ is even. Therefore:
+$$T(L) = \{\mathtt{0}^k \mid k \text{ is even}\} = (\mathtt{00})^*$$
+
+Construct a DFA for $(\mathtt{00})^*$.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["even", "odd", "dead"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "even": {"0": "odd",  "1": "dead"},
+      "odd":  {"0": "even", "1": "dead"},
+      "dead": {"0": "dead", "1": "dead"}
+    },
+    "initial_state": "even",
+    "final_states": ["even"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    The language $(00)^*$ consists of $\varepsilon, 00, 0000, \ldots$. Any $\mathtt{1}$ is rejected immediately. Count $\mathtt{0}$s; accept when the count is even.
+  </pl-hint>
+</pl-hidden-hints>

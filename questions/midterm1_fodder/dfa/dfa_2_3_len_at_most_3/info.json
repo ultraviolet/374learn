@@ -1,0 +1,9 @@
+{
+  "uuid": "4c1c85a0-8ad0-4773-9b19-7de484628c9d",
+  "title": "DFA Construction: Strings of length at most 3",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

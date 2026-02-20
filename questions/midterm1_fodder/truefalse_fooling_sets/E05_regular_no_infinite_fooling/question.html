@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ is regular, then $L$ has no infinite fooling set.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! This is the contrapositive of E.1: if $L$ had an infinite fooling set, $L$ would be non-regular. So regular languages cannot have infinite fooling sets. (They do have finite fooling sets whose maximum size equals the number of states in the minimal DFA.)">Yes</pl-answer>
+    <pl-answer correct="false" feedback="By the Fooling Set Lemma, an infinite fooling set would force infinitely many DFA states, making $L$ non-regular. So regular languages cannot have infinite fooling sets.">No</pl-answer>
+</pl-multiple-choice>

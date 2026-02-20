@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if for every string $w \notin L$ there is a DFA that rejects $w$, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The condition is trivially true for every language $L$: for any $w \notin L$, the all-rejecting DFA rejects $w$. Yet $L$ can be non-regular. Each DFA is only required to reject one particular non-member; no single DFA has to reject all non-members while also accepting all members.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The all-rejecting DFA rejects every string, so the condition trivially holds for all languages $L$. This does not imply $L$ is regular.">No</pl-answer>
+</pl-multiple-choice>

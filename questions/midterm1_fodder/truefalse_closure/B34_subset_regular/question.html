@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L \subseteq L'$ and $L$ is regular, then $L'$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \emptyset$ (regular) and $L' = \{0^n1^n \mid n \geq 0\}$ (not regular). We have $\emptyset \subseteq L'$ but $L'$ is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! For example, $\emptyset \subseteq \{0^n1^n\}$, and $\emptyset$ is regular, but $\{0^n1^n\}$ is not.">No</pl-answer>
+</pl-multiple-choice>

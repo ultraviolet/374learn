@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if the language $\{0^{|w|} \mid w \in L\}$ is regular, then $L$ is also regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \{0^n 1^n \mid n \geq 0\}$ is not regular. But $\{0^{|w|} \mid w \in L\} = \{0^{2n} \mid n \geq 0\} = (00)^*$, which IS regular. A language's length set being regular tells you nothing about whether $L$ itself is regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Counterexample: $L = \{0^n 1^n\}$ is not regular, but its length language is $\{0^{2n} \mid n \geq 0\} = (00)^*$, which is regular. Many non-regular languages have regular length languages.">No</pl-answer>
+</pl-multiple-choice>

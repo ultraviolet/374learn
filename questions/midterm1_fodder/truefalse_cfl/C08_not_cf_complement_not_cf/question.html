@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ is not context-free, then $\Sigma^* \setminus L$ is not context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Unlike regular languages, context-free languages are NOT closed under complement. So the complement of a non-CFL can be CFL. For example, there exist languages $L$ such that $L$ is not CFL but $\Sigma^* \setminus L$ is CFL. (Context-free languages are not closed under complement, so non-CFLs can have CFL complements.)">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Context-free languages are not closed under complementation (unlike regular languages). So we cannot conclude that the complement of a non-CFL is also non-CFL.">No</pl-answer>
+</pl-multiple-choice>

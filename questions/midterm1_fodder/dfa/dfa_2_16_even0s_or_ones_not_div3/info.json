@@ -1,0 +1,9 @@
+{
+  "uuid": "0b7f6ad4-7a63-4297-ac52-c69b1bbbd364",
+  "title": "DFA: Even number of 0s OR ones not divisible by 3",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

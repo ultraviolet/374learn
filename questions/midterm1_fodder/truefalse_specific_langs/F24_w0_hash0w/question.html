@@ -1,0 +1,17 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{w \cdot 0^{\#(0,w)} \mid w \in \{0,1\}^*\}$ is regular.**
+
+*(Here $\#(0,w)$ denotes the number of $\mathtt{0}$s in $w$.)*
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The language is NOT regular. Fooling set: $\{(0^n 1,\, 0^n) \mid n \geq 0\}$. Each $0^n 1 \cdot 0^n$ is in the language (take $w = 0^n 1$, which has $n$ zeros, and the suffix is $0^n$ ✓). For $n \neq m$: $0^n 1 \cdot 0^m$ is in the language only if the unique way to write it as $w \cdot 0^{\#(0,w)}$ gives $m = n$. Since the only $\mathtt{1}$ in the string forces the split, $0^n 1 \cdot 0^m \notin L$ for $n \neq m$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The language is NOT regular. The fooling set $\{(0^n 1, 0^n) \mid n \geq 0\}$ witnesses infinitely many $\equiv_L$-classes: the split point is forced by the single $\mathtt{1}$, so $0^n 1 \cdot 0^m \notin L$ when $n \neq m$.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,9 @@
+{
+  "uuid": "f08fe70d-f7bb-4376-af13-93f7ff08e78e",
+  "title": "NFA: Union construction for at least one of three conditions",
+  "topic": "NFA Construction",
+  "tags": ["midterm1", "nfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

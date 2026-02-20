@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid \text{every maximal run of consecutive } \mathtt{0}\text{s in } w \text{ has even length} \}$$
+
+For example, $\varepsilon$, $1$, $00$, $1001$, $0011$, $001001$, and $110011$ are in the language (all $0$-runs have length $0$, $2$, $4$, ...), but $0$, $10$, $100$, and $1001100$ are not (they have a $0$-run of odd length).
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (1+00)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Build a DFA: state "even" (start, accepting — current $0$-run length is even) and state "odd" (non-accepting — current $0$-run is odd). On $0$: toggle state. On $1$: reset to "even" (if in "odd", then seeing a $1$ closes an odd $0$-run, which is forbidden — go to dead).
+    </pl-hint>
+    <antml-hint show-after-submission=6>
+        The DFA has: even $\xrightarrow{0}$ odd, even $\xrightarrow{1}$ even, odd $\xrightarrow{0}$ even, odd $\xrightarrow{1}$ dead. Applying Arden's lemma gives $L_\text{even} = (1 + 00)^*$.
+    </antml-hint>
+</pl-hidden-hints>

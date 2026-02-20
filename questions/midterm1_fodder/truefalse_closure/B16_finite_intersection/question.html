@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L$ and $L'$, if $L$ and $L'$ are finite, then $L \cap L'$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Finite languages are regular, and regular languages are closed under intersection. So the intersection of two finite languages is regular (and also finite).">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Finite languages are regular, and the intersection of two regular languages is regular. Also, the intersection of two finite languages is finite, hence regular.">No</pl-answer>
+</pl-multiple-choice>

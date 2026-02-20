@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The empty language $\emptyset$ is context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The empty language $\emptyset$ is regular (the DFA with one non-accepting state recognizes it), and every regular language is context-free. Alternatively, the CFG with no productions where the start symbol $S$ never derives any string recognizes $\emptyset$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="$\emptyset$ is regular (recognized by a DFA with no accepting states), and every regular language is context-free.">No</pl-answer>
+</pl-multiple-choice>

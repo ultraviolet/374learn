@@ -1,0 +1,9 @@
+{
+  "uuid": "380aa5e3-510e-4cd1-9639-eba716d7851c",
+  "title": "Regular Expressions: Exactly one of: two 1s or one 0",
+  "topic": "Regular Expressions",
+  "tags": ["midterm1", "regular-expressions"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

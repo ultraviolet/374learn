@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if $L$ is finite, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Any finite language $\{w_1, \ldots, w_k\}$ is regular. You can write a regular expression $w_1 + w_2 + \cdots + w_k$ (treating each string as a concatenation of single-character expressions). The empty language $\emptyset$ is also regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Every finite language is regular, since it can be expressed as a finite union of regular expressions (one per string). Even the empty language $\emptyset$ is regular.">No</pl-answer>
+</pl-multiple-choice>

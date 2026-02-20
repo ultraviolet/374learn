@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ contains the subsequence } \mathtt{10} \text{ or the subsequence } \mathtt{01}, \textbf{but not both} \}$$
+
+Recall that a **subsequence** is obtained by deleting zero or more characters (not necessarily contiguous). For example, $10$, $100$, $01$, and $011$ are in the language, but $\varepsilon$, $0$, $1$, $000$, $111$, $0110$, and $010$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    11*00*+00*11*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        A string contains subsequence $\mathtt{10}$ but not $\mathtt{01}$ iff: no $0$ appears before any $1$ in the string. That forces all $1$s before all $0$s.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        Subsequence $\mathtt{10}$ but not $\mathtt{01}$: the string must be $1^+0^+$. Subsequence $\mathtt{01}$ but not $\mathtt{10}$: the string must be $0^+1^+$.
+    </pl-hint>
+</pl-hidden-hints>

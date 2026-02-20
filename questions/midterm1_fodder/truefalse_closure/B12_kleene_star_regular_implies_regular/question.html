@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if $L^*$ is regular, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \{0^p \mid p \text{ is prime}\}$. $L$ is not regular (a classic example). However, $L^* = \{\varepsilon\} \cup \{0^k \mid k \geq 2\}$ is regular (since every integer $\geq 2$ is expressible as a sum of primes, and 0 and 1 are not). So $L^*$ is regular but $L$ is not.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Counterexample: $L = \{0^p \mid p \text{ is prime}\}$ is not regular, yet $L^* = \{\varepsilon\} \cup \{0^k \mid k \geq 2\}$ is regular (since every integer $\geq 2$ is a sum of primes by Bertrand's postulate / Goldbach). So $L^*$ regular does not imply $L$ is regular.">No</pl-answer>
+</pl-multiple-choice>

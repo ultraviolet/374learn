@@ -1,0 +1,32 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings where the number of $\mathtt{1}$s is divisible by $3$.</center>***
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["n0", "n1", "n2"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "n0": {"0": "n0", "1": "n1"},
+      "n1": {"0": "n1", "1": "n2"},
+      "n2": {"0": "n2", "1": "n0"}
+    },
+    "initial_state": "n0",
+    "final_states": ["n0"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Track the number of $\mathtt{1}$s seen so far, mod 3. There are 3 states: $0$, $1$, or $2$ ones mod 3. Reading a $\mathtt{0}$ doesn't change the count; reading a $\mathtt{1}$ increments it mod 3. Accept when the count is $0 \pmod{3}$.
+  </pl-hint>
+</pl-hidden-hints>

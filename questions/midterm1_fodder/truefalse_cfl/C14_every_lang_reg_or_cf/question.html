@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Every language is either regular or context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $\{0^n1^n2^n \mid n \geq 0\}$ (over $\Sigma = \{0,1,2\}$) is neither regular nor context-free. The Chomsky hierarchy has multiple levels, and there exist languages outside the CFL class.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! There are languages that are neither regular nor context-free. For example, $\{0^n1^n2^n \mid n \geq 0\}$ is a classic example of a non-CFL (provable by the pumping lemma for CFLs).">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ contains at least two } \mathtt{1}\text{s or at least one } \mathtt{0} \text{ (or possibly both)} \}$$
+
+As an example, $0$, $00$, $11$, $010$, $110$, $011$, and $111$ are in the language, but $\varepsilon$ and $\mathtt{1}$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    0(0+1)*+1(0+1)(0+1)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Identify the complement: strings that do NOT have at least two $1$s and do NOT have a $0$. These must have no $0$s and at most one $1$: just $\varepsilon$ and $\mathtt{1}$. So the language is everything else.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        The language is $\Sigma^* \setminus \{\varepsilon, \mathtt{1}\}$: all strings starting with $0$ (at least one $0$), or strings starting with $1$ followed by at least one more character (giving either a second $1$ or a $0$).
+    </pl-hint>
+</pl-hidden-hints>

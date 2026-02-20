@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, and for every string $w \in L$, there is a DFA that accepts $w$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! For any string $w$, the all-accepting DFA (which accepts every string in $\Sigma^*$) accepts $w$. So for any language $L$ and any $w \in L$, this DFA witnesses the existence required. Note: we only need to find *some* DFA that accepts $w$, not one that recognizes exactly $L$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The all-accepting DFA accepts every string, including every $w \in L$ for any language $L$.">No</pl-answer>
+</pl-multiple-choice>

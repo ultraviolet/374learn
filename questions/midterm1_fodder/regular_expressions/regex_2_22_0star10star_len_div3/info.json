@@ -1,0 +1,9 @@
+{
+  "uuid": "edb23377-3716-4600-91a6-3ec1bfc661b3",
+  "title": "Regular Expressions: Strings in 0*10* with length divisible by 3",
+  "topic": "Regular Expressions",
+  "tags": ["midterm1", "regular-expressions"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

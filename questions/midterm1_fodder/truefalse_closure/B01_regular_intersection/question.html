@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all regular languages $L$ and $L'$, the language $L \cap L'$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Regular languages are closed under intersection. One proof: $L \cap L' = \overline{\overline{L} \cup \overline{L'}}$ (De Morgan), and regular languages are closed under complement and union. Alternatively, use the product (cross-product) construction to build a DFA for $L \cap L'$ directly.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Regular languages are closed under intersection. Use De Morgan's laws and closure under complement and union, or directly use the product construction.">No</pl-answer>
+</pl-multiple-choice>

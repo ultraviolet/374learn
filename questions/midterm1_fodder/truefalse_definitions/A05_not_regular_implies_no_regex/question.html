@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if $L$ is not regular then $L$ cannot be represented by a regular expression.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! This is the contrapositive of the statement that every language described by a regular expression is regular (A.6). Since regular expressions and regular languages are equivalent, a non-regular language has no regular expression.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="This is the contrapositive of: if $L$ has a regular expression, then $L$ is regular. Since that statement is true, its contrapositive is also true.">No</pl-answer>
+</pl-multiple-choice>

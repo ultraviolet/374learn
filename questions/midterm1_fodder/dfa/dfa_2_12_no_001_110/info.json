@@ -1,0 +1,9 @@
+{
+  "uuid": "4496ca26-cfc3-470e-814f-9883a4f76520",
+  "title": "DFA: No 001 or 110 substring",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

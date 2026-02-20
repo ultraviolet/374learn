@@ -1,0 +1,8 @@
+{
+    "uuid": "58f451c9-ac93-4d7c-a5a3-c8eaac22e376",
+    "title": "True/False: (A union B)* concat C Is CFL When A, B, C Are CFLs",
+    "topic": "Context-Free Languages",
+    "tags": ["midterm1", "true-false", "context-free"],
+    "type": "v3",
+    "singleVariant": true
+}

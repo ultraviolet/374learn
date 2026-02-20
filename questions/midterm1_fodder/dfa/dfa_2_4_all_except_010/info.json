@@ -1,0 +1,9 @@
+{
+  "uuid": "dd2aefae-623c-4d19-8049-1b5a7dedc364",
+  "title": "DFA Construction: All strings except 010",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

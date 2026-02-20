@@ -1,0 +1,22 @@
+{
+    "title": "Fooling Set: {0^i 1^j 0^k | 2i=k or i=2k}",
+    "topic": "Fooling Sets",
+    "tags": [
+        "midterm1",
+        "fooling-sets"
+    ],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/fooling_sets/run.sh",
+        "timeout": 10
+    },
+    "uuid": "ef33fa8d-452c-4989-aa52-ae2a246c5b66"
+}

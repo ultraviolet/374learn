@@ -1,0 +1,35 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings containing at least two $\mathtt{1}$s and at least one $\mathtt{0}$.</center>***
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["n0z0", "n1z0", "n2z0", "n0z1", "n1z1", "n2z1"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "n0z0": {"0": "n0z1", "1": "n1z0"},
+      "n1z0": {"0": "n1z1", "1": "n2z0"},
+      "n2z0": {"0": "n2z1", "1": "n2z0"},
+      "n0z1": {"0": "n0z1", "1": "n1z1"},
+      "n1z1": {"0": "n1z1", "1": "n2z1"},
+      "n2z1": {"0": "n2z1", "1": "n2z1"}
+    },
+    "initial_state": "n0z0",
+    "final_states": ["n2z1"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Use a product construction: track (number of $\mathtt{1}$s seen, capped at 2) $\times$ (whether a $\mathtt{0}$ has been seen). This gives $3 \times 2 = 6$ states. State $\mathtt{nkzb}$ means: $k$ ones seen so far ($k \in \{0,1,2\}$) and $b$ zeros seen ($b \in \{0,1\}$). Accept when $k = 2$ and $b = 1$.
+  </pl-hint>
+</pl-hidden-hints>

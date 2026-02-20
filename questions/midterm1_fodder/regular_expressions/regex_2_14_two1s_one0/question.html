@@ -1,0 +1,23 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ contains at least two } \mathtt{1}\text{s and at least one } \mathtt{0} \}$$
+
+As an example, $011$, $101$, $110$, $0110$, $1100$, and $10011$ are in the language, but $\varepsilon$, $0$, $11$, $010$, $001$, and $100$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (0+1)*0(0+1)*1(0+1)*1(0+1)*+(0+1)*1(0+1)*0(0+1)*1(0+1)*+(0+1)*1(0+1)*1(0+1)*0(0+1)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Consider where the $0$ falls relative to the two $1$s. Case 1: $0$ appears before both $1$s. Case 2: $0$ appears between the two $1$s. Case 3: $0$ appears after both $1$s.
+    </pl-hint>
+</pl-hidden-hints>

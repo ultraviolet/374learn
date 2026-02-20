@@ -1,0 +1,22 @@
+{
+    "title": "Fooling Set: {x#y | #(0,x) = #(1,y)}",
+    "topic": "Fooling Sets",
+    "tags": [
+        "midterm1",
+        "fooling-sets"
+    ],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": [
+            "/"
+        ],
+        "entrypoint": "/grade/serverFilesCourse/theorielearn/fooling_sets/run.sh",
+        "timeout": 10
+    },
+    "uuid": "edfad0a9-e744-435d-a234-f62968b502b7"
+}

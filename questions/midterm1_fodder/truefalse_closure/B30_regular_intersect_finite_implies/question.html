@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L$ is regular and $L \cap L'$ is finite, then $L'$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \emptyset$ (regular) and $L' = \{0^n1^n \mid n \geq 0\}$ (not regular). Then $L \cap L' = \emptyset$, which is finite. But $L'$ is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! If $L = \emptyset$, then $L \cap L' = \emptyset$ is finite (and regular) for any $L'$, including non-regular ones.">No</pl-answer>
+</pl-multiple-choice>

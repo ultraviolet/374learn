@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{w \in \{0,1\}^* \mid |\#(0,x) - \#(1,x)| < 374 \text{ for every substring } x \text{ of } w\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Let $S_i = \#\mathtt{0} - \#\mathtt{1}$ in the first $i$ characters of $w$ (prefix sum). The condition $|\#(0,x) - \#(1,x)| < 374$ for every substring is equivalent to $\max_i S_i - \min_i S_i < 374$ (the range of prefix sums). A DFA can track the pair $(S_i - \min_{j \leq i} S_j,\; \max_{j \leq i} S_j - \min_{j \leq i} S_j)$, both bounded in $[0,373]$. This requires at most $374^2/2$ live states, hence is finite.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The condition reduces to: the range of prefix sums $\max S_i - \min S_i < 374$. Both $S_i - \min$ and $\max - \min$ are bounded in $[0, 373]$ throughout any accepted string, giving a finite state space.">No</pl-answer>
+</pl-multiple-choice>

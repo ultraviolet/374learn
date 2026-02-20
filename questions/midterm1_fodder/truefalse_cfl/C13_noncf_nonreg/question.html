@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Every non-context-free language is non-regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! This is the contrapositive of C.12: every regular language is context-free. Taking the contrapositive: if $L$ is not context-free, then $L$ is not regular. So every non-CFL is non-regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="This follows from the contrapositive of C.12: every regular language is context-free, so if $L$ is not context-free, $L$ cannot be regular.">No</pl-answer>
+</pl-multiple-choice>

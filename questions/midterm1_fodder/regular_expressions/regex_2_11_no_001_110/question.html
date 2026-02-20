@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ does not contain either } \mathtt{001} \text{ or } \mathtt{110} \text{ as a substring} \}$$
+
+As an example, $\varepsilon$, $0$, $1$, $01$, $10$, $010$, $101$, $0100$, and $10011$ are in the language, but $001$, $110$, $0011$, $1100$, and $11010$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    1*+(e+1)0(10)*(0*+1+)
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        $\mathtt{001}$ is forbidden iff: in any run of $\geq 2$ zeros, no $1$ can follow. $\mathtt{110}$ is forbidden iff: in any run of $\geq 2$ ones, no $0$ can follow. So a run of length $\geq 2$ can only appear at the end of the string.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        The string alternates between single $0$s and single $1$s, with at most one long run (of $0$s or $1$s) at the end. Build a DFA with states tracking whether the last run has length 1 or $\geq 2$.
+    </pl-hint>
+</pl-hidden-hints>

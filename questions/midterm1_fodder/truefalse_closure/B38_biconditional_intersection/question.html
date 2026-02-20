@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Two languages $L$ and $L'$ are regular if and only if $L \cap L'$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The forward direction ($\Rightarrow$) holds: if both are regular, their intersection is regular. But the backward direction ($\Leftarrow$) fails: $L = \emptyset$ (regular) and $L' = \{0^n1^n\}$ (not regular) gives $L \cap L' = \emptyset$ (regular), yet $L'$ is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The forward direction holds, but not the converse. Counterexample: $L = \emptyset$, $L' = \{0^n1^n\}$: $L \cap L' = \emptyset$ is regular but $L'$ is not.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \{0,1\}^*$, if $L$ contains a finite number of strings in $0^*$, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \{0^n1^n \mid n \geq 0\}$. The only string in $0^*$ that is also in $L$ is $\varepsilon = 0^0 1^0$ (since any string $0^k$ with $k \geq 1$ has no 1s and is not of the form $0^n1^n$ for $n \geq 1$). So $L \cap 0^*$ is just $\{\varepsilon\}$, which is finite. But $L$ is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! A language can contain only finitely many strings of the form $0^k$ yet still be non-regular. For example, $\{0^n1^n \mid n \geq 0\}$ contains only $\varepsilon$ from $0^*$, yet is not regular.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ does not start with the prefix } 010 \}$$
+
+As an example, $\varepsilon$, $0$, $01$, $011$, and $100$ are in the language, but $010$ and $0101$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    e+0+01+1(0+1)*+00(0+1)*+011(0+1)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Consider cases by what the string starts with. Strings starting with $1$ are always OK. For strings starting with $0$, you must avoid $01$ as a second character... or if the second char is $1$, you must avoid $0$ as the third character.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        Cases: $\varepsilon$, exactly $0$, exactly $01$, starts with $1$, starts with $00$, starts with $011$.
+    </pl-hint>
+</pl-hidden-hints>

@@ -1,0 +1,33 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings that end with the suffix $\mathtt{010}$.</center>***
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["e", "0", "01", "010"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "e":   {"0": "0",   "1": "e"},
+      "0":   {"0": "0",   "1": "01"},
+      "01":  {"0": "010", "1": "e"},
+      "010": {"0": "0",   "1": "01"}
+    },
+    "initial_state": "e",
+    "final_states": ["010"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Track the longest suffix of the string read so far that is a prefix of $\mathtt{010}$. States: no progress ($\varepsilon$), matched $\mathtt{0}$, matched $\mathtt{01}$, matched $\mathtt{010}$ (accept). Use the KMP failure function to handle mismatches.
+  </pl-hint>
+</pl-hidden-hints>

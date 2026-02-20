@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Every regular language is recognized by an NFA with exactly 374 accepting states.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! For any regular language $L$, we can construct an NFA with exactly 374 accepting states as follows. First, build any NFA $N$ for $L$ (e.g., from a DFA by adding a fresh accepting state $q_\text{acc}$ with $\varepsilon$-transitions from all original accepting states, making the originals non-accepting — giving 1 accepting state). Then add 373 new unreachable accepting states. Unreachable states do not affect what strings are accepted, so the resulting NFA still recognizes $L$ and has exactly 374 accepting states.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Given any NFA for $L$ with $k$ accepting states, we can adjust the count: if $k < 374$, add $374-k$ unreachable accepting states (which don't change the language). If $k > 374$, first modify the NFA to use a single accepting state (via $\varepsilon$-transitions from all accepting states to a fresh $q_\text{acc}$), then add 373 unreachable accepting states.">No</pl-answer>
+</pl-multiple-choice>

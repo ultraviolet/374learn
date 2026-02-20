@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L$ is not regular and $L \cup L'$ is regular, then $L'$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \{0^n1^n \mid n \geq 0\}$ (not regular) and $L' = \Sigma^* \setminus L$ (also not regular, by B.8). Then $L \cup L' = \Sigma^*$ is regular. So $L$ is not regular, $L \cup L'$ is regular, but $L'$ is also not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Take $L = \{0^n1^n \mid n \geq 0\}$ (not regular) and $L' = \Sigma^* \setminus L$ (also not regular). Their union is $\Sigma^*$, which is regular. So the hypothesis holds but $L'$ is not regular.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,9 @@
+{
+  "uuid": "959b025a-3586-41ef-a07e-2db39ecb0c83",
+  "title": "DFA: At least two 1s XOR at least one 0",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

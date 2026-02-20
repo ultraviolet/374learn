@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Every context-free language is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $\{0^n1^n \mid n \geq 0\}$ is context-free (CFG: $S \to \varepsilon \mid 0S1$) but not regular (fooling set: $\{0^n \mid n \geq 0\}$). The class of CFLs strictly contains the regular languages.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The class of context-free languages strictly contains the regular languages. For example, $\{0^n1^n \mid n \geq 0\}$ is CFL but not regular.">No</pl-answer>
+</pl-multiple-choice>

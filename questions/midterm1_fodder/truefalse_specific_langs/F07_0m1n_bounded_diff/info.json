@@ -1,0 +1,8 @@
+{
+    "uuid": "7222a0bc-79b4-42a8-9b26-cd499ae6d492",
+    "title": "True/False: {0^m 1^n | 0<=m-n<=374} Regular",
+    "topic": "Specific Languages",
+    "tags": ["midterm1", "true-false", "regular-languages", "gut-check"],
+    "type": "v3",
+    "singleVariant": true
+}

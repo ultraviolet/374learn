@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ is not context-free, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $\{0^n1^n2^n \mid n \geq 0\}$ is not context-free and also not regular. The hierarchy is regular $\subsetneq$ CFL $\subsetneq$ all languages. Failing to be CFL does not make a language regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! There are languages that are neither regular nor context-free. For example, $\{0^n1^n2^n \mid n \geq 0\}$ is not context-free and not regular.">No</pl-answer>
+</pl-multiple-choice>

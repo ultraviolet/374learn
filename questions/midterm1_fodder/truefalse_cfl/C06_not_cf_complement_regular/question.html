@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ is not context-free, then $\Sigma^* \setminus L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \{0^n1^n2^n \mid n \geq 0\}$ is not context-free. Its complement $\Sigma^* \setminus L$ is the set of strings over $\{0,1,2\}$ that are not of this form. This complement is not regular either.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The complement of a non-CFL need not be regular. For example, $\{0^n1^n2^n\}$ is not CFL, and its complement is not regular.">No</pl-answer>
+</pl-multiple-choice>

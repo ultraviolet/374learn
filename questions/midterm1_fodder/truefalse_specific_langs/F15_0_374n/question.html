@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^{374n} \mid n \geq 0\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The language is the set of unary strings whose length is divisible by 374. It is recognized by a DFA with 374 states tracking length mod 374, and described by the regular expression $\mathtt{(0^{374})^*}$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The language $\{0^{374n}\}$ is the set of 0-strings with length $\equiv 0 \pmod{374}$. A DFA with 374 states (tracking length mod 374) recognizes it.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,8 @@
+{
+    "uuid": "f82ec464-a054-40e2-8e4d-38ebbf3e000c",
+    "title": "True/False: (A union B) minus C Is Regular for Any A, B, C",
+    "topic": "Regular Languages",
+    "tags": ["midterm1", "true-false", "closure-properties", "regular-languages"],
+    "type": "v3",
+    "singleVariant": true
+}

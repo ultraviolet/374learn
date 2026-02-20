@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{w \in \{0,1\}^* \mid w \text{ represents an integer divisible by 374 in base 473}\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The same DFA-for-divisibility construction works in any base. A DFA with 374 states tracks the value of $w$ modulo 374 in base 473: on reading digit $d$, update $v \leftarrow (473 \cdot v + d) \bmod 374$. Accept if $v \equiv 0$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="A DFA can compute the value of $w$ modulo 374 in base 473 using 374 states. The construction $v \leftarrow (473v + d) \bmod 374$ works for any base.">No</pl-answer>
+</pl-multiple-choice>

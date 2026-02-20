@@ -1,0 +1,310 @@
+{
+    "uuid": "8ed197bc-8dcd-4072-aa99-fe5e97bc7885",
+    "type": "Homework",
+    "title": "Midterm 1 Fodder (Sp23, Untested)",
+    "set": "Question Bank",
+    "number": "SP23-MT1",
+    "allowIssueReporting": false,
+    "allowAccess": [
+        {
+            "mode": "Public",
+            "credit": 100,
+            "startDate": "2025-01-01T12:59:59"
+        }
+    ],
+    "zones": [
+        {
+            "title": "§1 True/False: Definitions",
+            "questions": [
+                {"id": "midterm1_fodder/truefalse_definitions/A01_every_language_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A02_every_finite_language_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A03_every_infinite_language_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A04_regular_implies_regex", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A05_not_regular_implies_no_regex", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A06_regex_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A07_no_regex_implies_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A08_dfa_accepts_all_in_L_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A09_dfa_accepts_all_not_in_L_implies_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A10_dfa_rejects_all_not_in_L_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A11_per_string_dfa_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A12_per_complement_dfa_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A13_dfa_implies_nfa", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A14_nfa_implies_dfa", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A15_nfa_epsilon_implies_nfa", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A16_dfa_accepts_each_member", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A17_regular_dfa_exactly_374_accepting", "points": 1},
+                {"id": "midterm1_fodder/truefalse_definitions/A18_regular_nfa_exactly_374_accepting", "points": 1}
+            ]
+        },
+        {
+            "title": "§1 True/False: Closure Properties",
+            "questions": [
+                {"id": "midterm1_fodder/truefalse_closure/B01_regular_intersection", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B02_regular_union", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B03_regular_kleene_star", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B04_regular_difference", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B05_regular_complement", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B06_regular_complement_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B07_not_regular_complement_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B08_not_regular_complement_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B09_any_intersection_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B10_any_union_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B11_any_kleene_star_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B12_kleene_star_regular_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B13_any_difference_any", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B14_finite_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B15_finite_union_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B16_finite_intersection", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B17_infinite_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B18_cofinite_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B19_few_in_0star_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B20_cofinite_0star_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B21_both_nonregular_intersection", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B22_both_nonregular_union", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B23_regular_union_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B24_regular_union_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B25_nonregular_union_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B26_regular_intersection_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B27_regular_intersection_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B28_regular_union_finite", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B29_regular_intersect_finite", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B30_regular_intersect_finite_implies", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B31_regular_intersect_empty", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B32_nonreg_intersect_empty", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B33_regular_nonreg_intersect_empty", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B34_subset_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B35_subset_superreg", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B36_subset_nonreg", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B37_subset_super_nonreg", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B38_biconditional_intersection", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B39_no_regex_complement_dfa", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B40_no_dfa_complement_regex", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B41_no_dfa_complement_no_regex", "points": 1},
+                {"id": "midterm1_fodder/truefalse_closure/B42_dfa_complement_regex", "points": 1}
+            ]
+        },
+        {
+            "title": "§1 True/False: Context-Free Languages",
+            "questions": [
+                {"id": "midterm1_fodder/truefalse_cfl/C01_nonreg_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C02_nonreg_not_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C03_reg_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C04_reg_not_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C05_not_cf_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C06_not_cf_complement_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C07_not_cf_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C08_not_cf_complement_not_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C09_empty_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C10_finite_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C11_cf_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C12_regular_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C13_noncf_nonreg", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C14_every_lang_reg_or_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C15_cf_concat", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C16_cf_star", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C17_cf_union_star_concat", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C18_any_star_cf", "points": 1},
+                {"id": "midterm1_fodder/truefalse_cfl/C19_star_cf_implies_cf", "points": 1}
+            ]
+        },
+        {
+            "title": "§1 True/False: Equivalence Classes",
+            "questions": [
+                {"id": "midterm1_fodder/truefalse_equiv_classes/D01_regular_finite_classes", "points": 1},
+                {"id": "midterm1_fodder/truefalse_equiv_classes/D02_nonregular_infinite_classes", "points": 1},
+                {"id": "midterm1_fodder/truefalse_equiv_classes/D03_finite_classes_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_equiv_classes/D04_infinite_classes_implies_nonregular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_equiv_classes/D05_regular_classes_are_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_equiv_classes/D06_any_lang_classes_regular", "points": 1}
+            ]
+        },
+        {
+            "title": "§1 True/False: Fooling Sets",
+            "questions": [
+                {"id": "midterm1_fodder/truefalse_fooling_sets/E01_infinite_fooling_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_fooling_sets/E02_finite_fooling_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_fooling_sets/E03_no_infinite_fooling_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_fooling_sets/E04_nonregular_has_infinite_fooling", "points": 1},
+                {"id": "midterm1_fodder/truefalse_fooling_sets/E05_regular_no_infinite_fooling", "points": 1},
+                {"id": "midterm1_fodder/truefalse_fooling_sets/E06_nonregular_no_finite_fooling", "points": 1},
+                {"id": "midterm1_fodder/truefalse_fooling_sets/E07_fooling_374_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_fooling_sets/E08_no_fooling_374_implies_regular", "points": 1}
+            ]
+        },
+        {
+            "title": "§1 True/False: Specific Languages",
+            "questions": [
+                {"id": "midterm1_fodder/truefalse_specific_langs/F01_0i1j2k_sum_eq_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F02_0i1j2k_sum_leq_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F03_0i1j2k_total_eq_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F04_0i1j2k_total_gt_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F05_0i1j_i_lt_374_lt_j", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F06_0m1n_bounded_sum", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F07_0m1n_bounded_diff", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F08_0i1j_not_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F09_0i1j_diff_div_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F10_0i1j_sum_div_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F11_0_nsquared", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F12_0_37n_plus4", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F13_0n10n", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F14_0m10n", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F15_0_374n", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F16_0_37n_1_4n_ge374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F17_0_37n_1_4n_le374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F18_length_div_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F19_binary_div_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F20_base473_div_374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F21_global_balance_lt374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F22_prefix_balance_lt374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F23_substring_balance_lt374", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F24_w0_hash0w", "points": 1},
+                {"id": "midterm1_fodder/truefalse_specific_langs/F25_w0_hash0w_mod374", "points": 1}
+            ]
+        },
+        {
+            "title": "§1 True/False: Automata Operations",
+            "questions": [
+                {"id": "midterm1_fodder/truefalse_automata/G01_dfa_complement_disjoint", "points": 1},
+                {"id": "midterm1_fodder/truefalse_automata/G02_nfa_complement_disjoint", "points": 1},
+                {"id": "midterm1_fodder/truefalse_automata/G03_dfa_flip_partition", "points": 1},
+                {"id": "midterm1_fodder/truefalse_automata/G04_nfa_flip_partition", "points": 1},
+                {"id": "midterm1_fodder/truefalse_automata/G05_dfa_complement_states", "points": 1},
+                {"id": "midterm1_fodder/truefalse_automata/G06_nfa_complement_states", "points": 1},
+                {"id": "midterm1_fodder/truefalse_automata/G07_dfa_star_states", "points": 1},
+                {"id": "midterm1_fodder/truefalse_automata/G08_nfa_star_states", "points": 1}
+            ]
+        },
+        {
+            "title": "§1 True/False: Language Transformations",
+            "questions": [
+                {"id": "midterm1_fodder/truefalse_transformations/H01_regular_reversal", "points": 1},
+                {"id": "midterm1_fodder/truefalse_transformations/H02_reversal_regular_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_transformations/H03_reversal_nonreg_implies_nonreg", "points": 1},
+                {"id": "midterm1_fodder/truefalse_transformations/H04_wwR_preimage_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_transformations/H05_wwR_image_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_transformations/H06_wwR_preimage_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_transformations/H07_length_language_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_transformations/H08_length_regular_implies_regular", "points": 1},
+                {"id": "midterm1_fodder/truefalse_transformations/H09_cfl_reversal", "points": 1}
+            ]
+        },
+        {
+            "title": "§2 Regular Expressions",
+            "questions": [
+                {"id": "midterm1_fodder/regular_expressions/regex_2_1_length_at_most_3", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_2_all_except_010", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_3_ends_with_010", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_4_not_start_010", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_5_contains_010", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_6_no_010_substring", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_7_contains_subseq_010", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_8_no_subseq_010", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_9_substring_10_or_01", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_10_xor_substrings", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_11_no_001_110", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_12_subseq_10_or_01", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_13_xor_subsequences", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_14_two1s_one0", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_15_two1s_or_one0", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_16_xor_two1s_one0", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_17_even_0runs", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_18_even_0runs_odd_1runs", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_19_length_div3", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_20_ones_div3", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_21_0star1star_len_div3", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_22_0star10star_len_div3", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_23_0star1star0star_even", "points": 1},
+                {"id": "midterm1_fodder/regular_expressions/regex_2_24_0n_w_1n", "points": 1}
+            ]
+        },
+        {
+            "title": "§2 DFA Construction",
+            "questions": [
+                {"id": "midterm1_fodder/dfa/dfa_2_3_len_at_most_3", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_4_all_except_010", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_5_ends_with_010", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_6_not_start_010", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_7_contains_010", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_8_no_010_substring", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_9_subseq_010", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_10_substring_10_or_01", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_11_xor_substrings", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_12_no_001_110", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_13_subseq_10_or_01", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_14_two1s_one0", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_15_xor_two1s_one0", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_16_even0s_or_ones_not_div3", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_17_even_0runs", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_18_even0runs_odd1runs", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_19_ends01_odd_len", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_20_ones_div3", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_21_binary_div3", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_23_0star1star_div3", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_24_0star10star_div3", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_25_0star1star0star_even", "points": 1},
+                {"id": "midterm1_fodder/dfa/dfa_2_26_00w11", "points": 1}
+            ]
+        },
+        {
+            "title": "§4 Fooling Set Coding",
+            "questions": [
+                {"id": "midterm1_fodder/fooling_sets/fs_4_1_more_zeros", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_2_fewer_zeros", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_3_twice_zeros", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_4_atleast_twice_zeros", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_5_power_of_2", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_6_power_of_3", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_7_fibonacci", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_8_perfect_squares", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_9_perfect_cubes", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_10_0_2n_1_n", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_11_0m_1n_not_eq", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_12_0i1j0k_2icond", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_13_0i1j0k_sum", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_14_x_hash_y", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_15_xx_complement", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_16_balanced_parens", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_17_palindromes_div3", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_18_two_equal_0runs", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_19_01n_10n", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_20_01m_10n_geq", "points": 1},
+                {"id": "midterm1_fodder/fooling_sets/fs_4_21_w_hash_x_hash_y", "points": 1}
+            ]
+        },
+        {
+            "title": "§6 Product/Subset Construction",
+            "questions": [
+                {"id": "midterm1_fodder/product_construction/pc_6_1_all_three", "points": 1},
+                {"id": "midterm1_fodder/product_construction/pc_6_2_at_least_one", "points": 1},
+                {"id": "midterm1_fodder/product_construction/pc_6_3_exactly_one", "points": 1},
+                {"id": "midterm1_fodder/product_construction/pc_6_4_exactly_two", "points": 1},
+                {"id": "midterm1_fodder/product_construction/pc_6_5_odd_number", "points": 1}
+            ]
+        },
+        {
+            "title": "§7 NFA Construction",
+            "questions": [
+                {"id": "midterm1_fodder/nfa_construction/nfa_7_2_union_at_least_one", "points": 1},
+                {"id": "midterm1_fodder/nfa_construction/nfa_7_3_prefix_diff_2", "points": 1},
+                {"id": "midterm1_fodder/nfa_construction/nfa_7_4_substring_diff_2", "points": 1}
+            ]
+        },
+        {
+            "title": "§7 Language Transformations (DFA Construction)",
+            "questions": [
+                {"id": "midterm1_fodder/language_transformations/lt_7_1_len_mod3", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_2_one_in_front", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_3_only_ones", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_4_only_ones_inv", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_5_missing_first_one", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_6_missing_one_one", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_7_prefixes", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_8_suffixes", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_10_evens_inv", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_12_strip_final_zeros", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_13_obliviate", "points": 1},
+                {"id": "midterm1_fodder/language_transformations/lt_7_14_unobliviate", "points": 1}
+            ]
+        }
+    ]
+}

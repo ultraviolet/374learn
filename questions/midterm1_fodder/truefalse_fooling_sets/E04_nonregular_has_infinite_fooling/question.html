@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ is not regular, then $L$ has an infinite fooling set.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! By the Myhill–Nerode theorem, if $L$ is not regular then $\equiv_L$ has infinitely many equivalence classes. From infinitely many pairwise $\equiv_L$-inequivalent strings, one can construct an infinite fooling set for $L$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The biconditional holds: $L$ is not regular if and only if $L$ has an infinite fooling set. The forward direction says non-regular languages always have infinite fooling sets.">No</pl-answer>
+</pl-multiple-choice>

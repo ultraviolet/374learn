@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^i 1^j \mid (i - j) \text{ is divisible by } 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Build a DFA that tracks $(i - j) \bmod 374$ as it reads the string (increasing by 1 for each $\mathtt{0}$, decreasing by 1 mod 374 for each $\mathtt{1}$), along with a flag for whether the $0^*1^*$ structure is violated. The DFA has $374 \times 3 + 1$ states (374 residues $\times$ {reading 0s, reading 1s, seen a 0 after 1} plus dead). Accept when residue $= 0$ and structure is valid.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="$(i-j) \bmod 374$ can be tracked by a DFA with 374 counting states (one per residue class). Combined with checking the $0^*1^*$ structure, this gives a finite automaton.">No</pl-answer>
+</pl-multiple-choice>

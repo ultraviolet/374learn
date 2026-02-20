@@ -1,0 +1,8 @@
+{
+    "uuid": "aa5209cc-6316-4133-805c-86df3fdeb937",
+    "title": "True/False: NFA with ε-Transitions Implies NFA without ε-Transitions",
+    "topic": "Regular Languages",
+    "tags": ["midterm1", "true-false", "definitions", "NFAs"],
+    "type": "v3",
+    "singleVariant": true
+}

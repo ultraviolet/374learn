@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{w \in \{0,1\}^* \mid |\#(0,w) - \#(1,w)| < 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The language is NOT regular. Fooling set: $\{(0^{374n},\, 1^{374n}) \mid n \geq 0\}$. Each $0^{374n} \cdot 1^{374n}$ has $|\#0 - \#1| = 0 < 374$ ✓. For $n \neq m$: $0^{374n} \cdot 1^{374m}$ has $|\#0 - \#1| = 374|n-m| \geq 374$, so it is not in $L$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The language is NOT regular. The final balance $\#(0,w) - \#(1,w)$ can be arbitrarily large or small, and a DFA would need infinitely many states to track it exactly. Fooling set: $\{(0^{374n}, 1^{374n}) \mid n \geq 0\}$.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^{37n} 1^{4n} \mid n \geq 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The language is NOT regular. Fooling set: $\{(0^{37n},\, 1^{4n}) \mid n \geq 374\}$. Each $0^{37n} \cdot 1^{4n} \in L$ ✓. For $n \neq m$ (say $n > m$): $0^{37n} \cdot 1^{4m}$ would need $4m = 4n$, so $m = n$. Thus $0^{37n} \cdot 1^{4m} \notin L$. The language has the same non-regularity structure as $\{0^{37n}1^{4n} \mid n \geq 0\}$; removing finitely many strings doesn't help.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The language is NOT regular. Fooling set: $\{(0^{37n}, 1^{4n}) \mid n \geq 374\}$. For $n \neq m$, $0^{37n} \cdot 1^{4m} \notin L$ since the ratio $37n : 4m \neq 37:4$. Restricting to $n \geq 374$ does not help—it merely removes finitely many strings from a non-regular language.">No</pl-answer>
+</pl-multiple-choice>

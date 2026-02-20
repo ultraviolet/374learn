@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\left\{ w \in \Sigma^* \;\middle|\; \begin{array}{l} \text{every maximal run of consecutive } \mathtt{0}\text{s in } w \text{ has even length,} \\ \text{and every maximal run of consecutive } \mathtt{1}\text{s in } w \text{ has odd length} \end{array} \right\}$$
+
+For example, $\varepsilon$, $1$, $111$, $00$, $100$, $1001$, $001$, and $0010011$ are in the language, but $0$, $11$, $0011$, $10$, $1100$, and $1001100$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (e+00(00)*)(1(11)*00(00)*)*(e+1(11)*)
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Build a DFA tracking (current run type, parity): states for "in even-length $0$-run" (accepting), "in odd-length $0$-run" (dead if $1$ seen), "in odd-length $1$-run" (accepting), "in even-length $1$-run" (dead if $0$ seen).
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        The string alternates between even-$0$-blocks $(00)^+$ and odd-$1$-blocks $1(11)^*$. The general form is: (optional even-$0$-block)(odd-$1$-block · even-$0$-block)*(optional odd-$1$-block), giving $(e+(00)^+)(1(11)^*(00)^+)^*(e+1(11)^*)$.
+    </pl-hint>
+</pl-hidden-hints>

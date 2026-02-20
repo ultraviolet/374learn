@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every non-regular language $L$, the relation $\equiv_L$ has infinitely many equivalence classes.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! By the Myhill–Nerode theorem, $L$ is regular if and only if $\equiv_L$ has finitely many equivalence classes. Equivalently, if $L$ is not regular, then $\equiv_L$ must have infinitely many equivalence classes.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The Myhill–Nerode theorem is a biconditional: $L$ is regular if and only if $\equiv_L$ has finitely many equivalence classes. So non-regular languages always have infinitely many.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ is recognized by a DFA with $n$ states, then the complementary language $\Sigma^* \setminus L$ is recognized by a DFA with at most $n + 1$ states.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! To complement a DFA, simply swap accepting and non-accepting states. The resulting DFA has exactly the same $n$ states (no new states needed), so $n \leq n + 1$ ✓.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="DFA complementation only requires swapping accepting and non-accepting states. The same $n$ states suffice—no new states are added. Since $n \leq n+1$, the statement is true.">No</pl-answer>
+</pl-multiple-choice>

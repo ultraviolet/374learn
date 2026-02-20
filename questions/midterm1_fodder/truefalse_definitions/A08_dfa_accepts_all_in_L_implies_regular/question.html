@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if there is a DFA that accepts every string in $L$, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The condition only requires the DFA to accept all strings in $L$, not that it accepts *only* strings in $L$. For example, the DFA that accepts every string in $\Sigma^*$ accepts every string in $\{0^n1^n \mid n \geq 0\}$, yet that language is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The all-accepting DFA accepts every string in any language $L$, even non-regular ones. For $L$ to be regular, we'd need a DFA that accepts exactly the strings in $L$, not just a DFA that accepts at least the strings in $L$.">No</pl-answer>
+</pl-multiple-choice>

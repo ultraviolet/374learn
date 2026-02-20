@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^i 1^j 2^k \mid i + j - k = 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The language is NOT regular. Fooling set: $\{(0^{374+n+1},\, 2^{n+1}) \mid n \geq 0\}$. Each $0^{374+n+1} \cdot 2^{n+1}$ has $(374+n+1) + 0 - (n+1) = 374$ ✓. For $n < m$: $0^{374+m+1} \cdot 2^{n+1}$ has $(374+m+1)-(n+1) = 374 + (m-n) \neq 374$, so it is not in $L$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The equality $i+j-k = 374$ (with all three counts unconstrained) cannot be checked by a finite automaton. Fooling set: $\{(0^{374+n+1}, 2^{n+1}) \mid n \geq 0\}$ witnesses infinitely many $\equiv_L$-classes.">No</pl-answer>
+</pl-multiple-choice>

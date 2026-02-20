@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^i 1^j \mid (i + j) \text{ is divisible by } 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The condition $(i+j) \bmod 374 = 0$ depends only on the total length mod 374. A DFA can track the length mod 374 (374 states) and also whether the $0^*1^*$ structure is maintained. Their product gives a finite automaton.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="$(i+j) \bmod 374$ is just the total length mod 374. A DFA with 374 states tracking length mod 374, combined with checking $0^*1^*$ structure, recognizes this language.">No</pl-answer>
+</pl-multiple-choice>

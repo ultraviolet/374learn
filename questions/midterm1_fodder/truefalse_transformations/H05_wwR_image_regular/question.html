@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every regular language $L$, the language $\{w w^R \mid w \in L\}$ is also regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = (01)^*$ is regular. Then $\{ww^R \mid w \in (01)^*\} = \{(01)^n(10)^n \mid n \geq 0\}$. Fooling set: $\{((01)^n, (10)^n) \mid n \geq 0\}$. Each $(01)^n(10)^n \in L'$ ✓. For $n \neq m$: $(01)^n(10)^m \notin L'$ (would require $n = m$). So $L'$ is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The image $\{ww^R \mid w \in L\}$ can be non-regular. For $L = (01)^*$, the image $\{(01)^n(10)^n \mid n \geq 0\}$ is not regular (fooling set argument).">No</pl-answer>
+</pl-multiple-choice>

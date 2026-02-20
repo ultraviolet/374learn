@@ -1,0 +1,9 @@
+{
+  "uuid": "f6495a7c-8b97-42ab-a04c-c2f99a0249d9",
+  "title": "DFA: Contains subsequence 10 or 01",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

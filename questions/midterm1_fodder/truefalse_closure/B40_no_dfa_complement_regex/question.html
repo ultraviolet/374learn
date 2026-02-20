@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if no DFA recognizes $L$, then $\Sigma^* \setminus L$ can be described by a regular expression.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="If no DFA recognizes $L$, then $L$ is not regular. By B.8, $\Sigma^* \setminus L$ is also not regular. A non-regular language cannot be described by a regular expression (A.5). So the complement has no regular expression.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! If no DFA recognizes $L$, then $L$ is not regular, so its complement is also not regular (B.8), and therefore has no regular expression (A.5).">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,8 @@
+{
+    "uuid": "30af98d1-3f17-4519-a332-fbe88f4c62e9",
+    "title": "True/False: No Regular Expression Implies Some DFA Recognizes Complement",
+    "topic": "Regular Languages",
+    "tags": ["midterm1", "true-false", "closure-properties", "regular-languages"],
+    "type": "v3",
+    "singleVariant": true
+}

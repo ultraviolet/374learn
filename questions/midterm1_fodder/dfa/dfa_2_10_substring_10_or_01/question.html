@@ -1,0 +1,33 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings containing the substring $\mathtt{10}$ or the substring $\mathtt{01}$.</center>***
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["e", "has0", "has1", "both"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "e":    {"0": "has0", "1": "has1"},
+      "has0": {"0": "has0", "1": "both"},
+      "has1": {"0": "both", "1": "has1"},
+      "both": {"0": "both", "1": "both"}
+    },
+    "initial_state": "e",
+    "final_states": ["both"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    A string contains $\mathtt{10}$ or $\mathtt{01}$ iff it contains both a $\mathtt{0}$ and a $\mathtt{1}$. Track: seen neither, seen only $\mathtt{0}$s, seen only $\mathtt{1}$s, seen both (accept).
+  </pl-hint>
+</pl-hidden-hints>

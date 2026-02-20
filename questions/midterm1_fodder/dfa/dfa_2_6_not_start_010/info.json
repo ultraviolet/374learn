@@ -1,0 +1,9 @@
+{
+  "uuid": "fe11c124-6d56-4da4-bc6a-27b6bce5f84e",
+  "title": "DFA Construction: Strings not starting with prefix 010",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

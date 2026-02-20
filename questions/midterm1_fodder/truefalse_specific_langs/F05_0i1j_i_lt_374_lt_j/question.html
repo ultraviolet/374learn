@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^i 1^j \mid i < 374 < j\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The language is $\{0^0, 0^1, \ldots, 0^{373}\} \cdot \{1^{375}, 1^{376}, \ldots\}$. The first factor is a finite language (regular); the second is $1^{375} \cdot 1^*$ (regular). Their concatenation is regular. The DFA just tracks: count 0s up to 374 (reject if $i \geq 374$), then count 1s up to 374 (accept once $j > 374$ and input ends).">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Both conditions $i < 374$ (at most 373 zeros) and $j > 374$ (at least 375 ones) can be checked with finite memory. The DFA has at most $374 \times 375 + O(1)$ states.">No</pl-answer>
+</pl-multiple-choice>

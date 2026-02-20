@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \mathtt{0}^*\mathtt{1}^* \mid |w| \equiv 0 \pmod{3} \}$$
+
+That is, all strings of the form $0^a 1^b$ (some $0$s followed by some $1$s) whose total length $a + b$ is divisible by $3$. For example, $\varepsilon$, $000$, $111$, $011$, $001$, $000111$, and $001111$ are in the language, but $0$, $01$, $001100$ (wrong form), and $0011$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (000)*(111)*+0(000)*11(111)*+00(000)*1(111)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        The string has the form $0^a 1^b$ with $a + b \equiv 0 \pmod 3$. Consider $a \bmod 3$ and $b \bmod 3$: the pairs $(a, b) \bmod 3$ satisfying $a + b \equiv 0$ are $(0,0)$, $(1,2)$, and $(2,1)$.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        Case $(a \equiv 0, b \equiv 0)$: $(000)^*(111)^*$. Case $(a \equiv 1, b \equiv 2)$: $0 \cdot (000)^* \cdot 11 \cdot (111)^*$. Case $(a \equiv 2, b \equiv 1)$: $00 \cdot (000)^* \cdot 1 \cdot (111)^*$.
+    </pl-hint>
+</pl-hidden-hints>

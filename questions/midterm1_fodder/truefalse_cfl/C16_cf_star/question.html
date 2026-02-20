@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every context-free language $L$, the language $L^*$ is also context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Context-free languages are closed under Kleene star. If $G$ generates $L$ with start symbol $S$, then adding the productions $S' \to \varepsilon \mid S' S$ to get a new start symbol $S'$ generates $L^*$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="CFLs are closed under Kleene star. Add a new start symbol with productions $S' \to \varepsilon \mid S' S$ where $S$ is the original start.">No</pl-answer>
+</pl-multiple-choice>

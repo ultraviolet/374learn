@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^n 1 0^n \mid n \geq 0\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The language is NOT regular. Fooling set: $\{(0^n,\, 1\, 0^n) \mid n \geq 0\}$. Each $0^n \cdot 1 \cdot 0^n \in L$ ✓. For $n \neq m$: $0^n \cdot 1 \cdot 0^m \notin L$ (the zeros on the two sides don't match).">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The language is NOT regular. The fooling set $\{(0^n, 10^n) \mid n \geq 0\}$ shows infinitely many $\equiv_L$-classes: $0^n \cdot 10^n \in L$ but $0^n \cdot 10^m \notin L$ for $n \neq m$.">No</pl-answer>
+</pl-multiple-choice>

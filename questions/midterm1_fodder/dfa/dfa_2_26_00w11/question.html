@@ -1,0 +1,38 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings of the form $\mathtt{00}w\mathtt{11}$ for some $w \in \{0,1\}^*$.</center>***
+
+That is, all strings that start with $\mathtt{00}$ and end with $\mathtt{11}$.
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["start", "saw0", "suf00", "suf01", "suf10", "suf11", "dead"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "start": {"0": "saw0",  "1": "dead"},
+      "saw0":  {"0": "suf00", "1": "dead"},
+      "suf00": {"0": "suf00", "1": "suf01"},
+      "suf01": {"0": "suf10", "1": "suf11"},
+      "suf10": {"0": "suf00", "1": "suf01"},
+      "suf11": {"0": "suf10", "1": "suf11"},
+      "dead":  {"0": "dead",  "1": "dead"}
+    },
+    "initial_state": "start",
+    "final_states": ["suf11"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Two independent conditions: (1) the string starts with $\mathtt{00}$ — check the first two characters and go to dead if they're not both $\mathtt{0}$; (2) the string ends with $\mathtt{11}$ — track the last two characters seen (four suffix states: $\mathtt{00}$, $\mathtt{01}$, $\mathtt{10}$, $\mathtt{11}$). Once past the prefix, only the suffix state matters. Accept when we're past the prefix and the current suffix is $\mathtt{11}$.
+  </pl-hint>
+</pl-hidden-hints>

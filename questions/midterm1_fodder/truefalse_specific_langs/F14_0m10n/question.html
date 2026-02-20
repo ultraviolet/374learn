@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^m 1 0^n \mid m \geq 0 \text{ and } n \geq 0\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The language is $0^* \cdot 1 \cdot 0^*$, described by the regular expression $\mathtt{0^*10^*}$. It is the set of all binary strings containing exactly one $\mathtt{1}$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The language $\{0^m 1 0^n\} = 0^* \cdot \{1\} \cdot 0^*$ is regular, described by $\mathtt{0^*10^*}$. There is no coupling between $m$ and $n$.">No</pl-answer>
+</pl-multiple-choice>

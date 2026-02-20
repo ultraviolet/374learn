@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L$ and $L'$ are not regular, then $L \cap L'$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \{0^n1^n \mid n \geq 0\}$ and $L' = \Sigma^* \setminus L$ (the complement of $L$). Both $L$ and $L'$ are non-regular. But $L \cap L' = \emptyset$, which is regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Two non-regular languages can intersect to give a regular language. For example, any non-regular language $L$ and its complement $\Sigma^* \setminus L$ (also non-regular) satisfy $L \cap (\Sigma^* \setminus L) = \emptyset$, which is regular.">No</pl-answer>
+</pl-multiple-choice>

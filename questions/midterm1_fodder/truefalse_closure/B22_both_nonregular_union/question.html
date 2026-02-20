@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L$ and $L'$ are not regular, then $L \cup L'$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \{0^n1^n \mid n \geq 0\}$ and $L' = \Sigma^* \setminus L$ (the complement). Both are non-regular, but $L \cup L' = \Sigma^*$, which is regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! A non-regular language and its complement are both non-regular, yet their union is $\Sigma^*$, which is regular.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if some DFA recognizes $L$, then some NFA also recognizes $L$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Every DFA is a special case of an NFA (one where each transition function returns exactly one state, and there are no $\varepsilon$-transitions). So if a DFA recognizes $L$, that same machine serves as an NFA recognizing $L$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Every DFA is already a valid NFA. A DFA is simply an NFA with the restriction that each state has exactly one transition per input symbol and no $\varepsilon$-transitions.">No</pl-answer>
+</pl-multiple-choice>

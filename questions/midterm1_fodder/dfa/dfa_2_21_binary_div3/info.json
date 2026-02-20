@@ -1,0 +1,9 @@
+{
+  "uuid": "9098cdaf-d9fb-43a3-918c-048bead79ee6",
+  "title": "DFA: Binary integer divisible by 3",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

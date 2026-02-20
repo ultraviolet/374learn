@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ is recognized by a DFA, then $\Sigma^* \setminus L$ can be described by a regular expression.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! If a DFA recognizes $L$, then $L$ is regular. Regular languages are closed under complement (B.5), so $\Sigma^* \setminus L$ is also regular. Every regular language has a regular expression (A.4). So $\Sigma^* \setminus L$ can be described by a regular expression.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="If a DFA recognizes $L$, then $L$ is regular, its complement is regular (B.5), and every regular language has a regular expression (A.4).">No</pl-answer>
+</pl-multiple-choice>

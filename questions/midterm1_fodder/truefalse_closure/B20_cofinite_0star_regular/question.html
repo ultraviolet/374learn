@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \{0,1\}^*$, if $L$ contains all but a finite number of strings in $0^*$, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \{0^n1^n \mid n \geq 1\} \cup 0^*$. Then $L$ contains every string in $0^*$ (missing 0 strings from $0^*$), so the condition holds. But $L$ is not regular: the strings $0^i$ and $0^j$ (for $i \neq j$) are distinguishable by the suffix $1^i$ (since $0^i \cdot 1^i \in L$ but $0^j \cdot 1^i \notin L$ when $j \neq i$).">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! A language can contain all strings in $0^*$ and still be non-regular. For example, $\{0^n1^n \mid n \geq 1\} \cup 0^*$ contains all of $0^*$ yet is not regular.">No</pl-answer>
+</pl-multiple-choice>

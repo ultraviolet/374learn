@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L$ and $L'$, the language $L \cap L'$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = L' = \{0^n1^n \mid n \geq 0\}$. Then $L \cap L' = \{0^n1^n \mid n \geq 0\}$, which is not regular. Closure under intersection only holds when both $L$ and $L'$ are already regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Closure under intersection only applies when both $L$ and $L'$ are regular. If either is non-regular, the intersection may also be non-regular. Counterexample: $L = L' = \{0^n1^n \mid n \geq 0\}$, so $L \cap L' = \{0^n1^n \mid n \geq 0\}$ is not regular.">No</pl-answer>
+</pl-multiple-choice>

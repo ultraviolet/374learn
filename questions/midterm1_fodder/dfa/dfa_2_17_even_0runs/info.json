@@ -1,0 +1,9 @@
+{
+  "uuid": "65068161-0ff3-4259-9aff-375011afa35b",
+  "title": "DFA: Every run of 0s has even length",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

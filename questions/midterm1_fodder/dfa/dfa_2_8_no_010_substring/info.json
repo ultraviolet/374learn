@@ -1,0 +1,9 @@
+{
+  "uuid": "71a48a47-ba2f-40ac-b719-2055cabb383c",
+  "title": "DFA Construction: Strings not containing substring 010",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

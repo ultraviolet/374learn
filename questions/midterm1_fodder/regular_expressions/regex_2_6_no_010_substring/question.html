@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ does not contain the substring } 010 \}$$
+
+As an example, $\varepsilon$, $0$, $01$, $011$, and $110$ are in the language, but $010$, $1010$, and $0010$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (1*00*11)*1*(e+00*+00*1)
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Think about what configurations are "safe." After reading $01$, the next character cannot be $0$ — it must be $1$ or the string must end. Use states to track whether you've seen a prefix of $010$.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        Build a DFA with states for: no prefix seen, seen $0$, seen $01$. The regex follows from the DFA's structure: runs of $1$s can appear anywhere, but after any block of $0$s you need $11$ before the next $0$ block.
+    </pl-hint>
+</pl-hidden-hints>

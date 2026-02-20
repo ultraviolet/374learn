@@ -1,0 +1,23 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ contains the subsequence } 010 \}$$
+
+Recall that a **subsequence** is obtained by deleting zero or more characters (not necessarily contiguous). For example, $010$, $0110$, $10100$, and $01001$ are in the language (they each contain $0$, then $1$, then $0$, not necessarily adjacent), but $01$ and $110$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (0+1)*0(0+1)*1(0+1)*0(0+1)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        A subsequence means there exist positions $i < j < k$ with $w[i] = 0$, $w[j] = 1$, $w[k] = 0$. The characters between them can be anything.
+    </pl-hint>
+</pl-hidden-hints>

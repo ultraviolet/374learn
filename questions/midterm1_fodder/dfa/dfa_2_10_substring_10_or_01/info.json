@@ -1,0 +1,9 @@
+{
+  "uuid": "7c4bbdf7-48a5-4dec-b4cc-c540bff0825a",
+  "title": "DFA Construction: Strings containing substring 10 or 01",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

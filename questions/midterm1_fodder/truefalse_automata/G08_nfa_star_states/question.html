@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ is recognized by an NFA with $n$ states, then $L^*$ is recognized by a NFA with at most $n + 1$ states.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The standard NFA construction for $L^*$ from an NFA $M$ for $L$: add a new start state $q_0$ (which is accepting), add an $\varepsilon$-transition from $q_0$ to the original start state, and add $\varepsilon$-transitions from each accepting state of $M$ back to the original start state. The resulting NFA has $n + 1$ states.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The standard NFA-for-Kleene-star construction adds exactly one new accepting start state with $\varepsilon$-transitions, giving $n+1$ states total.">No</pl-answer>
+</pl-multiple-choice>

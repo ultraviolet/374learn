@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every regular language $L$, the language $\{w^R \mid w \in L\}$ is also regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The reversal of a regular language is regular. Proof: Given a DFA $M$ for $L$, construct an NFA for $\text{rev}(L)$ by reversing all transitions, making the original start state the only accepting state, and adding a new start state with $\varepsilon$-transitions to all original accepting states. Convert to a DFA if needed.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Regular languages are closed under reversal. Given a DFA for $L$, reverse all transitions to get an NFA for $\{w^R \mid w \in L\}$.">No</pl-answer>
+</pl-multiple-choice>

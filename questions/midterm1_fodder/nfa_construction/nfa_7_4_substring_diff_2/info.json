@@ -1,0 +1,9 @@
+{
+  "uuid": "574f88b3-e623-43e9-9251-8de641ee134b",
+  "title": "DFA: Every substring has |#0s - #1s| at most 2",
+  "topic": "NFA Construction",
+  "tags": ["midterm1", "dfa", "nfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

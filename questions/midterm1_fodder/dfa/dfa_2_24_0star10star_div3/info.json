@@ -1,0 +1,9 @@
+{
+  "uuid": "0832fc97-a5b9-4782-8e18-40b6c0770170",
+  "title": "DFA: 0*10* strings with length divisible by 3",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^{37n+4} \mid n \geq 0\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The language is $\{0^4, 0^{41}, 0^{78}, \ldots\}$, the set of unary strings whose length is congruent to 4 modulo 37. This is described by the regular expression $\mathtt{0000(0^{37})^*}$, and recognized by a DFA with 37 states tracking length mod 37.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The language $\{0^{37n+4}\}$ consists of all strings of 0s whose length $\equiv 4 \pmod{37}$. A DFA with 37 states tracking length mod 37 recognizes it.">No</pl-answer>
+</pl-multiple-choice>

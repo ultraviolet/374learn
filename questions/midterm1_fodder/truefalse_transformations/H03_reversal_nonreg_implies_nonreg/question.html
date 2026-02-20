@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if the language $\{w^R \mid w \in L\}$ is not regular, then $L$ is also not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! This is the contrapositive of H.2: if $L$ were regular, then $\text{rev}(L)$ would be regular (by H.1). So if $\text{rev}(L)$ is not regular, $L$ cannot be regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="By contrapositive of H.2: $L$ regular $\Rightarrow$ $\text{rev}(L)$ regular. Equivalently, $\text{rev}(L)$ not regular $\Rightarrow$ $L$ not regular.">No</pl-answer>
+</pl-multiple-choice>

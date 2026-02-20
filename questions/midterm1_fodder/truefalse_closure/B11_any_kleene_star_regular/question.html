@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, the language $L^*$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \{0^n1^n \mid n \geq 1\}$. Then $L^*$ contains $\varepsilon$, $01$, $0011$, $01 \cdot 01 = 0101$, $01 \cdot 0011$, etc. It can be shown that $L^*$ is not regular (intuitively, membership requires matching a sequence of balanced blocks). Closure under Kleene star only applies when $L$ is already regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The Kleene star of a non-regular language can also be non-regular. Closure under Kleene star only holds when $L$ is regular. Counterexample: $L = \{0^n1^n \mid n \geq 1\}$ is not regular, and $L^*$ is also not regular.">No</pl-answer>
+</pl-multiple-choice>

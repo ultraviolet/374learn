@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid \#_1(w) \equiv 0 \pmod{3} \}$$
+
+That is, all strings in which the number of $\mathtt{1}$s is divisible by $3$. For example, $\varepsilon$, $0$, $00$, $111$, $0110010$, and $101101$ are in the language, but $1$, $11$, $10$, and $110$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (0+10*10*1)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Build a DFA with 3 states tracking the number of $\mathtt{1}$s mod 3. On $\mathtt{0}$: stay in same state. On $\mathtt{1}$: advance to next state mod 3. Apply Arden's lemma.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        The DFA gives: from state $q_0$ (accepting), the return-to-$q_0$ transitions are $0$ (self-loop) or $1\cdot 0^*\cdot 1\cdot 0^*\cdot 1$ (three $\mathtt{1}$s, with any $\mathtt{0}$s between them). This gives $(0 + 10^*10^*1)^*$.
+    </pl-hint>
+</pl-hidden-hints>

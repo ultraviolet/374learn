@@ -1,0 +1,9 @@
+{
+  "uuid": "6c811b42-519e-4b18-9f76-b22d7e144acf",
+  "title": "DFA: Strings starting with 00 and ending with 11",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

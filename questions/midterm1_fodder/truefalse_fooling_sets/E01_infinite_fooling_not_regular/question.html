@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ has an infinite fooling set, then $L$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! By the Fooling Set Lemma, if $F = \{(x_i, y_i)\}$ is a fooling set for $L$, then all strings $x_i$ are pairwise $\equiv_L$-inequivalent. An infinite fooling set therefore gives infinitely many $\equiv_L$-classes, so by the Myhill–Nerode theorem $L$ is not regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The Fooling Set Lemma says: the size of any fooling set is a lower bound on the number of DFA states needed for $L$. An infinite fooling set means $L$ requires infinitely many states—hence it's not regular.">No</pl-answer>
+</pl-multiple-choice>

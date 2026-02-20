@@ -1,0 +1,13 @@
+{
+  "uuid": "8813ef86-f98c-40f3-af7e-adeec451b4eb",
+  "title": "Product DFA: Odd number of three conditions",
+  "topic": "DFA Construction",
+  "tags": [
+    "midterm1",
+    "dfa",
+    "product-construction"
+  ],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

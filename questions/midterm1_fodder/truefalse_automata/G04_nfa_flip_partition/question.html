@@ -1,0 +1,17 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+Let $M$ be an **NFA** over $\Sigma$. Let $M'$ be identical to $M$ except that accepting states in $M$ are non-accepting in $M'$ and vice versa.
+
+**Each string in $\Sigma^*$ is accepted by exactly one of $M$ and $M'$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Two things can go wrong for NFAs: (1) A string $w$ can be accepted by BOTH if some computation paths end in $A$ and others end in $Q \setminus A$. (2) A string $w$ can be rejected by BOTH if all computation paths 'die' (reach the empty set of states), so neither $M$ nor $M'$ accepts.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! NFAs can have multiple computation paths. A string can be accepted by both $M$ and $M'$ (via different paths) or rejected by both (if all paths die before reaching any state).">No</pl-answer>
+</pl-multiple-choice>

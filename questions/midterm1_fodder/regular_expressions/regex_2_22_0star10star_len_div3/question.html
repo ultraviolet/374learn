@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \mathtt{0}^*\mathtt{1}\mathtt{0}^* \mid |w| \equiv 0 \pmod{3} \}$$
+
+That is, all strings of the form $0^a \mathtt{1} 0^b$ (exactly one $\mathtt{1}$, surrounded by any $\mathtt{0}$s) whose total length $a + 1 + b$ is divisible by $3$. For example, $\mathtt{001}$, $\mathtt{010}$, $\mathtt{100}$, $\mathtt{000100}$, and $\mathtt{010000}$ are in the language, but $\mathtt{1}$, $\mathtt{01}$, $\mathtt{10}$, and $\mathtt{0010}$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (000)*100(000)*+0(000)*10(000)*+00(000)*1(000)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        The string has the form $0^a \mathtt{1} 0^b$ with $a + 1 + b \equiv 0 \pmod 3$, i.e., $a + b \equiv 2 \pmod 3$. Consider the three cases: $(a \bmod 3, b \bmod 3) \in \{(0,2),(1,1),(2,0)\}$.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        Case $(a \equiv 0, b \equiv 2)$: $(000)^* \cdot \mathtt{1} \cdot \mathtt{00}(000)^*$. Case $(a \equiv 1, b \equiv 1)$: $\mathtt{0}(000)^* \cdot \mathtt{1} \cdot \mathtt{0}(000)^*$. Case $(a \equiv 2, b \equiv 0)$: $\mathtt{00}(000)^* \cdot \mathtt{1} \cdot (000)^*$.
+    </pl-hint>
+</pl-hidden-hints>

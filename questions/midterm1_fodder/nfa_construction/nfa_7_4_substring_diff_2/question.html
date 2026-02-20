@@ -1,0 +1,38 @@
+<pl-question-panel>
+<markdown>
+Construct a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings such that in every substring, the number of $\mathtt{0}$s and the number of $\mathtt{1}$s differ by at most $2$.</center>***
+
+Formally: $w \in L$ iff for every substring $w[i..j]$ ($0 \leq i \leq j \leq |w|$), $\bigl|\#(\mathtt{0}, w[i..j]) - \#(\mathtt{1}, w[i..j])\bigr| \leq 2$.
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["s00", "s01", "s11", "s02", "s12", "s22", "dead"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "s00": {"0": "s11", "1": "s01"},
+      "s01": {"0": "s11", "1": "s02"},
+      "s11": {"0": "s22", "1": "s01"},
+      "s02": {"0": "s12", "1": "dead"},
+      "s12": {"0": "s22", "1": "s02"},
+      "s22": {"0": "dead", "1": "s12"},
+      "dead":{"0": "dead", "1": "dead"}
+    },
+    "initial_state": "s00",
+    "final_states": ["s00", "s01", "s11", "s02", "s12", "s22"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Key insight: the difference $\#\mathtt{0}\text{s} - \#\mathtt{1}\text{s}$ in $w[i..j]$ equals $\text{prefixsum}(j) - \text{prefixsum}(i-1)$. So the condition is that the range $\max - \min$ of all prefix sums must be $\leq 2$. Track (current prefix sum minus min so far, max so far minus min so far) = $(a, b)$ with $0 \leq a \leq b \leq 2$. There are 6 valid states plus dead.
+  </pl-hint>
+</pl-hidden-hints>

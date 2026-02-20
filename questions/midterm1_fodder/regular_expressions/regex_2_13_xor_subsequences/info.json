@@ -1,0 +1,9 @@
+{
+  "uuid": "51858dca-daf9-445b-b231-0463f9d4037f",
+  "title": "Regular Expressions: Exactly one of subsequences 10 or 01",
+  "topic": "Regular Expressions",
+  "tags": ["midterm1", "regular-expressions"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

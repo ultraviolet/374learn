@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all regular languages $A$, $B$, and $C$, the language $(A \cup B) \setminus C$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Regular languages are closed under union, complement, and intersection. Since $X \setminus Y = X \cap \overline{Y}$, we have $(A \cup B) \setminus C = (A \cup B) \cap \overline{C}$. Each operation preserves regularity: $A \cup B$ is regular (closure under union), $\overline{C}$ is regular (closure under complement), and their intersection is regular (closure under intersection).">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Note that $X \setminus Y = X \cap \overline{Y}$. Since regular languages are closed under union, complement, and intersection, $(A \cup B) \setminus C$ must be regular.">No</pl-answer>
+</pl-multiple-choice>

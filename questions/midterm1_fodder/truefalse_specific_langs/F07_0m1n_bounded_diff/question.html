@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^m 1^n \mid 0 \leq m - n \leq 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The language is NOT regular. Fooling set: $\{(0^k, 1^k) \mid k \geq 0\}$. Each $0^k \cdot 1^k$ has $m - n = 0 \in [0,374]$ ✓. For $k < \ell$: $0^k \cdot 1^\ell$ has $m - n = k - \ell < 0$, so it is not in $L$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The language is NOT regular. Fooling set: $\{(0^k, 1^k) \mid k \geq 0\}$. Since $0^k \cdot 1^\ell \notin L$ for $k < \ell$ (the difference is negative), this is a valid infinite fooling set.">No</pl-answer>
+</pl-multiple-choice>

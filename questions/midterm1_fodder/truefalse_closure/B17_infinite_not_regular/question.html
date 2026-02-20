@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ contains infinitely many strings in $\Sigma^*$, then $L$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \{0,1\}^*$ (all binary strings) is infinite yet regular (recognized by a 1-state DFA or described by the regex $(0+1)^*$). Many infinite languages are regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Many regular languages are infinite. For example, $0^*$, $(01)^*$, and $\{0,1\}^*$ are all infinite regular languages. Infinity alone does not prevent a language from being regular.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,9 @@
+{
+  "uuid": "FDB2D2B5-364E-44E6-A98D-3463F8273A8E",
+  "title": "Language Transformation: MissingFirstOne(L)",
+  "topic": "Language Transformations",
+  "tags": ["midterm1", "dfa", "transformations"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

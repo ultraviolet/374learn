@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ has a finite fooling set, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \{0^n 1^n \mid n \geq 0\}$ is not regular, yet $\{(\varepsilon, \varepsilon)\}$ is a fooling set of size 1 for $L$ (since $\varepsilon \cdot \varepsilon = \varepsilon \in L$, and there are no pairs to check for the second condition). Fooling sets give a lower bound on DFA states, not an upper bound.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Having a finite fooling set only gives a finite lower bound on the number of DFA states. Non-regular languages also have finite (and infinite) fooling sets. For instance, $\{(\varepsilon, \varepsilon)\}$ is a size-1 fooling set for any language containing $\varepsilon$, regular or not.">No</pl-answer>
+</pl-multiple-choice>

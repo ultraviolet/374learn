@@ -1,0 +1,13 @@
+{
+  "uuid": "d3978396-2ad0-4e8f-9b6b-f149130485e2",
+  "title": "Product DFA: At least one of three conditions",
+  "topic": "DFA Construction",
+  "tags": [
+    "midterm1",
+    "dfa",
+    "product-construction"
+  ],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Every finite language is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Any finite set of strings $\{w_1, w_2, \ldots, w_k\}$ can be accepted by a DFA (essentially a trie). Alternatively, any finite language can be written as a finite union of single-string languages, each of which is described by a regular expression.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Think about whether a finite set of strings can always be recognized by a DFA. Can you write a regular expression for any finite set of strings?">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,8 @@
+{
+    "uuid": "313a8e9f-f05a-41cf-baeb-fe5a082e32c2",
+    "title": "True/False: Per-String DFA Acceptance Implies L Regular",
+    "topic": "Regular Languages",
+    "tags": ["midterm1", "true-false", "definitions", "DFAs"],
+    "type": "v3",
+    "singleVariant": true
+}

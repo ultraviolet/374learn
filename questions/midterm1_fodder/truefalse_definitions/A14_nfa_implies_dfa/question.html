@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if some NFA recognizes $L$, then some DFA also recognizes $L$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The subset construction (powerset construction) converts any NFA into an equivalent DFA. The resulting DFA has states corresponding to subsets of the NFA's states, and it recognizes exactly the same language.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The subset (powerset) construction proves that NFAs and DFAs recognize exactly the same class of languages. Any NFA can be converted to an equivalent DFA.">No</pl-answer>
+</pl-multiple-choice>

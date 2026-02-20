@@ -1,0 +1,9 @@
+{
+  "uuid": "bce4fa7f-8704-4801-a8ba-31dad35e14da",
+  "title": "DFA: 0*1*0* strings with even length",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

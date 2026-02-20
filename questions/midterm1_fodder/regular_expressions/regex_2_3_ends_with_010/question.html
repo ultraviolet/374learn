@@ -1,0 +1,23 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ ends with } 010 \}$$
+
+As an example, $010$, $1010$, and $00010$ are in the language, but $01$ and $100$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (0+1)*010
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        The string must end with the fixed suffix $010$. What can precede it?
+    </pl-hint>
+</pl-hidden-hints>

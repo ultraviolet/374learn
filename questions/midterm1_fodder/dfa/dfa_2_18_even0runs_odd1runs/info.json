@@ -1,0 +1,9 @@
+{
+  "uuid": "c24f2961-6de3-479a-9bf3-8ad78499b846",
+  "title": "DFA: Every 0-run even length, every 1-run odd length",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

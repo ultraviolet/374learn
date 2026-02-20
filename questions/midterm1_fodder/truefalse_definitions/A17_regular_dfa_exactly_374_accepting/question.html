@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Every regular language is recognized by a DFA with exactly 374 accepting states.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: The language $L = \{w \in \{0,1\}^* \mid |w| \leq 374\}$ is regular (recognized by a length-counting DFA). The 375 strings $\varepsilon, \mathtt{0}, \mathtt{00}, \ldots, \mathtt{0}^{374}$ are pairwise distinguishable members of $L$ (the string $\mathtt{0}^{374-i}$ distinguishes $\mathtt{0}^i$ from $\mathtt{0}^j$ when $i < j$). So any DFA for $L$ must have at least 375 distinct accepting states, and cannot have exactly 374.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The language $\{w \in \{0,1\}^* \mid |w| \leq 374\}$ requires at least 375 accepting states in any DFA, since it contains 375 pairwise-distinguishable strings ($\varepsilon, \mathtt{0}, \ldots, \mathtt{0}^{374}$), all of which must be accepted and must lead to distinct states.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,17 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+Let $M = (\Sigma, Q, s, A, \delta)$ and $M' = (\Sigma, Q, s, Q \setminus A, \delta)$ be arbitrary **DFAs** with identical alphabets, states, starting states, and transition functions, but with complementary accepting states.
+
+**Then $L(M) \cap L(M') = \emptyset$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! For any string $w$, the DFA $M$ reaches a unique state $q = \delta^*(s, w)$. Either $q \in A$ (so $M$ accepts and $M'$ rejects) or $q \in Q \setminus A$ (so $M$ rejects and $M'$ accepts). No string can be accepted by both, so $L(M) \cap L(M') = \emptyset$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="DFAs are deterministic: every string leads to exactly one state. That state is either in $A$ (accepted by $M$, rejected by $M'$) or in $Q \setminus A$ (rejected by $M$, accepted by $M'$). So $L(M) \cap L(M') = \emptyset$.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,38 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+$$\{ w \in \mathtt{0}^*\mathtt{1}^* \mid |w| \equiv 0 \pmod{3} \}$$
+
+That is, all strings of the form $\mathtt{0}^a\mathtt{1}^b$ (all $\mathtt{0}$s before all $\mathtt{1}$s) whose total length $a + b$ is divisible by $3$.
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["z0", "z1", "z2", "o0", "o1", "o2", "dead"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "z0": {"0": "z1", "1": "o1"},
+      "z1": {"0": "z2", "1": "o2"},
+      "z2": {"0": "z0", "1": "o0"},
+      "o0": {"0": "dead", "1": "o1"},
+      "o1": {"0": "dead", "1": "o2"},
+      "o2": {"0": "dead", "1": "o0"},
+      "dead": {"0": "dead", "1": "dead"}
+    },
+    "initial_state": "z0",
+    "final_states": ["z0", "o0"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Track two things: (1) are we still in the $\mathtt{0}$-prefix or have we switched to $\mathtt{1}$s (plus a dead state if we see $\mathtt{0}$ after a $\mathtt{1}$), and (2) the current length mod 3. This gives at most $2 \times 3 + 1 = 7$ states. Accept when length $\equiv 0 \pmod{3}$ and we haven't violated the $\mathtt{0}^*\mathtt{1}^*$ structure.
+  </pl-hint>
+</pl-hidden-hints>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ can be recognized by a DFA, then $L$ is not context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Every regular language is also context-free. A DFA-recognizable language is context-free, not the opposite.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Every regular language is also context-free, so DFA-recognizable languages ARE context-free. The statement says they are NOT context-free, which is always false.">No</pl-answer>
+</pl-multiple-choice>

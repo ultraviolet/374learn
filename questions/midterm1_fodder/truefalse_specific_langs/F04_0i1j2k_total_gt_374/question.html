@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^i 1^j 2^k \mid i + j + k > 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! A DFA can verify this language: track (1) whether the string respects the $0^*1^*2^*$ structure (no 0 after 1, no 0 or 1 after 2), and (2) whether the total length exceeds 374 (using 375 length-counting states). Both conditions require only finite memory.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="A DFA just needs to check two things: the $0^*1^*2^*$ ordering (finite memory) and whether total length $> 374$ (track length up to 374, then accept everything beyond). This uses a finite number of states.">No</pl-answer>
+</pl-multiple-choice>

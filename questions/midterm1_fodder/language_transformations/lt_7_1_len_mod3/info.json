@@ -1,0 +1,9 @@
+{
+  "uuid": "22308623-209F-4304-9274-BF927416ED30",
+  "title": "Language Transformation: Filter by length mod 3",
+  "topic": "Language Transformations",
+  "tags": ["midterm1", "dfa", "transformations"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\Sigma^* \setminus \{010\}$$
+
+That is, all binary strings **except** the string $010$.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    e+(0+1)+(0+1)(0+1)+00(0+1)+011+1(0+1)(0+1)+(0+1)(0+1)(0+1)(0+1)(0+1)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Consider strings by length. All strings of length $\neq 3$ are in the language. For length-3 strings, all are included except $010$.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        Length-3 strings not equal to $010$: those starting with $00$, those starting with $01$ and ending $1$, and those starting with $1$.
+    </pl-hint>
+</pl-hidden-hints>

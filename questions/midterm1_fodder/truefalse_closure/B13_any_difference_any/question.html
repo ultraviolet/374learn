@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $A$, $B$, and $C$, the language $(A \cup B) \setminus C$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $A = B = \{0^n1^n \mid n \geq 0\}$ and $C = \emptyset$. Then $(A \cup B) \setminus C = \{0^n1^n \mid n \geq 0\}$, which is not regular. Closure properties only apply when $A$, $B$, and $C$ are already regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! If $A$, $B$, or $C$ are not regular, the result need not be regular. For example, take $A = B = \{0^n1^n \mid n \geq 0\}$ and $C = \emptyset$.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all context-free languages $L$ and $L'$, the language $L \cdot L'$ is also context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Context-free languages are closed under concatenation. If $G_1$ generates $L$ with start symbol $S_1$, and $G_2$ generates $L'$ with start symbol $S_2$, then the grammar with a new start symbol $S \to S_1 S_2$ generates $L \cdot L'$.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="CFLs are closed under concatenation. Combine the two grammars with a new start rule $S \to S_1 S_2$.">No</pl-answer>
+</pl-multiple-choice>

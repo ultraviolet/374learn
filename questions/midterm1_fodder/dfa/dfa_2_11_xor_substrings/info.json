@@ -1,0 +1,9 @@
+{
+  "uuid": "dd7915f6-120a-4b70-9793-59dd04f9835d",
+  "title": "DFA Construction: Exactly one of substrings 10 or 01",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

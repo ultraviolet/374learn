@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if some NFA with $\varepsilon$-transitions recognizes $L$, then some NFA without $\varepsilon$-transitions also recognizes $L$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! $\varepsilon$-transitions can be eliminated using the $\varepsilon$-closure construction: each state is augmented with all states reachable from it via $\varepsilon$-transitions alone, and then transitions are redefined to incorporate these closures. The resulting NFA has no $\varepsilon$-transitions and recognizes the same language.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="$\varepsilon$-transitions add no expressive power to NFAs. The $\varepsilon$-closure construction converts any NFA with $\varepsilon$-transitions into an equivalent NFA without them.">No</pl-answer>
+</pl-multiple-choice>

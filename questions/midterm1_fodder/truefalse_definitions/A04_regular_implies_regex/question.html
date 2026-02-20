@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if $L$ is regular then $L$ can be represented by a regular expression.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Regular languages, DFAs, NFAs, and regular expressions are all equivalent models. Any regular language has a regular expression describing it (this is proved by converting a DFA to a regular expression).">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Regular languages and regular expressions describe exactly the same class of languages. If $L$ is regular, there must be a regular expression for it.">No</pl-answer>
+</pl-multiple-choice>

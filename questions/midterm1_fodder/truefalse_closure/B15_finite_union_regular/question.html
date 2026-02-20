@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L$ and $L'$, if $L$ and $L'$ are finite, then $L \cup L'$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Finite languages are regular (B.14), and regular languages are closed under union (B.2). So the union of two finite languages is regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Finite languages are regular, and the union of two regular languages is regular. Therefore the union of two finite languages is regular.">No</pl-answer>
+</pl-multiple-choice>

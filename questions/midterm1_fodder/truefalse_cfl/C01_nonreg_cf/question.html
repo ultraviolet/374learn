@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ cannot be recognized by a DFA, then $L$ is context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $\{0^n1^n2^n \mid n \geq 0\}$ cannot be recognized by a DFA (not regular) and is also not context-free. The class of languages is strictly larger than CFLs: regular $\subsetneq$ context-free $\subsetneq$ all languages.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! There are languages that are neither regular nor context-free, such as $\{0^n1^n2^n \mid n \geq 0\}$. Not every non-regular language is context-free.">No</pl-answer>
+</pl-multiple-choice>

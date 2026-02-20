@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^{37n} 1^{4n} \mid n \leq 374\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! The condition $n \leq 374$ limits $n$ to finitely many values: $0, 1, 2, \ldots, 374$. The language contains at most 375 strings and is therefore finite. Every finite language is regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Since $n \leq 374$, only the values $n = 0, 1, \ldots, 374$ are allowed. The language is a finite set of at most 375 strings, hence regular.">No</pl-answer>
+</pl-multiple-choice>

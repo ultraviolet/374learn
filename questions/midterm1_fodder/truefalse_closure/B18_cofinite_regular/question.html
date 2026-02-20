@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ contains all but a finite number of strings in $\Sigma^*$, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! If $L$ contains all but finitely many strings, then $\Sigma^* \setminus L$ is a finite set of strings. Every finite language is regular (B.14), and regular languages are closed under complement (B.5). So $L = \Sigma^* \setminus (\Sigma^* \setminus L)$ is the complement of a finite regular language, hence regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="If $L$ contains all but finitely many strings, then $\Sigma^* \setminus L$ is finite, hence regular. Since regular languages are closed under complement, $L = \Sigma^* \setminus (\Sigma^* \setminus L)$ is also regular.">No</pl-answer>
+</pl-multiple-choice>

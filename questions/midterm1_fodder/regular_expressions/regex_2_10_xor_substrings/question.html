@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ contains the substring } \mathtt{10} \text{ or the substring } \mathtt{01}, \textbf{but not both} \}$$
+
+As an example, $10$, $100$, $01$, and $011$ are in the language, but $\varepsilon$, $000$, $111$, $0110$, and $010$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    11*00*+00*11*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        A string contains substring $\mathtt{10}$ but not $\mathtt{01}$ iff: whenever the string transitions between characters, it goes from $1$ to $0$, never from $0$ to $1$. What does such a string look like?
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        A string with $\mathtt{10}$ but not $\mathtt{01}$ must be of the form $1^+0^+$ (all $1$s before all $0$s). By symmetry, $\mathtt{01}$ but not $\mathtt{10}$ gives $0^+1^+$.
+    </pl-hint>
+</pl-hidden-hints>

@@ -1,0 +1,8 @@
+{
+    "uuid": "d5f04868-3ab7-4f8e-8062-ad3a53b33a53",
+    "title": "True/False: {w 0^(#0s mod 374) | w in {0,1}*} Regular",
+    "topic": "Specific Languages",
+    "tags": ["midterm1", "true-false", "regular-languages", "gut-check"],
+    "type": "v3",
+    "singleVariant": true
+}

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ is not regular, then $\Sigma^* \setminus L$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Proof by contradiction: suppose $L$ is not regular but $\Sigma^* \setminus L$ is regular. Since regular languages are closed under complement, $\Sigma^* \setminus (\Sigma^* \setminus L) = L$ would also be regular, contradicting the assumption that $L$ is not regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Use a proof by contradiction: if $\Sigma^* \setminus L$ were regular, then $L = \Sigma^* \setminus (\Sigma^* \setminus L)$ would be regular by closure under complement.">No</pl-answer>
+</pl-multiple-choice>

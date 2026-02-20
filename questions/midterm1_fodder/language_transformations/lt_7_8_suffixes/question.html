@@ -1,0 +1,38 @@
+<pl-question-panel>
+<markdown>
+Define the transformation $\mathit{Suffixes}(L) = \{y \mid \exists\, x \text{ s.t. } xy \in L\}$.
+
+Let $L$ be the language of all strings over $\{0,1\}$ that **end in $\mathtt{0}$**.
+
+Observe that $y \in \mathit{Suffixes}(L)$ iff there exists $x$ such that $xy$ ends in $\mathtt{0}$:
+- If $y = \varepsilon$, choose $x \in L$ (e.g., $x = \mathtt{0}$). So $\varepsilon \in \mathit{Suffixes}(L)$.
+- If $y$ ends in $\mathtt{0}$, choose $x = \varepsilon$. So $y \in \mathit{Suffixes}(L)$.
+- If $y$ ends in $\mathtt{1}$, then $xy$ ends in $\mathtt{1}$ for any $x$, so $y \notin \mathit{Suffixes}(L)$.
+
+Therefore $\mathit{Suffixes}(L) = L \cup \{\varepsilon\}$ = strings that either are empty or end in $\mathtt{0}$.
+
+Construct a DFA for this language.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["ok", "bad"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "ok":  {"0": "ok", "1": "bad"},
+      "bad": {"0": "ok", "1": "bad"}
+    },
+    "initial_state": "ok",
+    "final_states": ["ok"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Accept $\varepsilon$ (initial state is accepting) and any string ending in $\mathtt{0}$. The state "ok" represents "empty or last character was $\mathtt{0}$"; "bad" represents "last character was $\mathtt{1}$".
+  </pl-hint>
+</pl-hidden-hints>

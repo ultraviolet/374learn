@@ -1,0 +1,9 @@
+{
+  "uuid": "6bf04074-356c-4d40-b28f-ea8157734021",
+  "title": "DFA: Ends with 01 and has odd length",
+  "topic": "DFA Construction",
+  "tags": ["midterm1", "dfa"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ does not have an infinite fooling set, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! This is the contrapositive of E.4: every non-regular language has an infinite fooling set (by Myhill–Nerode). So if $L$ has no infinite fooling set, $L$ must be regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The fooling set method is a complete characterization: $L$ is not regular if and only if $L$ has an infinite fooling set. The contrapositive says: no infinite fooling set implies $L$ is regular.">No</pl-answer>
+</pl-multiple-choice>

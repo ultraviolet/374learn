@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \mathtt{0}^*\mathtt{1}^*\mathtt{0}^* \mid |w| \equiv 0 \pmod{2} \}$$
+
+That is, all strings of the form $0^a 1^b 0^c$ (some $\mathtt{0}$s, then some $\mathtt{1}$s, then some $\mathtt{0}$s, any of which may be empty) whose total length $a + b + c$ is even. For example, $\varepsilon$, $\mathtt{00}$, $\mathtt{11}$, $\mathtt{0011}$, $\mathtt{0110}$, and $\mathtt{001100}$ are in the language, but $\mathtt{0}$, $\mathtt{1}$, $\mathtt{010}$ (wrong form—$0$ after $1$ after $0$), and $\mathtt{001}$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (00)*(11)*(00)*+(00)*1(11)*0(00)*+0(00)*1(11)*(00)*+0(00)*(11)*0(00)*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        The string is $0^a 1^b 0^c$ with $a + b + c$ even. Consider parities: you need an even number of odd-length pieces. The valid parity triples $(a, b, c) \bmod 2$ with sum $\equiv 0$ are: $(0,0,0)$, $(1,1,0)$, $(0,1,1)$, $(1,0,1)$.
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        Case $(0,0,0)$: $(00)^*(11)^*(00)^*$. Case $(1,1,0)$: $0(00)^* \cdot 1(11)^* \cdot (00)^*$. Case $(0,1,1)$: $(00)^* \cdot 1(11)^* \cdot 0(00)^*$. Case $(1,0,1)$: $0(00)^* \cdot (11)^* \cdot 0(00)^*$.
+    </pl-hint>
+</pl-hidden-hints>

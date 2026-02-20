@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L \subseteq L'$ and $L'$ is not regular, then $L$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \emptyset$ (regular) and $L' = \{0^n1^n \mid n \geq 0\}$ (not regular). We have $\emptyset \subseteq L'$ but $\emptyset$ is regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! A regular language can be a subset of a non-regular language. For example, $\emptyset \subseteq \{0^n1^n\}$, and $\emptyset$ is regular.">No</pl-answer>
+</pl-multiple-choice>

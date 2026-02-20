@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**Every language is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $\{0^n1^n \mid n \geq 0\}$ is a language that cannot be recognized by any DFA, so it is not regular.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! Not every language is regular. A standard counterexample is $\{0^n1^n \mid n \geq 0\}$, which can be shown non-regular by a fooling set argument.">No</pl-answer>
+</pl-multiple-choice>

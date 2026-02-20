@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if $L^*$ is context-free, then $L$ is context-free.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Take a non-CFL language $L$ such that $L^*$ is simple. For instance, let $L = \{0^p \mid p \text{ is prime}\}$ (not regular, and some argue not CFL either). Then $L^* = \{\varepsilon\} \cup \{0^k \mid k \geq 2\}$, which is regular (hence CFL). So $L^*$ is CFL but $L$ may not be.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! $L^*$ being context-free does not imply $L$ is context-free. For example, $L = \{0^p \mid p \text{ prime}\}$ is not regular (arguably not CFL), yet $L^* = \{\varepsilon\} \cup \{0^k \mid k \geq 2\}$ is regular, hence CFL.">No</pl-answer>
+</pl-multiple-choice>

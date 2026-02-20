@@ -1,0 +1,17 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+Let $M$ be a **DFA** over $\Sigma$. Let $M'$ be identical to $M$ except that accepting states in $M$ are non-accepting in $M'$ and vice versa.
+
+**Each string in $\Sigma^*$ is accepted by exactly one of $M$ and $M'$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! Every string $w$ leads the DFA to a unique state $q = \delta^*(s,w)$. If $q \in A$: $M$ accepts, $M'$ rejects. If $q \notin A$: $M$ rejects, $M'$ accepts. Exactly one accepts.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="DFAs are total and deterministic: every string reaches exactly one state. The state is either accepting in $M$ (so $M$ accepts and $M'$ rejects) or not (so $M$ rejects and $M'$ accepts).">No</pl-answer>
+</pl-multiple-choice>

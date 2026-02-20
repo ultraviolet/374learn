@@ -1,0 +1,17 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+Let $M = (\Sigma, Q, s, A, \delta)$ and $M' = (\Sigma, Q, s, Q \setminus A, \delta)$ be arbitrary **NFAs** with identical alphabets, states, starting states, and transition functions, but with complementary accepting states.
+
+**Then $L(M) \cap L(M') = \emptyset$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $Q = \{q_0, q_1, q_2\}$, $s = q_0$, $A = \{q_1\}$, and $\delta(q_0, a) = \{q_1, q_2\}$. Then $M$ accepts $a$ (via the path reaching $q_1 \in A$) and $M'$ also accepts $a$ (via the path reaching $q_2 \in Q \setminus A$). So $a \in L(M) \cap L(M')$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! NFAs are nondeterministic. A single string can have multiple computation paths, some ending in $A$ and others ending in $Q \setminus A$. In that case, the string is accepted by BOTH $M$ and $M'$.">No</pl-answer>
+</pl-multiple-choice>

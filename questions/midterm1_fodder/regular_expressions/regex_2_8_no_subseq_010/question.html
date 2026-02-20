@@ -1,0 +1,26 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid w \text{ does not contain the subsequence } 010 \}$$
+
+Recall that a **subsequence** is obtained by deleting zero or more characters (not necessarily contiguous). For example, $\varepsilon$, $0$, $1$, $01$, $001$, $1100$, and $111$ are in the language, but $010$, $0110$, and $10100$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    1*(e+00*1*)
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Build a DFA that tracks progress toward matching $010$ as a subsequence. States: matched $\varepsilon$, matched $0$, matched $01$, matched $010$ (dead). What strings avoid the dead state?
+    </pl-hint>
+    <pl-hint show-after-submission=6>
+        A string avoids subsequence $010$ iff: once you see a $0$ followed later by a $1$, there are no more $0$s. In other words: the string looks like $1^* 0^* 1^*$ — leading $1$s, then any $0$s, then the $1$s must come after the last useful $0$.
+    </pl-hint>
+</pl-hidden-hints>

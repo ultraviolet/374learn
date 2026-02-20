@@ -1,0 +1,32 @@
+<pl-question-panel>
+<markdown>
+Define the transformation $\mathit{Prefixes}(L) = \{x \mid \exists\, y \text{ s.t. } xy \in L\}$.
+
+Let $L$ be the language of all strings over $\{0,1\}$ that **end in $\mathtt{0}$**.
+
+Observe that for any string $x$, we can choose $y = \mathtt{0}$ so that $xy$ ends in $\mathtt{0}$ and thus $xy \in L$. Therefore $\mathit{Prefixes}(L) = \Sigma^*$.
+
+Construct a DFA for $\Sigma^*$ (all strings).
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["all"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "all": {"0": "all", "1": "all"}
+    },
+    "initial_state": "all",
+    "final_states": ["all"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Every string is a prefix of some string in $L$ (just append $\mathtt{0}$). So the DFA accepts everything: one state that is both the start state and an accept state.
+  </pl-hint>
+</pl-hidden-hints>

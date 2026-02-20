@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if $\equiv_L$ has finitely many equivalence classes, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! This is exactly one direction of the Myhill–Nerode theorem: if $\equiv_L$ has finitely many equivalence classes, we can construct a DFA whose states correspond to those classes, proving $L$ is regular.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="The Myhill–Nerode theorem directly states this: finitely many equivalence classes of $\equiv_L$ implies $L$ is regular (construct the minimal DFA from the classes).">No</pl-answer>
+</pl-multiple-choice>

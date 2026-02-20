@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For every language $L$, if for every string $w \in L$ there is a DFA that accepts $w$, then $L$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The condition is trivially true for every language $L$: for any $w \in L$, the all-accepting DFA (or a DFA for the singleton $\{w\}$) accepts $w$. But $L$ might be non-regular. The condition says nothing useful, since each DFA is only required to accept one string at a time, not to recognize all of $L$ simultaneously.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The all-accepting DFA accepts every string $w$, so the condition holds for every language $L$ regardless of whether $L$ is regular. To prove $L$ is regular, you need a single DFA that recognizes exactly $L$.">No</pl-answer>
+</pl-multiple-choice>

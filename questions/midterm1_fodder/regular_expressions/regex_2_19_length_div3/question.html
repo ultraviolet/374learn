@@ -1,0 +1,23 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid |w| \equiv 0 \pmod{3} \}$$
+
+That is, all strings whose length is divisible by $3$. For example, $\varepsilon$, $000$, $111$, $010$, and $101101$ are in the language, but $0$, $01$, $1111$, and $11011$ are not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    ((0+1)(0+1)(0+1))*
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        The length is divisible by 3 iff the string can be grouped into blocks of exactly 3 characters.
+    </pl-hint>
+</pl-hidden-hints>

@@ -1,0 +1,9 @@
+{
+  "uuid": "3108175E-DF42-4929-9231-F5CE4955F3C9",
+  "title": "Language Transformation: StripFinal0s(L)",
+  "topic": "Language Transformations",
+  "tags": ["midterm1", "dfa", "transformations"],
+  "type": "v3",
+  "showCorrectAnswer": false,
+  "singleVariant": true
+}

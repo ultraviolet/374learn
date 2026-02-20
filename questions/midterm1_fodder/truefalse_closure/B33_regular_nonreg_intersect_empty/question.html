@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If $L$ is regular and $L'$ is not regular, then $L \cap L' = \emptyset$.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: Let $L = \Sigma^*$ (regular) and $L' = \{0^n1^n \mid n \geq 0\}$ (not regular). Then $L \cap L' = L' = \{0^n1^n \mid n \geq 0\} \neq \emptyset$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! For example, $L = \Sigma^*$ and $L' = \{0^n1^n\}$ gives $L \cap L' = \{0^n1^n\} \neq \emptyset$.">No</pl-answer>
+</pl-multiple-choice>

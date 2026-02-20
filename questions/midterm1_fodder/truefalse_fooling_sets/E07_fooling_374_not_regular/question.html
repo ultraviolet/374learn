@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ has a fooling set of size 374, then $L$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="Counterexample: $L = \{0^i \mid i \bmod 374 = 0\}$ is regular (minimal DFA has 374 states), yet $\{(0^j, 0^{374-j}) \mid j = 0, \ldots, 373\}$ is a fooling set of size 374 for $L$. A fooling set of size $n$ only means the DFA needs at least $n$ states—it says nothing about whether that number is finite.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The Fooling Set Lemma gives a lower bound on DFA states. A regular language can require many states. For example, $\{0^i \mid i \bmod 374 = 0\}$ is regular with a minimal 374-state DFA and has a fooling set of size 374.">No</pl-answer>
+</pl-multiple-choice>

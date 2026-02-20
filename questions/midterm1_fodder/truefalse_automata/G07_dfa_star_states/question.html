@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ is recognized by a DFA with $n$ states, then $L^*$ is recognized by a DFA with at most $n + 1$ states.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="In general, $L^*$ may require significantly more than $n+1$ DFA states. The standard construction builds an NFA for $L^*$ with $n+1$ states, but converting to a DFA can blow up exponentially. Counterexample: $L = \{0^n\}$ has a DFA with $n+1$ states, and $L^* = \{0^{kn} \mid k \geq 0\}$ has a minimal DFA with $n$ states—but for more complex $L$, the DFA for $L^*$ can be much larger than $n+1$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The DFA for $L^*$ is not obtained by a simple $n+1$-state construction. The standard NFA for $L^*$ has $n+1$ states, but converting it to a DFA may require exponentially many states.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**For all languages $L \subseteq \Sigma^*$, if $L$ is not context-free, then $L$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! This is the contrapositive of C.12: if $L$ is regular, then $L$ is context-free. Equivalently: if $L$ is not context-free, then $L$ is not regular (since being regular would make it context-free, contradicting the assumption).">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Every regular language is context-free (C.12). Taking the contrapositive: if $L$ is not context-free, then $L$ is not regular.">No</pl-answer>
+</pl-multiple-choice>

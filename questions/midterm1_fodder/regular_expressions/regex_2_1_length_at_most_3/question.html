@@ -1,0 +1,23 @@
+<pl-question-panel>
+<markdown>
+Assume we have the alphabet $\Sigma = \{0, 1\}$.
+
+Provide a regular expression for the following language:
+
+$$\{ w \in \Sigma^* \mid |w| \leq 3 \}$$
+
+As an example, $\varepsilon$, $0$, $11$, and $101$ are in the language, but $0101$ is not.
+<hr>
+</markdown>
+
+</pl-question-panel>
+
+<tl-regex-input answers-name="q1">
+    (e+0+1)(e+0+1)(e+0+1)
+</tl-regex-input>
+
+<pl-hidden-hints>
+    <pl-hint show-after-submission=3>
+        Think about how to describe strings of length exactly 0, 1, 2, and 3 separately, then union them. Each position can be $\varepsilon$, $0$, or $1$.
+    </pl-hint>
+</pl-hidden-hints>

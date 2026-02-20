@@ -1,0 +1,17 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{w \cdot 0^{\#(0,w) \bmod 374} \mid w \in \{0,1\}^*\}$ is regular.**
+
+*(Here $\#(0,w)$ denotes the number of $\mathtt{0}$s in $w$.)*
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="true" feedback="Correct! A string $s$ is in $L$ iff there exists $k \in \{0,\ldots,373\}$ such that (1) the last $k$ characters of $s$ are all $\mathtt{0}$, and (2) $\#(0,s) \equiv 2k \pmod{374}$. A DFA can track the pair $(\#(0,s) \bmod 374,\; \text{trailing-zeros count capped at } 373)$, using at most $374 \times 374$ states. The acceptance condition is decidable from this state.">Yes</pl-answer>
+    <pl-answer correct="false" feedback="Unlike F.24, the suffix length $\#(0,w) \bmod 374$ is bounded in $\{0,\ldots,373\}$. A DFA tracking $(\#(0,s) \bmod 374, \text{trailing-zeros count} \bmod 374)$ has finitely many states and can check the acceptance condition.">No</pl-answer>
+</pl-multiple-choice>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^{n^2} \mid n \geq 0\}$ is regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The language is NOT regular. Fooling set: $\{(0^{n^2}, 0^{2n+1}) \mid n \geq 0\}$. Note $0^{n^2} \cdot 0^{2n+1} = 0^{(n+1)^2} \in L$ ✓. For $n \neq m$: $0^{n^2} \cdot 0^{2m+1} = 0^{n^2 + 2m + 1}$. This is $0^{k^2}$ iff $k^2 = n^2 + 2m + 1 = (n+1)^2 + 2(m-n)$, which requires $m = n$. So $0^{n^2} \cdot 0^{2m+1} \notin L$ for $n \neq m$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The language is NOT regular. The gaps between consecutive perfect squares grow without bound, so no finite automaton can track membership. A fooling set argument confirms infinitely many $\equiv_L$-classes.">No</pl-answer>
+</pl-multiple-choice>

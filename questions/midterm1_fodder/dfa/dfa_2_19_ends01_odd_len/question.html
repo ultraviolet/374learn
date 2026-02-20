@@ -1,0 +1,35 @@
+<pl-question-panel>
+<markdown>
+Create a DFA for the following language over $\Sigma = \{0, 1\}$:
+
+***<center>All strings that end with $\mathtt{01}$ and have odd length.</center>***
+
+Describe each state in English.
+</markdown>
+<hr>
+</pl-question-panel>
+
+<tl-fsm-builder answers-name="q" fsm-type="dfa">
+  <correct-answer>
+  {
+    "states": ["other_e", "other_o", "last0_e", "last0_o", "last01_e", "last01_o"],
+    "input_symbols": ["0", "1"],
+    "transitions": {
+      "other_e":  {"0": "last0_o",  "1": "other_o"},
+      "other_o":  {"0": "last0_e",  "1": "other_e"},
+      "last0_e":  {"0": "last0_o",  "1": "last01_o"},
+      "last0_o":  {"0": "last0_e",  "1": "last01_e"},
+      "last01_e": {"0": "last0_o",  "1": "other_o"},
+      "last01_o": {"0": "last0_e",  "1": "other_e"}
+    },
+    "initial_state": "other_e",
+    "final_states": ["last01_o"]
+  }
+  </correct-answer>
+</tl-fsm-builder>
+
+<pl-hidden-hints>
+  <pl-hint show-after-submission=1>
+    Use a product DFA: track (suffix status) $\times$ (length parity). For the suffix, you need three states: string doesn't end in $\mathtt{0}$ or $\mathtt{01}$; string ends in $\mathtt{0}$ (possibly the start of $\mathtt{01}$); string ends in $\mathtt{01}$. Combined with even/odd length, this gives 6 states. Accept only when suffix is $\mathtt{01}$ and length is odd.
+  </pl-hint>
+</pl-hidden-hints>

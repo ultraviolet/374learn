@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**The language $\{0^i 1^j \mid i, j \geq 0\}$ is not regular.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="The statement is FALSE: $\{0^i 1^j \mid i, j \geq 0\} = 0^* 1^*$, which is a regular language described by the regular expression $\mathtt{0^* 1^*}$.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! The language $\{0^i 1^j \mid i, j \geq 0\} = 0^*1^*$ IS regular—it is described by the regular expression $\mathtt{0^*1^*}$. The statement claims it is not regular, which is false.">No</pl-answer>
+</pl-multiple-choice>

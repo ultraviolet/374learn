@@ -1,0 +1,15 @@
+<pl-question-panel>
+<markdown>
+Check **"Yes"** if the following statement is **always true**, or **"No"** otherwise.
+Give a brief explanation of your answer.
+
+---
+
+**If a language $L$ is recognized by an NFA with $n$ states, then the complementary language $\Sigma^* \setminus L$ is recognized by a NFA with at most $n + 1$ states.**
+</markdown>
+</pl-question-panel>
+
+<pl-multiple-choice answers-name="ans" weight="1" fixed-order="true">
+    <pl-answer correct="false" feedback="For NFAs, complementation requires converting to a DFA first (potentially $2^n$ states), then swapping accepting states. The resulting DFA (viewed as a special NFA) can have up to $2^n$ states—far more than $n+1$. Simply flipping accepting states of an NFA does NOT compute the complement language.">Yes</pl-answer>
+    <pl-answer correct="true" feedback="Correct! NFA complementation cannot be done by simply flipping accepting states (that changes each individual path's acceptance, not the language-level acceptance). The standard construction converts to a DFA ($\leq 2^n$ states) and then complements. The result may require exponentially more than $n+1$ states.">No</pl-answer>
+</pl-multiple-choice>
