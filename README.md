@@ -27,6 +27,7 @@ Public access is available at [374learn](https://374learn.d.rw). You may join th
      -p 80:3000 \
      -v "$PWD:/course" \
      -v ~/pl_ag_jobs:/jobs \
+     -v /var/run/docker.sock:/var/run/docker.sock \
      prairielearn/prairielearn
    ```
 
